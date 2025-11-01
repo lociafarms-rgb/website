@@ -1,6 +1,6 @@
 /**
  * YouTube Video Loader for Locia Farms
- * Dynamically loads and displays YouTube videos from videos.json
+ * Dynamically loads and displays YouTube videos from videos.json or YouTube API
  */
 
 class VideoLoader {
@@ -29,7 +29,21 @@ class VideoLoader {
         if (!this.videosContainer) return;
 
         try {
-            // Load videos.json - handle both root and videos subfolder paths
+            // Try to load from YouTube API first (if configured)
+            if (typeof youtubeAPI !== 'undefined' && youtubeAPI.isConfigured()) {
+                try {
+                    this.videos = await youtubeAPI.fetchVideos();
+                    if (this.videos.length > 0) {
+                        this.renderVideos();
+                        return;
+                    }
+                } catch (apiError) {
+                    console.warn('YouTube API fetch failed, falling back to videos.json:', apiError);
+                    // Fall through to videos.json loading
+                }
+            }
+
+            // Fallback to videos.json file
             const videosPath = window.location.pathname.includes('/videos/') 
                 ? '../videos.json' 
                 : 'videos.json';
