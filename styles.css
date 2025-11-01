@@ -215,6 +215,34 @@ header.scrolled {
     height: auto;
     display: block;
     border-radius: 16px;
+    object-fit: cover;
+}
+
+/* Image optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: var(--surface);
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Optimize image rendering performance */
+.card-image img,
+.carousel-slide img,
+.about-image img {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 /* Section Titles */
@@ -300,6 +328,15 @@ header.scrolled {
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-slide:not(.active) img {
+    opacity: 0;
+}
+
+.carousel-slide.active img {
+    opacity: 1;
 }
 
 .carousel-btn {

@@ -146,13 +146,8 @@ class PhotoCarousel {
     }
 }
 
-// Initialize carousel when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-        new PhotoCarousel(carouselContainer);
-    }
-});
+// Initialize carousel when DOM is ready (will be re-initialized with optimizations below)
+let carouselInstance = null;
 
 // Header scroll effect
 let lastScroll = 0;
@@ -212,5 +207,92 @@ document.querySelectorAll('.material-card').forEach(card => {
     card.style.transform = 'translateY(20px)';
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(card);
+});
+
+// Lazy loading image handler
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle lazy loaded images
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    
+                    // Preload the image
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                    }
+                    
+                    // Add loaded class when image is loaded
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                    
+                    // Mark as loaded even if already cached
+                    if (img.complete) {
+                        img.classList.add('loaded');
+                    }
+                    
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px' // Start loading 50px before entering viewport
+        });
+        
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+            // If image is already cached, mark it as loaded immediately
+            if (img.complete) {
+                img.classList.add('loaded');
+            }
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        lazyImages.forEach(img => {
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+            }
+            img.classList.add('loaded');
+        });
+    }
+    
+    // Optimize carousel image loading
+    const carouselSlides = document.querySelectorAll('.carousel-slide img');
+    const preloadAdjacentImages = (currentIndex) => {
+        const slides = Array.from(carouselSlides);
+        const total = slides.length;
+        
+        // Preload next and previous images
+        const nextIndex = (currentIndex + 1) % total;
+        const prevIndex = (currentIndex - 1 + total) % total;
+        
+        [slides[nextIndex], slides[prevIndex]].forEach(img => {
+            if (img && img.loading === 'lazy') {
+                // Force load adjacent images
+                const link = document.createElement('link');
+                link.rel = 'prefetch';
+                link.href = img.src;
+                document.head.appendChild(link);
+            }
+        });
+    };
+    
+    // Initialize carousel with optimization
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer && !carouselInstance) {
+        carouselInstance = new PhotoCarousel(carouselContainer);
+        // Preload adjacent images when slide changes
+        const originalUpdateSlide = carouselInstance.updateSlide.bind(carouselInstance);
+        carouselInstance.updateSlide = function() {
+            originalUpdateSlide();
+            preloadAdjacentImages(this.currentIndex);
+        };
+        // Preload initial adjacent images
+        preloadAdjacentImages(carouselInstance.currentIndex);
+    }
 });
 
