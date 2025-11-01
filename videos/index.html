@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Locia Farms Video Blog - Farm tours, animal updates, and farming tips">
+    <title>Video Blog - Locia Farms</title>
+    <link rel="icon" type="image/png" href="../logos/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .video-page {
+            padding: 2rem 1rem;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: color var(--transition-base);
+        }
+        
+        .back-link:hover {
+            color: var(--primary-dark);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        
+        .video-item {
+            background-color: var(--background);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-2);
+            transition: all var(--transition-base);
+        }
+        
+        .video-item:hover {
+            box-shadow: var(--shadow-4);
+            transform: translateY(-4px);
+        }
+        
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-button {
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all var(--transition-base);
+        }
+        
+        .video-item:hover .play-button {
+            background-color: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+        
+        .video-info {
+            padding: 1.5rem;
+        }
+        
+        .video-info h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .video-info .video-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .video-info p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            grid-column: 1 / -1;
+        }
+        
+        .empty-state svg {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            color: var(--primary-color);
+            opacity: 0.5;
+        }
+        
+        .empty-state h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .empty-state p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="../index.html" class="logo">
+                    <img src="../logos/logo.png" alt="Locia Farms Logo" class="logo-img">
+                    <span class="logo-text">Locia Farms</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#products">Products</a></li>
+                    <li><a href="../index.html#events">Events</a></li>
+                    <li><a href="../index.html#videos" class="active">Videos</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="video-page">
+        <div class="container">
+            <a href="../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Home
+            </a>
+            
+            <h1 class="section-title">Video Blog</h1>
+            <p class="section-subtitle">Follow our journey through video content - farm tours, animal updates, and farming tips</p>
+            
+            <div class="video-grid">
+                <!-- Placeholder for future videos -->
+                <div class="empty-state">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="5 3 19 12 5 21 5 3"/>
+                    </svg>
+                    <h3>Coming Soon</h3>
+                    <p>Our video blog is under development. Check back soon for farm tours, animal updates, and farming tips!</p>
+                </div>
+                
+                <!-- Template for future video items (uncomment and customize when ready) -->
+                <!--
+                <div class="video-item">
+                    <div class="video-thumbnail">
+                        <img src="../images/splash-home-01.jpg" alt="Video thumbnail">
+                        <div class="play-button">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h3>Farm Tour - Spring 2025</h3>
+                        <div class="video-date">April 2025</div>
+                        <p>Join us for a tour of the farm in spring, meet our animals, and see how we care for them.</p>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Locia Farms. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="../index.html">Home</a> | 
+                <a href="../index.html#products">Products</a> | 
+                <a href="../index.html#events">Events</a> | 
+                <a href="../index.html#videos">Videos</a> | 
+                <a href="../index.html#about">About</a> | 
+                <a href="../index.html#contact">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+

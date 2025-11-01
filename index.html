@@ -7,6 +7,9 @@
     <title>Locia Farms - Fresh Goats, Chickens & Produce</title>
     <link rel="icon" type="image/png" href="logos/favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -16,9 +19,16 @@
                     <img src="logos/logo.png" alt="Locia Farms Logo" class="logo-img">
                     <span class="logo-text">Locia Farms</span>
                 </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#products">Products & Services</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#videos">Video Blog</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -31,32 +41,221 @@
             <div class="hero-content">
                 <h1>Welcome to Locia Farms</h1>
                 <p class="hero-subtitle">Fresh. Local. Family Farm.</p>
-                <p>We provide quality goats, chickens, and fresh produce from our family farm.</p>
-                <a href="#products" class="cta-button">Explore Our Products</a>
+                <p>We provide quality goats, chickens, and fresh produce from our family farm. Visit us to experience the best of sustainable farming.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="cta-button primary">Explore Our Products</a>
+                    <a href="#contact" class="cta-button secondary">Get in Touch</a>
+                </div>
             </div>
             <div class="hero-image">
                 <img src="images/splash-home-01.jpg" alt="Locia Farms Landscape">
             </div>
         </section>
 
+        <!-- Photo Reel Section -->
+        <section id="photo-reel" class="photo-reel">
+            <div class="container">
+                <h2 class="section-title">Farm Life in Pictures</h2>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" aria-label="Previous image">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            <div class="carousel-slide active">
+                                <img src="images/splash-home-goat-01.jpeg" alt="Goats at Locia Farms">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/splash-home-goat-02.jpeg" alt="Goats at Locia Farms">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/splash-home-goat-03.jpeg" alt="Goats at Locia Farms">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/splash-home-goats-03.jpeg" alt="Goats at Locia Farms">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/splash-home-chickens-01.jpeg" alt="Chickens at Locia Farms">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/splash-home-chickens-02.jpeg" alt="Chickens at Locia Farms">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/splash-home-chicken-03.jpeg" alt="Chickens at Locia Farms">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/splash-home-animals-01.jpeg" alt="Farm Animals">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="images/splash-home-02.jpeg" alt="Locia Farms">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next image">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                    <div class="carousel-indicators"></div>
+                </div>
+            </div>
+        </section>
+
         <section id="products" class="products">
             <div class="container">
-                <h2>Our Products</h2>
+                <h2 class="section-title">Products & Services</h2>
+                <p class="section-subtitle">Contact us for pricing and availability. We accept cash, check, Venmo, Apple Cash, and Zelle.</p>
+                
                 <div class="product-grid">
-                    <div class="product-card">
-                        <img src="images/splash-home-goat-01.jpeg" alt="Goats">
-                        <h3>Goats</h3>
-                        <p>Healthy, well-cared-for goats for meat and dairy production.</p>
+                    <div class="product-card material-card">
+                        <div class="card-image">
+                            <img src="images/splash-home-goat-01.jpeg" alt="Goats">
+                        </div>
+                        <div class="card-content">
+                            <h3>Goats</h3>
+                            <p>Healthy, well-cared-for goats for meat and dairy production. Our goats are raised with care and sustainable practices.</p>
+                            <div class="card-actions">
+                                <a href="#contact" class="btn-text">Contact for Pricing</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-card">
-                        <img src="images/splash-home-chickens-01.jpeg" alt="Chickens">
-                        <h3>Chickens</h3>
-                        <p>Free-range chickens raised on our farm.</p>
+                    
+                    <div class="product-card material-card">
+                        <div class="card-image">
+                            <img src="images/splash-home-chickens-01.jpeg" alt="Chickens">
+                        </div>
+                        <div class="card-content">
+                            <h3>Chickens</h3>
+                            <p>Free-range chickens raised on our farm. Fresh eggs and meat available seasonally.</p>
+                            <div class="card-actions">
+                                <a href="#contact" class="btn-text">Contact for Pricing</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-card">
-                        <img src="images/splash-home-02.jpeg" alt="Fresh Produce">
-                        <h3>Fresh Produce</h3>
-                        <p>Locally grown vegetables and fruits from our farm.</p>
+                    
+                    <div class="product-card material-card">
+                        <div class="card-image">
+                            <img src="images/splash-home-02.jpeg" alt="Fresh Produce">
+                        </div>
+                        <div class="card-content">
+                            <h3>Fresh Produce</h3>
+                            <p>Locally grown vegetables and fruits from our farm. Seasonal availability varies.</p>
+                            <div class="card-actions">
+                                <a href="#contact" class="btn-text">Contact for Pricing</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-methods">
+                    <h3>Payment Methods</h3>
+                    <p>We accept the following payment methods:</p>
+                    <div class="payment-grid">
+                        <div class="payment-item">
+                            <span class="payment-icon">💵</span>
+                            <span>Cash</span>
+                        </div>
+                        <div class="payment-item">
+                            <span class="payment-icon">📝</span>
+                            <span>Check</span>
+                        </div>
+                        <div class="payment-item">
+                            <span class="payment-icon">📱</span>
+                            <span>Venmo</span>
+                        </div>
+                        <div class="payment-item">
+                            <span class="payment-icon">📱</span>
+                            <span>Apple Cash</span>
+                        </div>
+                        <div class="payment-item">
+                            <span class="payment-icon">📱</span>
+                            <span>Zelle</span>
+                        </div>
+                    </div>
+                    <p class="payment-note">All purchases are in-person at the farm or by appointment. Please contact us to schedule your visit.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="events">
+            <div class="container">
+                <h2 class="section-title">Ranch Events & Activities</h2>
+                <p class="section-subtitle">Join us for seasonal events and activities on the ranch</p>
+                
+                <div class="events-grid">
+                    <div class="event-card material-card">
+                        <div class="event-date">
+                            <span class="month">Spring</span>
+                            <span class="season">2025</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Spring Farm Tour</h3>
+                            <p>Come visit us this spring! Tour our farm, meet the animals, and learn about sustainable farming practices.</p>
+                            <div class="event-details">
+                                <p><strong>Details:</strong> Coming soon</p>
+                                <a href="#contact" class="btn-text">Contact for Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card material-card">
+                        <div class="event-date">
+                            <span class="month">Summer</span>
+                            <span class="season">2025</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Summer Harvest Festival</h3>
+                            <p>Celebrate the summer harvest with us! Fresh produce, farm-fresh meals, and family-friendly activities.</p>
+                            <div class="event-details">
+                                <p><strong>Details:</strong> Coming soon</p>
+                                <a href="#contact" class="btn-text">Contact for Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card material-card">
+                        <div class="event-date">
+                            <span class="month">Fall</span>
+                            <span class="season">2025</span>
+                        </div>
+                        <div class="event-content">
+                            <h3>Fall Open House</h3>
+                            <p>Experience the farm in autumn! Perfect weather for exploring, animal interactions, and seasonal activities.</p>
+                            <div class="event-details">
+                                <p><strong>Details:</strong> Coming soon</p>
+                                <a href="#contact" class="btn-text">Contact for Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="events-bulletin material-card">
+                    <h3>📋 Events Bulletin</h3>
+                    <p>Check back regularly for updates on upcoming events, workshops, and special activities. Follow us or contact us to stay informed about all ranch happenings!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Blog Section -->
+        <section id="videos" class="videos">
+            <div class="container">
+                <h2 class="section-title">Video Blog</h2>
+                <p class="section-subtitle">Follow our journey through video content</p>
+                
+                <div class="videos-grid">
+                    <div class="video-card material-card">
+                        <div class="video-placeholder">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"/>
+                            </svg>
+                        </div>
+                        <div class="video-content">
+                            <h3>Coming Soon</h3>
+                            <p>Our video blog is under development. Stay tuned for farm tours, animal updates, and farming tips!</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,7 +263,7 @@
 
         <section id="about" class="about">
             <div class="container">
-                <h2>About Locia Farms</h2>
+                <h2 class="section-title">About Locia Farms</h2>
                 <div class="about-content">
                     <div class="about-image">
                         <img src="images/splash-home-animals-01.jpeg" alt="Farm Animals">
@@ -72,6 +271,7 @@
                     <div class="about-text">
                         <p>Locia Farms is a family-owned farm dedicated to providing fresh, quality products to our community. We take pride in raising our animals with care and growing produce using sustainable farming practices.</p>
                         <p>Our commitment to quality and sustainability means you can trust that every product from Locia Farms meets our high standards.</p>
+                        <p>We believe in connecting our community with where their food comes from. Visit us at the farm to see our operations firsthand and meet the animals that make it all possible.</p>
                     </div>
                 </div>
             </div>
@@ -79,10 +279,24 @@
 
         <section id="contact" class="contact">
             <div class="container">
-                <h2>Contact Us</h2>
-                <p>Interested in our products? Get in touch with us!</p>
-                <div class="contact-info">
-                    <p>Visit us at our farm or reach out to learn more about our goats, chickens, and produce.</p>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Get in touch to learn more about our products, schedule a visit, or inquire about events</p>
+                
+                <div class="contact-cards">
+                    <div class="contact-card material-card">
+                        <h3>Visit Us</h3>
+                        <p>Come visit our farm! We welcome visitors by appointment. Contact us to schedule your visit.</p>
+                    </div>
+                    
+                    <div class="contact-card material-card">
+                        <h3>In-Person Purchases</h3>
+                        <p>All purchases are made in-person at the farm or by appointment. We accept cash, check, Venmo, Apple Cash, and Zelle.</p>
+                    </div>
+                    
+                    <div class="contact-card material-card">
+                        <h3>Stay Connected</h3>
+                        <p>Reach out to learn more about our goats, chickens, produce, or upcoming events. We'd love to hear from you!</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -91,8 +305,17 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Locia Farms. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="#home">Home</a> | 
+                <a href="#products">Products</a> | 
+                <a href="#events">Events</a> | 
+                <a href="#videos">Videos</a> | 
+                <a href="#about">About</a> | 
+                <a href="#contact">Contact</a>
+            </p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
