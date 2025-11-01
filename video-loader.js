@@ -29,8 +29,12 @@ class VideoLoader {
         if (!this.videosContainer) return;
 
         try {
-            // Load videos.json
-            const response = await fetch('videos.json');
+            // Load videos.json - handle both root and videos subfolder paths
+            const videosPath = window.location.pathname.includes('/videos/') 
+                ? '../videos.json' 
+                : 'videos.json';
+            
+            const response = await fetch(videosPath);
             if (!response.ok) {
                 throw new Error('Failed to load videos.json');
             }
@@ -39,7 +43,11 @@ class VideoLoader {
             this.videos = data.videos || [];
 
             if (this.videos.length === 0) {
-                this.showEmptyState();
+                // Don't show empty state if there's already placeholder content
+                const existingEmpty = this.videosContainer.querySelector('.empty-state');
+                if (!existingEmpty) {
+                    this.showEmptyState();
+                }
                 return;
             }
 
@@ -47,17 +55,25 @@ class VideoLoader {
             this.renderVideos();
         } catch (error) {
             console.error('Error loading videos:', error);
-            this.showEmptyState();
+            // Only show empty state if container is empty
+            const existingContent = this.videosContainer.querySelector('.empty-state, .video-item, .video-card');
+            if (!existingContent) {
+                this.showEmptyState();
+            }
         }
     }
 
     renderVideos() {
         if (!this.videosContainer) return;
 
-        // Clear existing content (but keep empty state if it exists)
+        // Clear existing placeholder content
         const emptyState = this.videosContainer.querySelector('.empty-state');
+        const placeholderCard = this.videosContainer.querySelector('.video-card.empty-state');
         if (emptyState) {
             emptyState.remove();
+        }
+        if (placeholderCard) {
+            placeholderCard.remove();
         }
 
         // Render each video
