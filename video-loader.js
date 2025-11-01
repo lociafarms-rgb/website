@@ -1,0 +1,171 @@
+/**
+ * YouTube Video Loader for Locia Farms
+ * Dynamically loads and displays YouTube videos from videos.json
+ */
+
+class VideoLoader {
+    constructor() {
+        this.videosContainer = null;
+        this.videos = [];
+        this.init();
+    }
+
+    async init() {
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this.loadVideos());
+        } else {
+            this.loadVideos();
+        }
+    }
+
+    async loadVideos() {
+        // Find video containers
+        const homeContainer = document.querySelector('#videos .videos-grid');
+        const videoPageContainer = document.querySelector('.video-grid');
+        
+        this.videosContainer = videoPageContainer || homeContainer;
+        
+        if (!this.videosContainer) return;
+
+        try {
+            // Load videos.json
+            const response = await fetch('videos.json');
+            if (!response.ok) {
+                throw new Error('Failed to load videos.json');
+            }
+            
+            const data = await response.json();
+            this.videos = data.videos || [];
+
+            if (this.videos.length === 0) {
+                this.showEmptyState();
+                return;
+            }
+
+            // Render videos
+            this.renderVideos();
+        } catch (error) {
+            console.error('Error loading videos:', error);
+            this.showEmptyState();
+        }
+    }
+
+    renderVideos() {
+        if (!this.videosContainer) return;
+
+        // Clear existing content (but keep empty state if it exists)
+        const emptyState = this.videosContainer.querySelector('.empty-state');
+        if (emptyState) {
+            emptyState.remove();
+        }
+
+        // Render each video
+        this.videos.forEach(video => {
+            const videoElement = this.createVideoElement(video);
+            this.videosContainer.appendChild(videoElement);
+        });
+    }
+
+    createVideoElement(video) {
+        // Extract YouTube video ID from URL or use direct ID
+        const videoId = this.extractVideoId(video.youtubeUrl || video.id);
+        
+        const videoItem = document.createElement('div');
+        videoItem.className = 'video-item material-card';
+        
+        videoItem.innerHTML = `
+            <div class="video-embed">
+                <iframe 
+                    src="https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1" 
+                    title="${this.escapeHtml(video.title)}"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+            <div class="video-info">
+                <h3>${this.escapeHtml(video.title)}</h3>
+                ${video.date ? `<div class="video-date">${this.formatDate(video.date)}</div>` : ''}
+                ${video.description ? `<p>${this.escapeHtml(video.description)}</p>` : ''}
+                <a href="${video.youtubeUrl || `https://www.youtube.com/watch?v=${videoId}`}" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="watch-on-youtube">
+                    Watch on YouTube
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                    </svg>
+                </a>
+            </div>
+        `;
+
+        return videoItem;
+    }
+
+    extractVideoId(urlOrId) {
+        if (!urlOrId) return '';
+        
+        // If it's already just an ID, return it
+        if (!urlOrId.includes('http') && !urlOrId.includes('/')) {
+            return urlOrId;
+        }
+
+        // Extract from various YouTube URL formats
+        const patterns = [
+            /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+            /^([a-zA-Z0-9_-]{11})$/  // Just the ID
+        ];
+
+        for (const pattern of patterns) {
+            const match = urlOrId.match(pattern);
+            if (match) {
+                return match[1] || match[0];
+            }
+        }
+
+        return urlOrId; // Fallback
+    }
+
+    formatDate(dateString) {
+        if (!dateString) return '';
+        
+        try {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            });
+        } catch (error) {
+            return dateString; // Return as-is if parsing fails
+        }
+    }
+
+    escapeHtml(text) {
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    showEmptyState() {
+        if (!this.videosContainer) return;
+        
+        const emptyState = document.createElement('div');
+        emptyState.className = 'empty-state';
+        emptyState.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+            </svg>
+            <h3>Coming Soon</h3>
+            <p>Our video blog is under development. Check back soon for farm tours, animal updates, and farming tips!</p>
+        `;
+        
+        this.videosContainer.appendChild(emptyState);
+    }
+}
+
+// Initialize video loader
+const videoLoader = new VideoLoader();
+

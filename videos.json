@@ -1,0 +1,13 @@
+{
+  "videos": [
+    {
+      "id": "example-video-id",
+      "title": "Example Video Title",
+      "description": "This is an example video. Replace with your actual YouTube video ID when you publish your first video.",
+      "date": "2025-01-01",
+      "thumbnail": "https://img.youtube.com/vi/example-video-id/maxresdefault.jpg",
+      "youtubeUrl": "https://www.youtube.com/watch?v=example-video-id"
+    }
+  ]
+}
+

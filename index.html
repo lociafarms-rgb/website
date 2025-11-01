@@ -224,10 +224,11 @@
         <section id="videos" class="videos">
             <div class="container">
                 <h2 class="section-title">Video Blog</h2>
-                <p class="section-subtitle">Follow our journey through video content</p>
+                <p class="section-subtitle">Follow our journey through video content - farm tours, animal updates, and farming tips</p>
                 
                 <div class="videos-grid">
-                    <div class="video-card material-card">
+                    <!-- Videos will be dynamically loaded from videos.json -->
+                    <div class="video-card material-card empty-state">
                         <div class="video-placeholder">
                             <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polygon points="5 3 19 12 5 21 5 3"/>
@@ -235,7 +236,8 @@
                         </div>
                         <div class="video-content">
                             <h3>Coming Soon</h3>
-                            <p>Our video blog is under development. Stay tuned for farm tours, animal updates, and farming tips!</p>
+                            <p>Our video blog is under development. Check back soon for farm tours, animal updates, and farming tips!</p>
+                            <p><a href="videos/index.html" class="btn-text">View Video Blog</a></p>
                         </div>
                     </div>
                 </div>
@@ -306,5 +308,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="video-loader.js"></script>
 </body>
 </html>

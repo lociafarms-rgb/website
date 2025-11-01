@@ -35,100 +35,6 @@
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
-        
-        .video-item {
-            background-color: var(--background);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-2);
-            transition: all var(--transition-base);
-        }
-        
-        .video-item:hover {
-            box-shadow: var(--shadow-4);
-            transform: translateY(-4px);
-        }
-        
-        .video-thumbnail {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16/9;
-            background-color: var(--surface);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-        
-        .video-thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .play-button {
-            position: absolute;
-            width: 64px;
-            height: 64px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            transition: all var(--transition-base);
-        }
-        
-        .video-item:hover .play-button {
-            background-color: rgba(0, 0, 0, 0.9);
-            transform: scale(1.1);
-        }
-        
-        .video-info {
-            padding: 1.5rem;
-        }
-        
-        .video-info h3 {
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-        
-        .video-info .video-date {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-        }
-        
-        .video-info p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-        
-        .empty-state {
-            text-align: center;
-            padding: 4rem 2rem;
-            grid-column: 1 / -1;
-        }
-        
-        .empty-state svg {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 2rem;
-            color: var(--primary-color);
-            opacity: 0.5;
-        }
-        
-        .empty-state h3 {
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .empty-state p {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
     </style>
 </head>
 <body>
@@ -169,7 +75,7 @@
             <p class="section-subtitle">Follow our journey through video content - farm tours, animal updates, and farming tips</p>
             
             <div class="video-grid">
-                <!-- Placeholder for future videos -->
+                <!-- Videos will be dynamically loaded from videos.json -->
                 <div class="empty-state">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="5 3 19 12 5 21 5 3"/>
@@ -177,25 +83,6 @@
                     <h3>Coming Soon</h3>
                     <p>Our video blog is under development. Check back soon for farm tours, animal updates, and farming tips!</p>
                 </div>
-                
-                <!-- Template for future video items (uncomment and customize when ready) -->
-                <!--
-                <div class="video-item">
-                    <div class="video-thumbnail">
-                        <img src="../images/splash-home-01.jpg" alt="Video thumbnail">
-                        <div class="play-button">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polygon points="5 3 19 12 5 21 5 3"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="video-info">
-                        <h3>Farm Tour - Spring 2025</h3>
-                        <div class="video-date">April 2025</div>
-                        <p>Join us for a tour of the farm in spring, meet our animals, and see how we care for them.</p>
-                    </div>
-                </div>
-                -->
             </div>
         </div>
     </main>
@@ -215,6 +102,7 @@
     </footer>
 
     <script src="../script.js"></script>
+    <script src="../video-loader.js"></script>
 </body>
 </html>
 
