@@ -35,4 +35,3 @@ website/
     ├── favicon.png
     └── locia_farms_vector.svg
 ```
-
