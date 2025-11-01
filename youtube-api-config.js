@@ -2,19 +2,28 @@
  * YouTube API Configuration
  * This file contains the YouTube API setup and video fetching logic
  * 
- * To use automatic YouTube video fetching:
- * 1. Get a YouTube Data API key from Google Cloud Console
- * 2. Set your YouTube channel ID or username
- * 3. Update the config below
+ * SECURITY NOTE: This file is public on GitHub Pages. The API key has been:
+ * - Retrieved from marketing/pipeline/.env
+ * - Should be restricted to specific HTTP referrers in Google Cloud Console
+ * - Should only have YouTube Data API v3 enabled
+ * 
+ * To complete setup:
+ * 1. Add your YouTube Channel ID below
+ * 2. Enable YouTube Data API v3 for this key: https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=winged-signal-476920-m1
+ * 3. Restrict API key to your domain: https://console.cloud.google.com/apis/credentials?project=winged-signal-476920-m1
+ * 4. Set USE_API to true
  */
 
 const YOUTUBE_API_CONFIG = {
     // Your YouTube Data API v3 key
-    // Get one at: https://console.cloud.google.com/apis/credentials
-    API_KEY: 'YOUR_YOUTUBE_API_KEY_HERE',
+    // Retrieved from marketing/pipeline/.env
+    // Project: winged-signal-476920-m1
+    API_KEY: 'AIzaSyCZbXgkdfrwesjNZgSkB_b5V8KUjS-ADiI',
     
     // Your YouTube Channel ID or Username
     // Find it at: https://www.youtube.com/account_advanced
+    // Or at: YouTube Studio → Settings → Channel → Advanced settings
+    // ⚠️ UPDATE THIS with your Channel ID (e.g., 'UCxxxxxxxxxxxxxxxxxxxxxxxxxx' or '@lociafarms')
     CHANNEL_ID: 'YOUR_CHANNEL_ID_OR_USERNAME',
     
     // Number of videos to fetch (max 50 per request)
@@ -24,7 +33,8 @@ const YOUTUBE_API_CONFIG = {
     CACHE_DURATION: 24 * 60 * 60 * 1000,
     
     // Use API instead of videos.json file
-    USE_API: false // Set to true to enable automatic fetching
+    // ⚠️ Set to true after adding your Channel ID above
+    USE_API: false
 };
 
 /**

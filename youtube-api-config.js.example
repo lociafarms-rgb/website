@@ -1,0 +1,32 @@
+/**
+ * YouTube API Configuration - EXAMPLE FILE
+ * Copy this file to youtube-api-config.js and update with your credentials
+ * 
+ * SECURITY NOTE: This file will be public on GitHub Pages. Make sure to:
+ * 1. Restrict your API key in Google Cloud Console
+ * 2. Add HTTP referrer restrictions for your domain
+ * 3. Only enable YouTube Data API v3 for this key
+ */
+
+const YOUTUBE_API_CONFIG = {
+    // Your YouTube Data API v3 key
+    // Get one at: https://console.cloud.google.com/apis/credentials?project=winged-signal-476920-m1
+    API_KEY: 'YOUR_YOUTUBE_API_KEY_HERE',
+    
+    // Your YouTube Channel ID or Username
+    // Find it at: https://www.youtube.com/account_advanced
+    // Or at: YouTube Studio → Settings → Channel → Advanced settings
+    CHANNEL_ID: 'YOUR_CHANNEL_ID_OR_USERNAME',
+    
+    // Number of videos to fetch (max 50 per request)
+    MAX_RESULTS: 12,
+    
+    // Cache duration in milliseconds (24 hours default)
+    CACHE_DURATION: 24 * 60 * 60 * 1000,
+    
+    // Use API instead of videos.json file
+    USE_API: false // Set to true after configuring above
+};
+
+// ... rest of the file (YouTubeAPIService class) ...
+
