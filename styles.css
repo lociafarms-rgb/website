@@ -1,6 +1,6 @@
 /**
  * Locia Farms Website Stylesheet
- * Material Design-inspired responsive stylesheet
+ * Modern Farmcore aesthetic with Apple Glass material effects
  */
 
 /* ============================================================================
@@ -13,21 +13,44 @@
 }
 
 /* ============================================================================
-   CSS VARIABLES (Design Tokens)
+   CSS VARIABLES (Farmcore Design Tokens)
    ============================================================================ */
 :root {
-    /* Colors */
-    --primary-color: #2d5016;
-    --primary-light: #5a7c3a;
-    --primary-dark: #1a3009;
-    --secondary-color: #8b9a5b;
-    --accent-color: #c8a882;
-    --text-primary: #212121;
-    --text-secondary: #757575;
-    --background: #ffffff;
-    --surface: #f5f5f5;
-    --surface-variant: #fafafa;
-    --divider: #e0e0e0;
+    /* Farmcore Color Palette - Earthy, warm, natural */
+    --primary-color: #3d6930;        /* Rich forest green */
+    --primary-light: #5a8c47;        /* Lighter green */
+    --primary-dark: #2a4a22;         /* Deep forest green */
+    --secondary-color: #8b7355;      /* Warm brown */
+    --accent-color: #c8a882;         /* Earthy tan */
+    --accent-light: #e8dcc5;         /* Light cream */
+    
+    /* Natural Text Colors */
+    --text-primary: #2a2a2a;         /* Dark charcoal */
+    --text-secondary: #6b5e4f;       /* Warm brown text */
+    --text-light: #9b8f80;           /* Light brown */
+    
+    /* Farmcore Backgrounds - Warm, natural */
+    --background: #faf8f3;           /* Warm cream */
+    --surface: #f5f1e8;              /* Light beige */
+    --surface-variant: #f0ebe0;      /* Soft cream */
+    --surface-glass: rgba(255, 255, 255, 0.7);  /* Glass background */
+    --surface-glass-dark: rgba(250, 248, 243, 0.85);
+    
+    /* Natural Dividers */
+    --divider: #e0d8cc;              /* Warm divider */
+    --divider-light: rgba(139, 115, 85, 0.15);
+    
+    /* Apple Glass Material Effects */
+    --glass-blur: blur(20px) saturate(180%);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+    --glass-shadow: 0 8px 32px 0 rgba(61, 105, 48, 0.15);
+    
+    /* Soft Natural Shadows */
+    --shadow-1: 0 2px 8px rgba(61, 105, 48, 0.08);
+    --shadow-2: 0 4px 16px rgba(61, 105, 48, 0.12);
+    --shadow-3: 0 8px 24px rgba(61, 105, 48, 0.15);
+    --shadow-4: 0 12px 32px rgba(61, 105, 48, 0.18);
+    --shadow-5: 0 16px 40px rgba(61, 105, 48, 0.20);
     
     /* Material Design Shadows (Elevation Levels) */
     --shadow-1: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
@@ -68,18 +91,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION (Apple Glass Effect)
    ============================================================================ */
 header {
-    background-color: var(--background);
+    background: var(--surface-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border-bottom: var(--glass-border);
     box-shadow: var(--shadow-1);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: box-shadow var(--transition-base);
+    transition: all var(--transition-base);
 }
 
 header.scrolled {
+    background: var(--surface-glass-dark);
     box-shadow: var(--shadow-2);
 }
 
@@ -140,7 +167,7 @@ header.scrolled {
     font-weight: 500;
     font-size: 0.95rem;
     padding: 8px 16px;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: all var(--transition-base);
     position: relative;
 }
@@ -148,7 +175,9 @@ header.scrolled {
 .nav-menu a:hover,
 .nav-menu a.active {
     color: var(--primary-color);
-    background-color: var(--surface);
+    background: var(--surface-glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .nav-menu a::after {
@@ -221,15 +250,17 @@ header.scrolled {
 
 .hero-image {
     position: relative;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: var(--shadow-4);
+    box-shadow: var(--shadow-3);
     transition: transform var(--transition-base), box-shadow var(--transition-base);
+    border: var(--glass-border);
 }
 
 .hero-image:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-5);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .hero-image img {
@@ -337,8 +368,9 @@ img[loading="lazy"].loaded {
 .carousel-wrapper {
     position: relative;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 20px;
     box-shadow: var(--shadow-3);
+    border: var(--glass-border);
     aspect-ratio: 16/9;
 }
 
@@ -374,8 +406,10 @@ img[loading="lazy"].loaded {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    border: none;
+    background: var(--surface-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -390,9 +424,10 @@ img[loading="lazy"].loaded {
 }
 
 .carousel-btn:hover {
-    background-color: var(--background);
+    background: var(--surface-glass-dark);
     box-shadow: var(--shadow-4);
     transform: translateY(-50%) scale(1.1);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .carousel-btn.prev {
@@ -443,8 +478,8 @@ img[loading="lazy"].loaded {
 }
 
 .product-card {
-    background-color: var(--background);
-    border-radius: 12px;
+    background: transparent;
+    border-radius: 16px;
     overflow: hidden;
 }
 
@@ -501,66 +536,41 @@ img[loading="lazy"].loaded {
     text-decoration: underline;
 }
 
-/* Payment Methods */
+/* Payment Methods (Simplified) */
 .payment-methods {
     margin-top: 4rem;
     padding: 2.5rem;
-    background-color: var(--surface);
-    border-radius: 12px;
-    box-shadow: var(--shadow-1);
+    background: var(--surface-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-2);
+    text-align: center;
 }
 
 .payment-methods h3 {
     font-size: 1.75rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
-    text-align: center;
+    font-weight: 600;
 }
 
-.payment-methods > p {
-    text-align: center;
+.payment-list {
+    font-size: 1.1rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
-}
-
-.payment-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1.5rem;
     margin-bottom: 1.5rem;
-}
-
-.payment-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    background-color: var(--background);
-    border-radius: 8px;
-    box-shadow: var(--shadow-1);
-    transition: all var(--transition-base);
-}
-
-.payment-item:hover {
-    box-shadow: var(--shadow-2);
-    transform: translateY(-2px);
-}
-
-.payment-icon {
-    font-size: 2rem;
-}
-
-.payment-item span:last-child {
     font-weight: 500;
-    color: var(--text-primary);
+    letter-spacing: 0.5px;
+    line-height: 1.8;
 }
 
 .payment-note {
-    text-align: center;
-    color: var(--text-secondary);
+    color: var(--text-light);
+    font-size: 0.95rem;
     font-style: italic;
     margin-top: 1rem;
+    line-height: 1.6;
 }
 
 /* ============================================================================
@@ -593,7 +603,8 @@ img[loading="lazy"].loaded {
     padding: 1.5rem;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     color: white;
-    border-radius: 12px 0 0 12px;
+    border-radius: 16px 0 0 16px;
+    box-shadow: var(--shadow-2);
 }
 
 .event-date .month {
@@ -715,9 +726,10 @@ img[loading="lazy"].loaded {
 
 .about-image {
     position: relative;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow-3);
+    border: var(--glass-border);
 }
 
 .about-image img {
@@ -905,7 +917,10 @@ footer p {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: var(--background);
+        background: var(--surface-glass);
+        backdrop-filter: var(--glass-blur);
+        -webkit-backdrop-filter: var(--glass-blur);
+        border-top: var(--glass-border);
         flex-direction: column;
         padding: 2rem;
         gap: 1rem;
