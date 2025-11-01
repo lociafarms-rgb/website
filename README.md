@@ -1,37 +1,57 @@
 # Locia Farms Website
 
-Static website for Locia Farms - a family farm providing fresh goats, chickens, and produce.
+Modern farmcore-styled website for Locia Farms - a peaceful family farm providing fresh goats, chickens, and produce.
+
+## Features
+
+- ✅ Responsive design with farmcore aesthetic
+- ✅ Apple Glass material effects
+- ✅ Photo reel carousel
+- ✅ Events section
+- ✅ Video blog with YouTube integration
+- ✅ Products & services section
+- ✅ Contact information
+- ✅ Performance optimized (lazy loading, caching)
 
 ## Setup
 
-This website is hosted on GitHub Pages. To enable GitHub Pages:
+### GitHub Pages
 
-1. Go to your repository settings on GitHub
-2. Navigate to "Pages" in the left sidebar
-3. Under "Source", select the `main` branch
-4. Click "Save"
-5. Your site will be available at: `https://lociafarms-rgb.github.io/website/`
+This website is hosted on GitHub Pages. Your site is available at:
+- **Live URL**: `https://lociafarms-rgb.github.io/website/`
 
-## Local Development
+To update settings:
+1. Go to repository settings → Pages
+2. Select `main` branch as source
+3. Save changes
 
-Simply open `index.html` in a web browser, or use a local server:
+### Local Development
 
 ```bash
+# Simple HTTP server
 python3 -m http.server 8000
+
+# Or use any local server
+# Then visit: http://localhost:8000
 ```
 
-Then visit `http://localhost:8000`
+## YouTube Integration
+
+The website automatically fetches videos from your YouTube channel. See `YOUTUBE_SETUP.md` for configuration.
 
 ## Repository Structure
 
 ```
 website/
-├── index.html          # Main homepage
-├── styles.css          # Stylesheet
-├── images/             # Website images
-│   └── splash-*.jpg
-└── logos/              # Logo files
-    ├── logo.png
-    ├── favicon.png
-    └── locia_farms_vector.svg
+├── index.html              # Main homepage
+├── styles.css              # Stylesheet
+├── script.js              # Main JavaScript
+├── video-loader.js         # YouTube video loader
+├── youtube-api-config.js   # YouTube API configuration
+├── videos.json             # Manual video entries (fallback)
+├── videos/
+│   └── index.html          # Video blog page
+├── images/                 # Website images
+├── logos/                  # Logo files
+└── README.md               # This file
 ```

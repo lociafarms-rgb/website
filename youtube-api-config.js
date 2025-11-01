@@ -86,7 +86,7 @@ class YouTubeAPIService {
                     return data.items[0].id;
                 }
             } catch (error) {
-                console.error('Error fetching channel ID:', error);
+                // Channel ID lookup failed, assume it's already a valid ID
             }
         }
         
@@ -144,7 +144,7 @@ class YouTubeAPIService {
 
             return videos;
         } catch (error) {
-            console.error('Error fetching videos from YouTube API:', error);
+            // Error fetching videos - will fall back to videos.json
             throw error;
         }
     }

@@ -38,7 +38,7 @@ class VideoLoader {
                         return;
                     }
                 } catch (apiError) {
-                    console.warn('YouTube API fetch failed, falling back to videos.json:', apiError);
+                    // Silently fall back to videos.json if API fails
                     // Fall through to videos.json loading
                 }
             }
@@ -68,7 +68,6 @@ class VideoLoader {
             // Render videos
             this.renderVideos();
         } catch (error) {
-            console.error('Error loading videos:', error);
             // Only show empty state if container is empty
             const existingContent = this.videosContainer.querySelector('.empty-state, .video-item, .video-card');
             if (!existingContent) {
