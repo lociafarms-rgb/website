@@ -601,6 +601,31 @@ img[loading="lazy"].loaded {
 
 .event-card {
     display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.event-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+.event-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.event-card:hover .event-image img {
+    transform: scale(1.05);
+}
+
+.event-body {
+    display: flex;
     gap: 1.5rem;
     padding: 0;
 }
@@ -614,7 +639,6 @@ img[loading="lazy"].loaded {
     padding: 1.5rem;
     background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     color: white;
-    border-radius: 16px 0 0 16px;
     box-shadow: var(--shadow-2);
 }
 
@@ -836,10 +860,11 @@ img[loading="lazy"].loaded {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 3rem;
 }
 
 .about-image {
@@ -848,6 +873,9 @@ img[loading="lazy"].loaded {
     overflow: hidden;
     box-shadow: var(--shadow-3);
     border: var(--glass-border);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-image img {
@@ -855,16 +883,19 @@ img[loading="lazy"].loaded {
     height: auto;
     display: block;
     border-radius: 16px;
+    object-fit: cover;
+    aspect-ratio: 4/3;
 }
 
 .about-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
+    font-size: 1.15rem;
+    line-height: 1.85;
     color: var(--text-secondary);
+    max-width: 100%;
 }
 
 .about-text p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
 }
 
 .about-text .lead {
@@ -1074,7 +1105,15 @@ footer p {
     }
 
     .about-content {
-        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .about-text {
+        font-size: 1.05rem;
+    }
+    
+    .about-image {
+        max-width: 100%;
     }
 
     .product-grid,
@@ -1097,8 +1136,14 @@ footer p {
         flex-direction: column;
     }
 
+    .event-body {
+        flex-direction: column;
+    }
+
     .event-date {
-        border-radius: 12px 12px 0 0;
+        border-radius: 0;
+        width: 100%;
+        min-width: 100%;
     }
 }
 
