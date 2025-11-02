@@ -56,6 +56,57 @@
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
         }
+
+        /* Square Online Store Container */
+        #square-store-container {
+            min-height: 800px;
+            margin-top: 2rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-2);
+        }
+
+        /* Square Store Iframe */
+        #square-store-iframe {
+            width: 100%;
+            min-height: 800px;
+            border: none;
+            border-radius: 16px;
+            background: var(--surface);
+        }
+
+        /* Setup Notice */
+        .setup-notice {
+            padding: 2rem;
+            background: var(--surface-glass);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: var(--glass-border);
+            border-radius: 16px;
+            margin-top: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-2);
+        }
+
+        .setup-notice h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .setup-notice p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .setup-notice a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .setup-notice a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -96,15 +147,62 @@
             <h1 class="section-title">Merchandise Store</h1>
             <p class="section-subtitle">Shop Locia Farms apparel and accessories featuring our farm logo</p>
             
-            <div class="merchandise-grid">
-                <!-- Products will be dynamically loaded from Printful API or merchandise.json -->
-                <div class="loading-state">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/>
-                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                    </svg>
-                    <p>Loading merchandise...</p>
+            <!-- Square Online Store -->
+            <!-- 
+                SETUP INSTRUCTIONS:
+                1. Create Square Online account at squareup.com
+                2. Get your store URL from Square Dashboard → Online → Website
+                3. Replace YOUR_STORE_URL below with your actual Square store URL
+                   Format: https://YOUR-STORE-NAME.square.site
+                
+                ALTERNATIVE: If iframe doesn't work, you can link directly to Square store
+                See SQUARE_SETUP.md for complete setup guide
+            -->
+            <div id="square-store-container">
+                <!-- Option 1: Embedded iframe (default) -->
+                <iframe 
+                    id="square-store-iframe"
+                    src="https://shop-co-101876.square.site" 
+                    style="width: 100%; min-height: 800px; border: none; border-radius: 16px;"
+                    title="Locia Farms Merchandise Store"
+                    loading="lazy"
+                    allow="payment"
+                    sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-top-navigation">
+                </iframe>
+                
+                <!-- Option 2: Direct link (backup if iframe blocked) -->
+                <div id="square-store-link" style="display: none; text-align: center; margin-top: 2rem;">
+                    <a href="https://shop-co-101876.square.site" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="buy-button cta-button primary"
+                       style="display: inline-flex; padding: 1rem 2rem; font-size: 1.1rem;">
+                        Visit Store
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 0.5rem;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                    </a>
+                    <p style="margin-top: 1rem; color: var(--text-secondary);">
+                        If the store doesn't load above, click the button to visit our Square Online store directly.
+                    </p>
                 </div>
+            </div>
+            
+            <div class="setup-notice" style="display: none; padding: 2rem; background: var(--surface-glass); border-radius: 16px; margin-top: 2rem; text-align: center;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Setup Required</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    To display your store, please configure your Square Online store URL in the iframe src below.
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">
+                    See <a href="../SQUARE_SETUP.md" style="color: var(--primary-color);">SQUARE_SETUP.md</a> for setup instructions.
+                </p>
+                <a href="https://squareup.com/us/en/online-store" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="buy-button"
+                   style="display: inline-flex; margin-top: 1rem;">
+                    Create Square Online Store
+                </a>
             </div>
         </div>
     </main>
@@ -124,9 +222,110 @@
         </div>
     </footer>
 
+    <!-- Square Online Store Script -->
+    <script type="text/javascript">
+        // Replace YOUR_STORE_URL with your actual Square Online store URL
+        // Find it in: Square Dashboard → Online → Website
+        // Format: https://YOUR-STORE-NAME.square.site
+        
+        (function() {
+            const storeIframe = document.getElementById('square-store-iframe');
+            const storeLink = document.getElementById('square-store-link');
+            const setupNotice = document.querySelector('.setup-notice');
+            
+            if (!storeIframe) return;
+            
+            let storeUrl = storeIframe.src;
+            
+            // Also check the link href
+            if (storeLink) {
+                const linkUrl = storeLink.querySelector('a')?.href;
+                if (linkUrl && linkUrl !== 'YOUR_STORE_URL') {
+                    storeUrl = linkUrl;
+                }
+            }
+            
+            // Show setup notice if store URL not configured
+            if (!storeUrl || storeUrl === 'YOUR_STORE_URL' || storeUrl.includes('YOUR_STORE_URL')) {
+                if (setupNotice) {
+                    setupNotice.style.display = 'block';
+                }
+                storeIframe.style.display = 'none';
+                if (storeLink) storeLink.style.display = 'none';
+                return;
+            }
+            
+            // Update both iframe and link with the store URL
+            storeIframe.src = storeUrl;
+            if (storeLink) {
+                const linkAnchor = storeLink.querySelector('a');
+                if (linkAnchor) linkAnchor.href = storeUrl;
+            }
+            
+            // Store is configured - hide setup notice
+            if (setupNotice) {
+                setupNotice.style.display = 'none';
+            }
+            
+            // Handle iframe load
+            storeIframe.onload = function() {
+                // Store loaded successfully
+                storeIframe.style.display = 'block';
+                if (storeLink) storeLink.style.display = 'none';
+            };
+            
+            // Handle iframe errors or if iframe is blocked
+            let loadTimeout = setTimeout(function() {
+                // If iframe doesn't load within 5 seconds, show direct link
+                if (storeLink && storeIframe.style.display !== 'block') {
+                    storeLink.style.display = 'block';
+                    storeIframe.style.display = 'none';
+                    console.warn('Square store iframe may be blocked. Showing direct link instead.');
+                }
+            }, 5000);
+            
+            storeIframe.onload = function() {
+                clearTimeout(loadTimeout);
+                storeIframe.style.display = 'block';
+                if (storeLink) storeLink.style.display = 'none';
+            };
+            
+            storeIframe.onerror = function() {
+                clearTimeout(loadTimeout);
+                // Show direct link if iframe fails
+                if (storeLink) {
+                    storeLink.style.display = 'block';
+                }
+                storeIframe.style.display = 'none';
+                
+                if (setupNotice) {
+                    setupNotice.querySelector('p').textContent = 'Store iframe may be blocked. Use the direct link below to visit our store.';
+                }
+            };
+            
+            // Make iframe responsive - adjust height dynamically
+            function resizeIframe() {
+                // Try to get iframe content height (may be blocked by CORS)
+                // If blocked, keep default min-height
+                try {
+                    const iframeDoc = storeIframe.contentDocument || storeIframe.contentWindow?.document;
+                    if (iframeDoc && iframeDoc.body) {
+                        storeIframe.style.height = iframeDoc.body.scrollHeight + 'px';
+                    }
+                } catch (e) {
+                    // Cross-origin restrictions - use default height
+                    // This is expected for Square Online iframes
+                }
+            }
+            
+            // Try to resize after load
+            storeIframe.addEventListener('load', function() {
+                setTimeout(resizeIframe, 1000);
+            });
+        })();
+    </script>
+    
     <script src="../script.js"></script>
-    <script src="../printful-api-config.js"></script>
-    <script src="../merchandise-loader.js"></script>
 </body>
 </html>
 

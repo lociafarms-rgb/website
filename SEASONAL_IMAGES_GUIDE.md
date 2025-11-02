@@ -24,6 +24,10 @@ The following seasonal bulletin images are referenced in the website:
    - Used for: Fall Open House event
    - Recommended: Images representing autumn on a farm (fall foliage, pumpkins, corn stalks, autumn harvest, etc.)
 
+4. **Winter 2025** - `images/seasonal-winter-2025.jpg`
+   - Used for: Winter Christmas Celebration event
+   - Recommended: Images representing winter on a farm (snow-covered fields, cozy farm scenes, winter activities, etc.)
+
 ## Image Specifications
 
 ### Technical Requirements
@@ -59,6 +63,7 @@ You can use stock images from:
 - **Spring**: "farm spring", "farm animals spring", "green field farm", "baby animals farm"
 - **Summer**: "farm harvest summer", "vegetable harvest", "sunny farm field", "fresh produce farm"
 - **Fall**: "farm autumn", "pumpkin farm", "fall harvest", "farm autumn foliage"
+- **Winter**: "farm winter", "snow farm", "winter farm scene", "cozy farm winter"
 
 ## Adding Images
 
@@ -95,6 +100,15 @@ Before uploading, consider:
 ✅ Image structure added to HTML
 ✅ CSS styling implemented
 ✅ Responsive design configured
-⏳ Images need to be added to `/website/images/` directory
+✅ Images downloaded from Unsplash and added to `/website/images/` directory
 
-Once you add the actual image files with the correct names, they will automatically appear on the website.
+### Downloaded Images
+
+All seasonal images have been successfully downloaded from Unsplash:
+
+- **Spring 2025**: `seasonal-spring-2025.jpg` (262KB, 1200x675px) - Farm landscape with spring growth
+- **Summer 2025**: `seasonal-summer-2025.jpg` (90KB, 1200x675px) - Summer harvest field
+- **Fall 2025**: `seasonal-fall-2025.jpg` (162KB, 1200x675px) - Autumn farm scene
+- **Winter 2025**: `seasonal-winter-2025.jpg` (174KB, 1200x675px) - Winter farm scene
+
+All images are optimized for web (under 500KB) and formatted in 16:9 aspect ratio (1200x675 pixels). The images are now live on your website!
