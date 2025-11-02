@@ -8,7 +8,7 @@ const ANALYTICS_CONFIG = {
     // Get from: Google Analytics → Admin → Data Streams → Web Stream → Measurement ID
     // Format: G-XXXXXXXXXX
     // Create GA4 property: https://analytics.google.com → Admin → Create Property
-    GA4_MEASUREMENT_ID: 'G-XXXXXXXXXX', // ⚠️ UPDATE with your GA4 Measurement ID
+    GA4_MEASUREMENT_ID: 'G-J4R8TKD3PE', // ✅ Configured
     
     // Google Ads Conversion ID (already configured)
     GOOGLE_ADS_CONVERSION_ID: 'AW-17696537147',
@@ -32,7 +32,7 @@ function initializeAnalytics() {
     }
     
     // Load GA4 script if configured
-    if (ANALYTICS_CONFIG.GA4_MEASUREMENT_ID && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
+    if (ANALYTICS_CONFIG.GA4_MEASUREMENT_ID && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID.length > 0) {
         // Load GA4 script dynamically
         const ga4Script = document.createElement('script');
         ga4Script.async = true;
@@ -53,7 +53,7 @@ function initializeAnalytics() {
     }
     
     // Link Analytics and Ads if configured
-    if (ANALYTICS_CONFIG.LINK_ANALYTICS_AND_ADS && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
+    if (ANALYTICS_CONFIG.LINK_ANALYTICS_AND_ADS && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID.length > 0) {
         gtag('config', ANALYTICS_CONFIG.GOOGLE_ADS_CONVERSION_ID, {
             'allow_enhanced_conversions_for_personal_information': ANALYTICS_CONFIG.ENHANCED_CONVERSIONS
         });

@@ -29,7 +29,7 @@
    - **Website URL**: `https://lociafarms-rgb.github.io/website/`
    - **Stream name**: "Locia Farms Website"
 3. Click **Create stream**
-4. **Copy your Measurement ID** (format: `G-XXXXXXXXXX`)
+4. **Copy your Measurement ID** (format: `G-J4R8TKD3PE`)
 
 ### Step 3: Configure the Website
 
@@ -155,9 +155,9 @@ For better conversion tracking accuracy:
 ## Current Configuration
 
 ```javascript
-GA4_MEASUREMENT_ID: 'G-XXXXXXXXXX', // ⚠️ UPDATE THIS
+GA4_MEASUREMENT_ID: 'G-J4R8TKD3PE', // ✅ Configured
 GOOGLE_ADS_CONVERSION_ID: 'AW-17696537147', // ✅ Already set
-LINK_ANALYTICS_AND_ADS: false, // ⚠️ Set to true after linking
+LINK_ANALYTICS_AND_ADS: false, // ⚠️ Set to true after linking accounts
 ENHANCED_CONVERSIONS: false, // Optional
 ```
 
