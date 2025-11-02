@@ -106,7 +106,7 @@ function trackPageView(pagePath, pageTitle = null) {
             params.page_title = pageTitle;
         }
         
-        if (ANALYTICS_CONFIG.GA4_MEASUREMENT_ID && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID !== 'G-XXXXXXXXXX') {
+        if (ANALYTICS_CONFIG.GA4_MEASUREMENT_ID && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID !== 'G-XXXXXXXXXX' && ANALYTICS_CONFIG.GA4_MEASUREMENT_ID.length > 0) {
             window.gtag('event', 'page_view', params);
         }
     }

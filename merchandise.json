@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "example-1",
+      "name": "Locia Farms T-Shirt",
+      "description": "Comfortable cotton t-shirt featuring the Locia Farms logo. Available in multiple sizes and colors.",
+      "thumbnail": "images/splash-home-02.jpeg",
+      "variants": [
+        {
+          "id": "variant-1",
+          "name": "Black - Small",
+          "size": "S",
+          "color": "Black",
+          "retail_price": "24.99",
+          "currency": "USD",
+          "is_available": true
+        },
+        {
+          "id": "variant-2",
+          "name": "Black - Medium",
+          "size": "M",
+          "color": "Black",
+          "retail_price": "24.99",
+          "currency": "USD",
+          "is_available": true
+        }
+      ]
+    }
+  ]
+}
+

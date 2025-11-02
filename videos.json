@@ -1,3 +1,19 @@
 {
-  "videos": []
+  "videos": [
+    {
+      "id": "YQjL95ZNhxo",
+      "title": "Welcome to Locia Farms - A Peaceful Family Farm in Ocala, Florida",
+      "description": "Welcome to Locia Farms - a peaceful six-acre hideaway in Morriston, Ocala, Florida. Experience our family farm with goats, chickens, and fresh produce.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=YQjL95ZNhxo",
+      "date": "2025-11-01",
+      "transcript": "Video Summary:\n\n\u2022 Peaceful Farm Landscape\n  Welcome to Locia Farms, a peaceful six-acre hideaway...\n\n\u2022 Happy Goats on the Farm\n  Our goats roam freely, bringing joy to our daily lives...\n\n\u2022 Our Free-Range Chickens\n  Fresh eggs come from our happy, free-range chickens..."
+    },
+    {
+      "id": "sPcq2ME5xhc",
+      "title": "Welcome to Locia Farms - A Peaceful Family Farm in Ocala, Florida",
+      "description": "Welcome to Locia Farms - a peaceful six-acre hideaway in Morriston, Ocala, Florida. Experience our family farm with goats, chickens, and fresh produce.",
+      "youtubeUrl": "https://www.youtube.com/watch?v=sPcq2ME5xhc",
+      "date": "2025-11-01"
+    }
+  ]
 }
