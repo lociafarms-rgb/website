@@ -1,15 +1,26 @@
-# macOS
-.DS_Store
-._*
+# Dependencies
+node_modules/
+package-lock.json
 
-# Editor directories and files
-.idea/
+# Test coverage
+coverage/
+.nyc_output/
+
+# IDE
 .vscode/
+.idea/
 *.swp
 *.swo
 *~
 
-# Temporary files
-*.tmp
-*.log
+# OS
+.DS_Store
+Thumbs.db
 
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local

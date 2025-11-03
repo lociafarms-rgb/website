@@ -1,0 +1,24 @@
+{
+  "name": "locia-farms-website",
+  "version": "1.0.0",
+  "description": "Locia Farms website - Modern farmcore-styled website",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@vitest/ui": "^1.3.1",
+    "jsdom": "^24.0.0",
+    "vitest": "^1.3.1"
+  },
+  "keywords": [
+    "farm",
+    "website",
+    "agriculture"
+  ],
+  "author": "Locia Farms",
+  "license": "MIT"
+}
+

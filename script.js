@@ -20,30 +20,33 @@ const CONFIG = {
 // ============================================================================
 const utils = {
     /**
-     * Debounce function calls
+     * Debounce function calls - prevents excessive function execution
+     * @param {Function} func - Function to debounce
+     * @param {number} wait - Wait time in milliseconds
+     * @returns {Function} Debounced function
      */
     debounce(func, wait) {
         let timeout;
         return function executedFunction(...args) {
-            const later = () => {
-                clearTimeout(timeout);
-                func(...args);
-            };
             clearTimeout(timeout);
-            timeout = setTimeout(later, wait);
+            timeout = setTimeout(() => func(...args), wait);
         };
     },
 
     /**
      * Check if element is in viewport
+     * @param {HTMLElement} element - Element to check
+     * @returns {boolean} True if element is in viewport
      */
     isInViewport(element) {
+        if (!element) return false;
         const rect = element.getBoundingClientRect();
+        const { innerHeight, innerWidth } = window;
         return (
             rect.top >= 0 &&
             rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.bottom <= innerHeight &&
+            rect.right <= innerWidth
         );
     }
 };
@@ -346,16 +349,11 @@ class ScrollEffectsController {
     init() {
         if (!this.header) return;
 
-        // Throttled scroll handler for better performance
+        // Debounced scroll handler for better performance
         const handleScroll = utils.debounce(() => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > CONFIG.SCROLL_OFFSET) {
-                this.header.classList.add('scrolled');
-            } else {
-                this.header.classList.remove('scrolled');
-            }
-        }, 10);
+            const shouldAddScrolled = window.pageYOffset > CONFIG.SCROLL_OFFSET;
+            this.header.classList.toggle('scrolled', shouldAddScrolled);
+        }, 16); // ~60fps for smoother performance
 
         window.addEventListener('scroll', handleScroll, { passive: true });
     }

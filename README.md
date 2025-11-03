@@ -35,6 +35,33 @@ python3 -m http.server 8000
 # Then visit: http://localhost:8000
 ```
 
+## Testing
+
+This project uses Vitest for unit testing.
+
+### Install Dependencies
+```bash
+npm install
+```
+
+### Run Tests
+```bash
+# Run tests once
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+```
+
+### Test Structure
+- `tests/utils.test.js` - Utility functions (debounce, isInViewport)
+- `tests/navigation.test.js` - NavigationController tests
+- `tests/carousel.test.js` - PhotoCarousel logic tests
+- `tests/video-loader.test.js` - VideoLoader utility tests
+
 ## YouTube Integration
 
 The website automatically fetches videos from your YouTube channel. See `YOUTUBE_SETUP.md` for configuration.
