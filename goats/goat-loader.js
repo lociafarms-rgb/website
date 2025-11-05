@@ -27,31 +27,42 @@ class GoatLoader {
 
         try {
             // Load goats from JSON file
-            // GitHub Pages serves from website/ subdirectory, so path depends on current location
-            const isGoatsPage = window.location.pathname.includes('/goats/') || window.location.pathname.endsWith('/goats');
-            const goatsPath = isGoatsPage 
-                ? 'goats.json'  // From goats/index.html, JSON is in same directory
-                : 'goats/goats.json';  // From root, JSON is in goats/ subdirectory
-            const response = await fetch(goatsPath);
+            // Try multiple possible paths based on GitHub Pages structure
+            const pathname = window.location.pathname;
+            const possiblePaths = [];
             
-            // Helper function to normalize image paths
-            const normalizeImagePath = (path) => {
-                // If path already starts with http or /, return as-is
-                if (path.startsWith('http') || path.startsWith('/')) {
-                    return path;
+            // If we're in goats/ subdirectory
+            if (pathname.includes('/goats/') || pathname.endsWith('/goats')) {
+                possiblePaths.push('goats.json');  // Same directory
+                possiblePaths.push('../goats/goats.json');  // Parent/goats/
+            } else {
+                possiblePaths.push('goats/goats.json');  // From root
+                possiblePaths.push('../goats/goats.json');  // From parent
+            }
+            
+            // Also try with /website/ prefix for GitHub Pages
+            if (pathname.includes('/website/')) {
+                possiblePaths.push('/website/goats/goats.json');
+            }
+            
+            let response = null;
+            let lastError = null;
+            
+            // Try each path until one works
+            for (const path of possiblePaths) {
+                try {
+                    response = await fetch(path);
+                    if (response.ok) {
+                        break; // Found working path
+                    }
+                } catch (err) {
+                    lastError = err;
+                    continue; // Try next path
                 }
-                // If path starts with ../, remove it and use root-relative path
-                if (path.startsWith('../')) {
-                    return path.substring(3); // Remove '../'
-                }
-                // If path starts with ./, remove it
-                if (path.startsWith('./')) {
-                    return path.substring(2);
-                }
-                return path;
-            };
-            if (!response.ok) {
-                throw new Error('Failed to load goats.json');
+            }
+            
+            if (!response || !response.ok) {
+                throw new Error(`Failed to load goats.json. Tried paths: ${possiblePaths.join(', ')}`);
             }
             
             const data = await response.json();
@@ -66,6 +77,8 @@ class GoatLoader {
             this.renderGoats();
         } catch (error) {
             console.error('Error loading goats:', error);
+            console.error('Current pathname:', window.location.pathname);
+            console.error('Current hostname:', window.location.hostname);
             this.showErrorState();
         }
     }
