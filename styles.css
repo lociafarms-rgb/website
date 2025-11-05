@@ -1646,7 +1646,8 @@ footer p {
     border-top: 1px solid var(--divider-light);
 }
 
-.goat-accordion-image-full {
+.goat-carousel-container {
+    position: relative;
     width: 100%;
     aspect-ratio: 4/3;
     border-radius: 12px;
@@ -1654,10 +1655,101 @@ footer p {
     background: var(--surface);
 }
 
-.goat-accordion-image-full img {
+.goat-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.goat-carousel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.goat-carousel-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.goat-carousel-slide.active {
+    opacity: 1;
+}
+
+.goat-carousel-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+.goat-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--surface-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: var(--shadow-2);
+    transition: all var(--transition-base);
+    color: var(--primary-color);
+    padding: 0;
+}
+
+.goat-carousel-btn:hover {
+    background: var(--surface-glass-dark);
+    box-shadow: var(--shadow-4);
+    transform: translateY(-50%) scale(1.1);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.goat-carousel-btn.prev {
+    left: 12px;
+}
+
+.goat-carousel-btn.next {
+    right: 12px;
+}
+
+.goat-carousel-indicators {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.goat-carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    padding: 0;
+}
+
+.goat-carousel-indicator.active {
+    background-color: white;
+    width: 24px;
+    border-radius: 6px;
 }
 
 .goat-accordion-details {

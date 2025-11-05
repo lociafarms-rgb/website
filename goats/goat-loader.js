@@ -230,13 +230,55 @@ class GoatLoader {
             </div>
         `;
         
-        // Create accordion content (collapsible)
+        // Get images array - support both single image and images array
+        const images = goat.images || [goat.image];
+        const normalizedImages = images.map(img => {
+            let path = img;
+            if (path.startsWith('../')) path = path.substring(3);
+            if (path.startsWith('goats/')) path = path.substring(6);
+            if (path.startsWith('/goats/')) path = path.substring(7);
+            path = path.replace(/\.\.\//g, '');
+            if (!path.startsWith('http') && !path.startsWith('//') && !path.startsWith('/')) {
+                path = '/' + path;
+            }
+            if (isGitHubPages && path.startsWith('/') && !path.startsWith('/website/')) {
+                path = '/website' + path;
+            }
+            return path;
+        });
+        
+        // Create accordion content (collapsible) with carousel
         const accordionContent = document.createElement('div');
         accordionContent.className = 'goat-accordion-content';
         accordionContent.innerHTML = `
             <div class="goat-accordion-body">
-                <div class="goat-accordion-image-full">
-                    <img src="${finalImagePath}" alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}" loading="lazy" decoding="async">
+                <div class="goat-carousel-container">
+                    <button class="goat-carousel-btn prev" aria-label="Previous image">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <div class="goat-carousel-wrapper">
+                        <div class="goat-carousel-track">
+                            ${normalizedImages.map((imgPath, idx) => `
+                                <div class="goat-carousel-slide ${idx === 0 ? 'active' : ''}">
+                                    <img src="${imgPath}" alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}" loading="lazy" decoding="async">
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                    <button class="goat-carousel-btn next" aria-label="Next image">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                    ${normalizedImages.length > 1 ? `
+                    <div class="goat-carousel-indicators">
+                        ${normalizedImages.map((_, idx) => `
+                            <button class="goat-carousel-indicator ${idx === 0 ? 'active' : ''}" data-index="${idx}" aria-label="Go to image ${idx + 1}"></button>
+                        `).join('')}
+                    </div>
+                    ` : ''}
                 </div>
                 <div class="goat-accordion-details">
                     <div class="goat-story">
@@ -291,20 +333,86 @@ class GoatLoader {
             };
         }
         
-        // Replace the image src in accordion content
-        const contentImg = accordionContent.querySelector('img');
-        if (contentImg) {
-            contentImg.src = finalImagePath;
-            contentImg.onerror = function() {
+        // Initialize carousel for this goat
+        if (normalizedImages.length > 1) {
+            this.initGoatCarousel(accordionContent, normalizedImages.length);
+        }
+        
+        // Set up error handlers for all images
+        const allImages = accordionContent.querySelectorAll('img');
+        allImages.forEach(img => {
+            img.onerror = function() {
                 this.onerror = null;
                 const fallbackPath = window.location.hostname.includes('github.io') 
                     ? '/website/images/splash-home-goat-01.jpeg' 
                     : '/images/splash-home-goat-01.jpeg';
                 this.src = fallbackPath;
             };
-        }
+        });
 
         return accordionItem;
+    }
+
+    initGoatCarousel(container, imageCount) {
+        const carouselContainer = container.querySelector('.goat-carousel-container');
+        const track = container.querySelector('.goat-carousel-track');
+        const slides = container.querySelectorAll('.goat-carousel-slide');
+        const prevBtn = container.querySelector('.goat-carousel-btn.prev');
+        const nextBtn = container.querySelector('.goat-carousel-btn.next');
+        const indicators = container.querySelectorAll('.goat-carousel-indicator');
+        
+        let currentIndex = 0;
+        
+        const goToSlide = (index) => {
+            if (index < 0) index = imageCount - 1;
+            if (index >= imageCount) index = 0;
+            
+            currentIndex = index;
+            
+            // Update slides
+            slides.forEach((slide, idx) => {
+                slide.classList.toggle('active', idx === currentIndex);
+            });
+            
+            // Update indicators
+            indicators.forEach((indicator, idx) => {
+                indicator.classList.toggle('active', idx === currentIndex);
+            });
+        };
+        
+        // Navigation buttons
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+        }
+        
+        // Indicator clicks
+        indicators.forEach((indicator, idx) => {
+            indicator.addEventListener('click', () => goToSlide(idx));
+        });
+        
+        // Touch/swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        track.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    goToSlide(currentIndex + 1); // Swipe left - next
+                } else {
+                    goToSlide(currentIndex - 1); // Swipe right - prev
+                }
+            }
+        }, { passive: true });
+    }
     }
 
     escapeHtml(text) {
