@@ -91,11 +91,32 @@ class GoatLoader {
             .join('');
 
         // Normalize image path for GitHub Pages compatibility
-        const imagePath = goat.image.startsWith('../') 
-            ? goat.image.substring(3) // Remove '../' for root-relative path
-            : goat.image.startsWith('/') 
-                ? goat.image.substring(1) // Remove leading '/' for root-relative
-                : goat.image;
+        // Since we're in a subdirectory (goats/), we need to handle paths correctly
+        let imagePath = goat.image;
+        
+        // If path already starts with http or //, use as-is
+        if (imagePath.startsWith('http') || imagePath.startsWith('//')) {
+            // Absolute URL, use as-is
+        }
+        // If path starts with '/', it's absolute from root - remove leading '/' for root-relative
+        else if (imagePath.startsWith('/')) {
+            imagePath = imagePath.substring(1);
+        }
+        // If path starts with '../', convert to root-relative by removing '../'
+        else if (imagePath.startsWith('../')) {
+            imagePath = imagePath.substring(3);
+        }
+        // If path is already root-relative (starts with 'images/', 'logos/', etc.), use as-is
+        // Otherwise, assume it needs to be root-relative
+        else if (!imagePath.startsWith('images/') && !imagePath.startsWith('logos/')) {
+            // If it's a bare filename or relative path, we might need to prepend
+            // But since our JSON has full paths, this shouldn't happen
+        }
+        
+        // Ensure the path is correct for the current page location
+        // For GitHub Pages with custom domain, root-relative paths work
+        // For subdirectories, we need to ensure the path resolves correctly
+        // The path should work if it's root-relative from the website root
         
         card.innerHTML = `
             <div class="goat-image">
@@ -104,7 +125,7 @@ class GoatLoader {
                     alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}"
                     loading="lazy"
                     decoding="async"
-                    onerror="this.onerror=null; this.src='images/splash-home-goat-01.jpeg';"
+                    onerror="this.onerror=null; this.src=window.location.pathname.includes('/goats/') ? '../images/splash-home-goat-01.jpeg' : 'images/splash-home-goat-01.jpeg';"
                 >
             </div>
             <div class="goat-content">
