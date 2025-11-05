@@ -1888,6 +1888,58 @@ footer p {
 }
 
 /* Responsive Goat Gallery */
+/* Responsive Goat Accordion */
+@media (max-width: 768px) {
+    .goat-accordion-body {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .goat-accordion-image {
+        width: 100px;
+        height: 100px;
+        min-width: 100px;
+    }
+    
+    .goat-accordion-name {
+        font-size: 1.5rem;
+    }
+    
+    .goat-accordion-bio-preview {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .goat-accordion-header-content {
+        gap: 1rem;
+    }
+    
+    .goat-accordion-image {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+    }
+    
+    .goat-accordion-name {
+        font-size: 1.25rem;
+    }
+    
+    .goat-accordion-bio-preview {
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    .goat-accordion-icon {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+    }
+}
+
 @media (max-width: 1024px) {
     .goats-grid {
         grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
