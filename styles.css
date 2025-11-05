@@ -1525,6 +1525,165 @@ footer p {
     background-color: var(--background);
 }
 
+/* Goats Accordion Styles */
+.goats-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.goat-accordion-item {
+    background: var(--surface-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-2);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.goat-accordion-item:hover {
+    box-shadow: var(--shadow-4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.goat-accordion-header {
+    padding: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color var(--transition-base);
+}
+
+.goat-accordion-header:hover {
+    background-color: var(--surface-glass-dark);
+}
+
+.goat-accordion-header-content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.goat-accordion-image {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.goat-accordion-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.goat-accordion-header-text {
+    flex: 1;
+}
+
+.goat-accordion-name {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.goat-accordion-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.goat-accordion-bio-preview {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.goat-accordion-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: transform var(--transition-base);
+}
+
+.goat-accordion-item.expanded .goat-accordion-icon {
+    transform: rotate(180deg);
+}
+
+.goat-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 1.5rem;
+}
+
+.goat-accordion-item.expanded .goat-accordion-content {
+    max-height: 2000px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.goat-accordion-body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--divider-light);
+}
+
+.goat-accordion-image-full {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.goat-accordion-image-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.goat-accordion-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.goat-story h4,
+.goat-traits h4,
+.goat-activity h4 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+
+.goat-story p,
+.goat-activity p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Legacy grid styles for backward compatibility */
 .goats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
@@ -1667,8 +1826,8 @@ footer p {
 }
 
 /* Loading State for Goats */
+.goats-accordion .loading-state,
 .goats-grid .loading-state {
-    grid-column: 1 / -1;
     text-align: center;
     padding: 4rem 2rem;
     color: var(--text-secondary);
@@ -1696,8 +1855,8 @@ footer p {
 }
 
 /* Empty State for Goats */
+.goats-accordion .empty-state,
 .goats-grid .empty-state {
-    grid-column: 1 / -1;
     text-align: center;
     padding: 4rem 2rem;
     background: var(--surface-glass);

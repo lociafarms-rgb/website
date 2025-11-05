@@ -93,6 +93,7 @@ class GoatLoader {
 
         // Clear loading state
         this.goatsContainer.innerHTML = '';
+        this.goatsContainer.className = 'goats-accordion'; // Change to accordion class
 
         // Render each goat
         this.goats.forEach(goat => {
@@ -102,8 +103,9 @@ class GoatLoader {
     }
 
     createGoatCard(goat) {
-        const card = document.createElement('div');
-        card.className = 'goat-card material-card';
+        const accordionItem = document.createElement('div');
+        accordionItem.className = 'goat-accordion-item';
+        accordionItem.setAttribute('data-goat-id', goat.id);
         
         // Create personality tags
         const personalityTags = goat.personality
@@ -201,51 +203,108 @@ class GoatLoader {
             img.onload();
         }
         
-        const imageDiv = document.createElement('div');
-        imageDiv.className = 'goat-image';
-        imageDiv.appendChild(img);
-        
-        // Verify image was appended
-        console.log('GoatLoader: Image div created and image appended. Image div children:', imageDiv.children.length);
-        console.log('GoatLoader: Image div first child src:', imageDiv.querySelector('img')?.src);
-        
-        // Build card content
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'goat-content';
-        contentDiv.innerHTML = `
-                <div class="goat-header">
-                    <h2 class="goat-name">${this.escapeHtml(goat.name)}</h2>
-                    <div class="goat-meta">
+        // Create accordion header (always visible)
+        const accordionHeader = document.createElement('div');
+        accordionHeader.className = 'goat-accordion-header';
+        accordionHeader.setAttribute('role', 'button');
+        accordionHeader.setAttribute('tabindex', '0');
+        accordionHeader.setAttribute('aria-expanded', 'false');
+        accordionHeader.innerHTML = `
+            <div class="goat-accordion-header-content">
+                <div class="goat-accordion-image">
+                    <img src="${finalImagePath}" alt="${this.escapeHtml(goat.name)}" loading="lazy" decoding="async">
+                </div>
+                <div class="goat-accordion-header-text">
+                    <h3 class="goat-accordion-name">${this.escapeHtml(goat.name)}</h3>
+                    <div class="goat-accordion-meta">
                         <span class="goat-breed">${this.escapeHtml(goat.breed)}</span>
                         <span class="goat-age">${this.escapeHtml(goat.age)}</span>
                     </div>
+                    <p class="goat-accordion-bio-preview">${this.escapeHtml(goat.bio)}</p>
                 </div>
-                <p class="goat-bio">${this.escapeHtml(goat.bio)}</p>
-                <div class="goat-details">
+                <div class="goat-accordion-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6"/>
+                    </svg>
+                </div>
+            </div>
+        `;
+        
+        // Create accordion content (collapsible)
+        const accordionContent = document.createElement('div');
+        accordionContent.className = 'goat-accordion-content';
+        accordionContent.innerHTML = `
+            <div class="goat-accordion-body">
+                <div class="goat-accordion-image-full">
+                    <img src="${finalImagePath}" alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}" loading="lazy" decoding="async">
+                </div>
+                <div class="goat-accordion-details">
                     <div class="goat-story">
-                        <h3>Background Story</h3>
+                        <h4>Background Story</h4>
                         <p>${this.escapeHtml(goat.backgroundStory)}</p>
                     </div>
                     <div class="goat-traits">
-                        <h3>Personality</h3>
+                        <h4>Personality</h4>
                         <div class="personality-tags">
                             ${personalityTags}
                         </div>
                     </div>
                     ${goat.favoriteActivity ? `
                     <div class="goat-activity">
-                        <h3>Favorite Activity</h3>
+                        <h4>Favorite Activity</h4>
                         <p>${this.escapeHtml(goat.favoriteActivity)}</p>
                     </div>
                     ` : ''}
                 </div>
+            </div>
         `;
         
-        // Append image and content to card
-        card.appendChild(imageDiv);
-        card.appendChild(contentDiv);
+        // Set up click handler for accordion
+        accordionHeader.addEventListener('click', () => {
+            const isExpanded = accordionHeader.getAttribute('aria-expanded') === 'true';
+            accordionHeader.setAttribute('aria-expanded', !isExpanded);
+            accordionItem.classList.toggle('expanded');
+        });
+        
+        // Keyboard navigation
+        accordionHeader.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                accordionHeader.click();
+            }
+        });
+        
+        // Append header and content
+        accordionItem.appendChild(accordionHeader);
+        accordionItem.appendChild(accordionContent);
+        
+        // Replace the image src in accordion header with the actual img element
+        const headerImg = accordionHeader.querySelector('img');
+        if (headerImg) {
+            headerImg.src = finalImagePath;
+            headerImg.onerror = function() {
+                this.onerror = null;
+                const fallbackPath = window.location.hostname.includes('github.io') 
+                    ? '/website/images/splash-home-goat-01.jpeg' 
+                    : '/images/splash-home-goat-01.jpeg';
+                this.src = fallbackPath;
+            };
+        }
+        
+        // Replace the image src in accordion content
+        const contentImg = accordionContent.querySelector('img');
+        if (contentImg) {
+            contentImg.src = finalImagePath;
+            contentImg.onerror = function() {
+                this.onerror = null;
+                const fallbackPath = window.location.hostname.includes('github.io') 
+                    ? '/website/images/splash-home-goat-01.jpeg' 
+                    : '/images/splash-home-goat-01.jpeg';
+                this.src = fallbackPath;
+            };
+        }
 
-        return card;
+        return accordionItem;
     }
 
     escapeHtml(text) {
