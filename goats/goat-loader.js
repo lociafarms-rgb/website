@@ -110,42 +110,10 @@ class GoatLoader {
             .map(trait => `<span class="personality-tag">${this.escapeHtml(trait)}</span>`)
             .join('');
 
-        // Normalize image path for GitHub Pages
-        // GitHub Pages serves from website/ subdirectory when accessed via github.io
-        // Custom domain (www.lociafarms.com) may serve from root or website/ depending on config
-        let imagePath = goat.image;
-        
-        // Detect if we're on GitHub Pages URL or custom domain
-        const isGitHubPages = window.location.hostname.includes('github.io');
-        
-        if (!imagePath.startsWith('http') && !imagePath.startsWith('//')) {
-            // If path starts with /website/, keep it for GitHub Pages, adjust for custom domain
-            if (imagePath.startsWith('/website/')) {
-                // On custom domain, remove /website/ prefix if it's configured to serve from root
-                if (!isGitHubPages && window.location.hostname === 'www.lociafarms.com') {
-                    imagePath = imagePath.replace('/website/', '/');
-                }
-            }
-            // If path is relative (../images/...), convert appropriately
-            else if (imagePath.startsWith('../')) {
-                if (isGitHubPages) {
-                    // GitHub Pages: /website/images/...
-                    imagePath = '/website/' + imagePath.substring(3);
-                } else {
-                    // Custom domain: might be /images/... or /website/images/...
-                    // Try /images/ first (if custom domain serves from website/ root)
-                    imagePath = imagePath.substring(3); // Remove ../
-                }
-            }
-            // If path doesn't start with /, make it absolute
-            else if (!imagePath.startsWith('/')) {
-                if (isGitHubPages) {
-                    imagePath = '/website/' + imagePath;
-                } else {
-                    imagePath = '/' + imagePath;
-                }
-            }
-        }
+        // Use image path as-is from JSON
+        // Paths in JSON are relative (../images/...) which work correctly from goats/index.html
+        // The relative path ../images/... correctly resolves to the website root's images folder
+        const imagePath = goat.image;
         
         card.innerHTML = `
             <div class="goat-image">
