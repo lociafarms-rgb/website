@@ -212,7 +212,15 @@ class GoatLoader {
         accordionHeader.innerHTML = `
             <div class="goat-accordion-header-content">
                 <div class="goat-accordion-image">
-                    <img src="${finalImagePath}" alt="${this.escapeHtml(goat.name)}" loading="lazy" decoding="async">
+                    <img 
+                        src="${finalImagePath}" 
+                        alt="${this.escapeHtml(goat.name)}" 
+                        loading="lazy" 
+                        decoding="async"
+                        width="120"
+                        height="120"
+                        fetchpriority="low"
+                    >
                 </div>
                 <div class="goat-accordion-header-text">
                     <h3 class="goat-accordion-name">${this.escapeHtml(goat.name)}</h3>
@@ -269,6 +277,7 @@ class GoatLoader {
                                         decoding="async"
                                         width="800"
                                         height="600"
+                                        fetchpriority="${idx === 0 ? 'high' : 'low'}"
                                         style="max-width: 100%; height: auto;"
                                     >
                                 </div>
@@ -346,12 +355,21 @@ class GoatLoader {
             this.initGoatCarousel(accordionContent, normalizedImages.length);
         }
         
+        // Preload first image for faster display
+        if (normalizedImages.length > 0) {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = normalizedImages[0];
+            link.fetchPriority = 'high';
+            document.head.appendChild(link);
+        }
+        
         // Set up error handlers and optimize loading for all images
         const allImages = accordionContent.querySelectorAll('img');
         allImages.forEach((img, idx) => {
             // Set up error handler
             img.onerror = function() {
-                console.error('GoatLoader: Image failed to load:', this.src);
                 this.onerror = null;
                 const fallbackPath = window.location.hostname.includes('github.io') 
                     ? '/website/images/splash-home-goat-01.jpeg' 
@@ -359,22 +377,18 @@ class GoatLoader {
                 this.src = fallbackPath;
             };
             
-            // Log successful loads
-            img.onload = function() {
-                console.log('GoatLoader: Image loaded successfully:', this.src);
-            };
-            
             // Ensure image has proper attributes for optimization
             if (!img.hasAttribute('width')) {
-                img.setAttribute('width', '800');
+                img.setAttribute('width', idx === 0 && img.closest('.goat-accordion-image') ? '120' : '800');
             }
             if (!img.hasAttribute('height')) {
-                img.setAttribute('height', '600');
+                img.setAttribute('height', idx === 0 && img.closest('.goat-accordion-image') ? '120' : '600');
             }
             
-            // Add loading optimization
-            if (idx > 0) {
+            // Optimize loading strategy
+            if (idx > 0 || !img.closest('.goat-carousel-slide')) {
                 img.loading = 'lazy';
+                img.fetchPriority = 'low';
             }
         });
 
