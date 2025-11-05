@@ -117,22 +117,19 @@ class GoatLoader {
         let finalImagePath = goat.image;
         const isGitHubPages = window.location.hostname.includes('github.io');
         
-        // Convert all relative paths to absolute paths
-        if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
-            // Path is relative (e.g., ../images/... or images/...)
-            if (finalImagePath.startsWith('../')) {
-                // Remove ../ prefix
-                finalImagePath = finalImagePath.substring(3);
-            }
-            // Add appropriate prefix
+        // Always convert relative paths (../images/...) to absolute paths
+        // This prevents the browser from resolving them relative to the current page URL
+        if (finalImagePath.startsWith('../')) {
+            // Remove ../ prefix to get images/... or goats/images/...
+            finalImagePath = finalImagePath.substring(3);
+            // Add absolute prefix
             if (isGitHubPages) {
                 finalImagePath = '/website/' + finalImagePath;
             } else {
                 finalImagePath = '/' + finalImagePath;
             }
-        } else if (finalImagePath.startsWith('../')) {
-            // Path starts with ../ but we need to handle it
-            finalImagePath = finalImagePath.substring(3);
+        } else if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
+            // Path is relative but doesn't start with ../
             if (isGitHubPages) {
                 finalImagePath = '/website/' + finalImagePath;
             } else {
@@ -143,8 +140,9 @@ class GoatLoader {
             finalImagePath = '/website' + finalImagePath;
         }
         
-        // Final safety check - ensure path is absolute
+        // Final validation - ensure path is absolute (starts with /, http://, or //)
         if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
+            console.warn('GoatLoader: Image path was not converted to absolute:', goat.image, '->', finalImagePath);
             if (isGitHubPages) {
                 finalImagePath = '/website/' + finalImagePath;
             } else {
