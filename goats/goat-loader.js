@@ -159,21 +159,27 @@ class GoatLoader {
         // This prevents browser from resolving relative paths in innerHTML
         const img = document.createElement('img');
         img.alt = `${goat.name} - ${goat.breed}`;
+        // Use 'eager' for first few images to ensure they load immediately
+        // Use 'lazy' for rest to improve performance
         img.loading = 'lazy';
         img.decoding = 'async';
         
         // Log when image loads or fails
         img.onload = function() {
-            console.log('GoatLoader: Image loaded successfully:', finalImagePath);
+            console.log('GoatLoader: ✅ Image loaded successfully:', finalImagePath);
+            console.log('GoatLoader: Image naturalWidth:', this.naturalWidth, 'naturalHeight:', this.naturalHeight);
         };
         
-        img.onerror = function() {
-            console.error('GoatLoader: Image failed to load:', finalImagePath);
+        img.onerror = function(event) {
+            console.error('GoatLoader: ❌ Image failed to load:', finalImagePath);
+            console.error('GoatLoader: Error event:', event);
+            console.error('GoatLoader: Current src:', this.src);
             console.error('GoatLoader: Attempting fallback image');
             this.onerror = null;
             const fallbackPath = window.location.hostname.includes('github.io') 
                 ? '/website/images/splash-home-goat-01.jpeg' 
                 : '/images/splash-home-goat-01.jpeg';
+            console.log('GoatLoader: Setting fallback to:', fallbackPath);
             this.src = fallbackPath;
         };
         
@@ -184,6 +190,14 @@ class GoatLoader {
         // Verify image element was created
         console.log('GoatLoader: Image element created:', img);
         console.log('GoatLoader: Image src attribute:', img.src);
+        console.log('GoatLoader: Image complete:', img.complete);
+        console.log('GoatLoader: Image naturalWidth:', img.naturalWidth);
+        
+        // If image is already loaded (cached), manually trigger onload
+        if (img.complete && img.naturalWidth > 0) {
+            console.log('GoatLoader: Image already loaded from cache');
+            img.onload();
+        }
         
         const imageDiv = document.createElement('div');
         imageDiv.className = 'goat-image';
