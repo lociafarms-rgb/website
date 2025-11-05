@@ -121,7 +121,8 @@ class GoatLoader {
         console.log('GoatLoader: Original image path:', goat.image, 'on', window.location.hostname);
         
         // Remove any relative path components and /goats/ prefix
-        // Convert ../images/... to /images/...
+        // Convert ../images/... to images/... (relative from root)
+        // or to /images/... (absolute)
         if (finalImagePath.startsWith('../')) {
             finalImagePath = finalImagePath.substring(3); // Remove ../
         }
@@ -137,7 +138,8 @@ class GoatLoader {
         // Remove any remaining relative path components
         finalImagePath = finalImagePath.replace(/\.\.\//g, '');
         
-        // Ensure path starts with / (absolute path)
+        // On main page, paths should be relative to root (images/...) or absolute (/images/...)
+        // Ensure path starts with / (absolute path) for consistency
         if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
             finalImagePath = '/' + finalImagePath;
         }

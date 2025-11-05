@@ -37,7 +37,7 @@
                     <li><a href="#events">Events</a></li>
                     <li><a href="#videos">Video Blog</a></li>
                     <li><a href="merchandise/index.html">Shop</a></li>
-                    <li><a href="goats/index.html">Our Goats</a></li>
+                    <li><a href="#goats">Our Goats</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -122,7 +122,7 @@
                 <div class="product-grid">
                     <div class="product-card material-card">
                         <div class="card-image">
-                            <a href="goats/index.html" style="display: block; text-decoration: none;">
+                            <a href="#goats" style="display: block; text-decoration: none;">
                                 <img src="images/splash-home-goat-01.jpeg" alt="Goats" loading="lazy" decoding="async" width="400" height="300">
                             </a>
                         </div>
@@ -130,7 +130,7 @@
                             <h3>Goats</h3>
                             <p>Healthy, well-cared-for goats for meat and dairy production. Our goats are raised with care and sustainable practices.</p>
                             <div class="card-actions">
-                                <a href="goats/index.html" class="btn-text">Meet Our Goats</a>
+                                <a href="#goats" class="btn-text">Meet Our Goats</a>
                                 <a href="#contact" class="btn-text">Contact for Pricing</a>
                             </div>
                         </div>
@@ -290,6 +290,21 @@
             </div>
         </section>
 
+        <!-- Goats Gallery Section -->
+        <section id="goats" class="goats-section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Goats</h2>
+                <p class="section-subtitle">Each goat has their own unique personality and story. Learn about our friendly goats and their backgrounds.</p>
+                
+                <div class="goats-grid" id="goats-grid">
+                    <!-- Goats will be dynamically loaded from goats.json -->
+                    <div class="loading-state">
+                        <p>Loading goat profiles...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="about" class="about">
             <div class="container">
                 <h2 class="section-title">Our Story</h2>
@@ -354,7 +369,7 @@
                         <li><a href="#events">Events</a></li>
                         <li><a href="#videos">Video Blog</a></li>
                         <li><a href="merchandise/index.html">Shop</a></li>
-                        <li><a href="goats/index.html">Our Goats</a></li>
+                        <li><a href="#goats">Our Goats</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -374,5 +389,13 @@
     <script src="script.js"></script>
     <script src="youtube-api-config.js"></script>
     <script src="video-loader.js"></script>
+    <script src="goats/goat-loader.js"></script>
+    <script>
+        // Initialize goat loader on main page
+        if (document.getElementById('goats-grid')) {
+            const goatLoader = new GoatLoader();
+            goatLoader.init();
+        }
+    </script>
 </body>
 </html>
