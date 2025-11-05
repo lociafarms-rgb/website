@@ -338,15 +338,23 @@ class GoatLoader {
         accordionItem.appendChild(accordionContent);
         
         // Replace the image src in accordion header with the actual img element
-        const headerImg = accordionHeader.querySelector('img');
+        const headerImg = accordionHeader.querySelector('.goat-accordion-image img');
         if (headerImg) {
-            headerImg.src = finalImagePath;
+            // Use first image from normalized images array
+            const thumbnailPath = normalizedImages.length > 0 ? normalizedImages[0] : finalImagePath;
+            headerImg.src = thumbnailPath;
+            headerImg.setAttribute('width', '120');
+            headerImg.setAttribute('height', '120');
             headerImg.onerror = function() {
+                console.error('GoatLoader: Thumbnail image failed to load:', this.src);
                 this.onerror = null;
                 const fallbackPath = window.location.hostname.includes('github.io') 
                     ? '/website/images/splash-home-goat-01.jpeg' 
                     : '/images/splash-home-goat-01.jpeg';
                 this.src = fallbackPath;
+            };
+            headerImg.onload = function() {
+                console.log('GoatLoader: Thumbnail loaded successfully:', this.src);
             };
         }
         
