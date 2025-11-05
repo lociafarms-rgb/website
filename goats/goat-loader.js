@@ -128,7 +128,7 @@ class GoatLoader {
                 if (isGitHubPages) {
                     finalImagePath = '/website/' + finalImagePath;
                 } else {
-                    // Custom domain serves from root
+                    // Custom domain serves from root - ensure absolute path
                     finalImagePath = '/' + finalImagePath;
                 }
             }
@@ -143,6 +143,16 @@ class GoatLoader {
             // If path already starts with /, check if it needs /website/ prefix for GitHub Pages
             else if (isGitHubPages && !finalImagePath.startsWith('/website/')) {
                 finalImagePath = '/website' + finalImagePath;
+            }
+        }
+        
+        // Ensure final path is absolute (starts with /)
+        if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
+            const isGitHubPages = window.location.hostname.includes('github.io');
+            if (isGitHubPages) {
+                finalImagePath = '/website/' + finalImagePath;
+            } else {
+                finalImagePath = '/' + finalImagePath;
             }
         }
         
