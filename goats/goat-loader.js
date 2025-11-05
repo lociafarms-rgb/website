@@ -113,42 +113,38 @@ class GoatLoader {
         // Normalize image path for GitHub Pages hosting
         // Custom domain (www.lociafarms.com) serves from root: /images/...
         // GitHub Pages (github.io) serves from /website/ subdirectory: /website/images/...
+        // IMPORTANT: Always convert relative paths to absolute to prevent browser from resolving them relative to current page
         let finalImagePath = goat.image;
+        const isGitHubPages = window.location.hostname.includes('github.io');
         
-        if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//')) {
-            // Check if we're on GitHub Pages (github.io) or custom domain
-            const isGitHubPages = window.location.hostname.includes('github.io');
-            
-            // If path is relative (../images/...), convert to absolute
+        // Convert all relative paths to absolute paths
+        if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
+            // Path is relative (e.g., ../images/... or images/...)
             if (finalImagePath.startsWith('../')) {
-                // Remove ../ prefix - this gives us images/... from the website root
+                // Remove ../ prefix
                 finalImagePath = finalImagePath.substring(3);
-                
-                // Add appropriate prefix based on hosting
-                if (isGitHubPages) {
-                    finalImagePath = '/website/' + finalImagePath;
-                } else {
-                    // Custom domain serves from root - ensure absolute path
-                    finalImagePath = '/' + finalImagePath;
-                }
             }
-            // If path doesn't start with / or ../, make it absolute
-            else if (!finalImagePath.startsWith('/')) {
-                if (isGitHubPages) {
-                    finalImagePath = '/website/' + finalImagePath;
-                } else {
-                    finalImagePath = '/' + finalImagePath;
-                }
+            // Add appropriate prefix
+            if (isGitHubPages) {
+                finalImagePath = '/website/' + finalImagePath;
+            } else {
+                finalImagePath = '/' + finalImagePath;
             }
-            // If path already starts with /, check if it needs /website/ prefix for GitHub Pages
-            else if (isGitHubPages && !finalImagePath.startsWith('/website/')) {
-                finalImagePath = '/website' + finalImagePath;
+        } else if (finalImagePath.startsWith('../')) {
+            // Path starts with ../ but we need to handle it
+            finalImagePath = finalImagePath.substring(3);
+            if (isGitHubPages) {
+                finalImagePath = '/website/' + finalImagePath;
+            } else {
+                finalImagePath = '/' + finalImagePath;
             }
+        } else if (finalImagePath.startsWith('/') && isGitHubPages && !finalImagePath.startsWith('/website/')) {
+            // Absolute path on GitHub Pages needs /website/ prefix
+            finalImagePath = '/website' + finalImagePath;
         }
         
-        // Ensure final path is absolute (starts with /)
+        // Final safety check - ensure path is absolute
         if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
-            const isGitHubPages = window.location.hostname.includes('github.io');
             if (isGitHubPages) {
                 finalImagePath = '/website/' + finalImagePath;
             } else {
