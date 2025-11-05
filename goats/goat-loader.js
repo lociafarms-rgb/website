@@ -110,41 +110,39 @@ class GoatLoader {
             .map(trait => `<span class="personality-tag">${this.escapeHtml(trait)}</span>`)
             .join('');
 
-        // Normalize image path for GitHub Pages subdirectory hosting
-        // GitHub Pages serves from website/ subdirectory, so we need to detect the correct base path
+        // Normalize image path for GitHub Pages hosting
+        // Custom domain (www.lociafarms.com) serves from root: /images/...
+        // GitHub Pages (github.io) serves from /website/ subdirectory: /website/images/...
         let finalImagePath = goat.image;
         
         if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//')) {
-            // If path is relative (../images/...), convert to work from goats/ subdirectory
+            // Check if we're on GitHub Pages (github.io) or custom domain
+            const isGitHubPages = window.location.hostname.includes('github.io');
+            
+            // If path is relative (../images/...), convert to absolute
             if (finalImagePath.startsWith('../')) {
                 // Remove ../ prefix - this gives us images/... from the website root
                 finalImagePath = finalImagePath.substring(3);
                 
-                // Check if we're on GitHub Pages (github.io) or custom domain
-                // GitHub Pages serves from /website/ subdirectory when accessed via github.io
-                // Custom domain might serve from root or /website/ depending on config
-                const isGitHubPages = window.location.hostname.includes('github.io');
-                const pathname = window.location.pathname;
-                
-                // If pathname includes /website/, we're on GitHub Pages subdirectory structure
-                // Otherwise, we're on custom domain which might serve from root
-                if (isGitHubPages || pathname.includes('/website/')) {
+                // Add appropriate prefix based on hosting
+                if (isGitHubPages) {
                     finalImagePath = '/website/' + finalImagePath;
                 } else {
-                    // Custom domain - try root path first
+                    // Custom domain serves from root
                     finalImagePath = '/' + finalImagePath;
                 }
             }
-            // If path doesn't start with / or ../, make it relative to website root
+            // If path doesn't start with / or ../, make it absolute
             else if (!finalImagePath.startsWith('/')) {
-                const isGitHubPages = window.location.hostname.includes('github.io');
-                const pathname = window.location.pathname;
-                
-                if (isGitHubPages || pathname.includes('/website/')) {
+                if (isGitHubPages) {
                     finalImagePath = '/website/' + finalImagePath;
                 } else {
                     finalImagePath = '/' + finalImagePath;
                 }
+            }
+            // If path already starts with /, check if it needs /website/ prefix for GitHub Pages
+            else if (isGitHubPages && !finalImagePath.startsWith('/website/')) {
+                finalImagePath = '/website' + finalImagePath;
             }
         }
         
@@ -155,7 +153,7 @@ class GoatLoader {
                     alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}"
                     loading="lazy"
                     decoding="async"
-                    onerror="this.onerror=null; this.src=(window.location.hostname.includes('github.io') || window.location.pathname.includes('/website/') ? '/website/images/splash-home-goat-01.jpeg' : '/images/splash-home-goat-01.jpeg');"
+                    onerror="this.onerror=null; this.src=(window.location.hostname.includes('github.io') ? '/website/images/splash-home-goat-01.jpeg' : '/images/splash-home-goat-01.jpeg');"
                 >
             </div>
             <div class="goat-content">
