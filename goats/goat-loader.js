@@ -178,12 +178,20 @@ class GoatLoader {
         };
         
         // Set src AFTER setting up error handlers to ensure they're in place
-        img.src = finalImagePath;
         console.log('GoatLoader: Setting image src to:', finalImagePath);
+        img.src = finalImagePath;
+        
+        // Verify image element was created
+        console.log('GoatLoader: Image element created:', img);
+        console.log('GoatLoader: Image src attribute:', img.src);
         
         const imageDiv = document.createElement('div');
         imageDiv.className = 'goat-image';
         imageDiv.appendChild(img);
+        
+        // Verify image was appended
+        console.log('GoatLoader: Image div created and image appended. Image div children:', imageDiv.children.length);
+        console.log('GoatLoader: Image div first child src:', imageDiv.querySelector('img')?.src);
         
         // Build card content
         const contentDiv = document.createElement('div');
