@@ -156,17 +156,29 @@ class GoatLoader {
         
         console.log('GoatLoader: Final image path:', finalImagePath);
         
-        card.innerHTML = `
-            <div class="goat-image">
-                <img 
-                    src="${this.escapeHtml(finalImagePath)}" 
-                    alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}"
-                    loading="lazy"
-                    decoding="async"
-                    onerror="this.onerror=null; this.src=(window.location.hostname.includes('github.io') ? '/website/images/splash-home-goat-01.jpeg' : '/images/splash-home-goat-01.jpeg');"
-                >
-            </div>
-            <div class="goat-content">
+        // Create image element directly to ensure path is set correctly
+        // This prevents browser from resolving relative paths in innerHTML
+        const img = document.createElement('img');
+        img.src = finalImagePath; // Set src directly as absolute path
+        img.alt = `${goat.name} - ${goat.breed}`;
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        img.onerror = function() {
+            this.onerror = null;
+            const fallbackPath = window.location.hostname.includes('github.io') 
+                ? '/website/images/splash-home-goat-01.jpeg' 
+                : '/images/splash-home-goat-01.jpeg';
+            this.src = fallbackPath;
+        };
+        
+        const imageDiv = document.createElement('div');
+        imageDiv.className = 'goat-image';
+        imageDiv.appendChild(img);
+        
+        // Build card content
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'goat-content';
+        contentDiv.innerHTML = `
                 <div class="goat-header">
                     <h2 class="goat-name">${this.escapeHtml(goat.name)}</h2>
                     <div class="goat-meta">
