@@ -117,38 +117,44 @@ class GoatLoader {
         let finalImagePath = goat.image;
         const isGitHubPages = window.location.hostname.includes('github.io');
         
+        // Debug: Log original path
+        console.log('GoatLoader: Original image path:', goat.image, 'on', window.location.hostname);
+        
         // Always convert relative paths (../images/...) to absolute paths
         // This prevents the browser from resolving them relative to the current page URL
         if (finalImagePath.startsWith('../')) {
-            // Remove ../ prefix to get images/... or goats/images/...
+            // Remove ../ prefix to get images/...
             finalImagePath = finalImagePath.substring(3);
-            // Add absolute prefix
-            if (isGitHubPages) {
-                finalImagePath = '/website/' + finalImagePath;
-            } else {
-                finalImagePath = '/' + finalImagePath;
-            }
+            // Add absolute prefix - custom domain serves from root, not /website/
+            finalImagePath = '/' + finalImagePath;
+            console.log('GoatLoader: Converted ../ path to:', finalImagePath);
         } else if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
             // Path is relative but doesn't start with ../
-            if (isGitHubPages) {
-                finalImagePath = '/website/' + finalImagePath;
-            } else {
-                finalImagePath = '/' + finalImagePath;
-            }
+            finalImagePath = '/' + finalImagePath;
+            console.log('GoatLoader: Converted relative path to:', finalImagePath);
         } else if (finalImagePath.startsWith('/') && isGitHubPages && !finalImagePath.startsWith('/website/')) {
             // Absolute path on GitHub Pages needs /website/ prefix
             finalImagePath = '/website' + finalImagePath;
+            console.log('GoatLoader: Added /website/ prefix for GitHub Pages:', finalImagePath);
         }
         
         // Final validation - ensure path is absolute (starts with /, http://, or //)
         if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//') && !finalImagePath.startsWith('/')) {
             console.warn('GoatLoader: Image path was not converted to absolute:', goat.image, '->', finalImagePath);
-            if (isGitHubPages) {
-                finalImagePath = '/website/' + finalImagePath;
-            } else {
+            finalImagePath = '/' + finalImagePath;
+        }
+        
+        // Final check - ensure we never use relative paths
+        if (finalImagePath.includes('../')) {
+            console.error('GoatLoader: ERROR - Path still contains ../:', finalImagePath);
+            // Force absolute path
+            finalImagePath = finalImagePath.replace(/\.\.\//g, '');
+            if (!finalImagePath.startsWith('/')) {
                 finalImagePath = '/' + finalImagePath;
             }
         }
+        
+        console.log('GoatLoader: Final image path:', finalImagePath);
         
         card.innerHTML = `
             <div class="goat-image">
