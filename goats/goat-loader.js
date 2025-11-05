@@ -110,20 +110,41 @@ class GoatLoader {
             .map(trait => `<span class="personality-tag">${this.escapeHtml(trait)}</span>`)
             .join('');
 
-        // Use image path as-is from JSON
-        // Paths in JSON are relative (../images/...) which work correctly from goats/index.html
-        // The relative path ../images/... correctly resolves to the website root's images folder
-        const imagePath = goat.image;
+        // Normalize image path for GitHub Pages subdirectory hosting
+        // GitHub Pages serves from website/ subdirectory, so we need to detect the correct base path
+        let finalImagePath = goat.image;
         
-        // Normalize image path for current location
-        // If path starts with ../, convert to absolute path based on hosting
-        let finalImagePath = imagePath;
-        if (imagePath.startsWith('../')) {
-            // Remove ../ prefix and make absolute
-            finalImagePath = imagePath.substring(3);
-            // Ensure it starts with /
-            if (!finalImagePath.startsWith('/')) {
-                finalImagePath = '/' + finalImagePath;
+        if (!finalImagePath.startsWith('http') && !finalImagePath.startsWith('//')) {
+            // If path is relative (../images/...), convert to work from goats/ subdirectory
+            if (finalImagePath.startsWith('../')) {
+                // Remove ../ prefix - this gives us images/... from the website root
+                finalImagePath = finalImagePath.substring(3);
+                
+                // Check if we're on GitHub Pages (github.io) or custom domain
+                // GitHub Pages serves from /website/ subdirectory when accessed via github.io
+                // Custom domain might serve from root or /website/ depending on config
+                const isGitHubPages = window.location.hostname.includes('github.io');
+                const pathname = window.location.pathname;
+                
+                // If pathname includes /website/, we're on GitHub Pages subdirectory structure
+                // Otherwise, we're on custom domain which might serve from root
+                if (isGitHubPages || pathname.includes('/website/')) {
+                    finalImagePath = '/website/' + finalImagePath;
+                } else {
+                    // Custom domain - try root path first
+                    finalImagePath = '/' + finalImagePath;
+                }
+            }
+            // If path doesn't start with / or ../, make it relative to website root
+            else if (!finalImagePath.startsWith('/')) {
+                const isGitHubPages = window.location.hostname.includes('github.io');
+                const pathname = window.location.pathname;
+                
+                if (isGitHubPages || pathname.includes('/website/')) {
+                    finalImagePath = '/website/' + finalImagePath;
+                } else {
+                    finalImagePath = '/' + finalImagePath;
+                }
             }
         }
         
@@ -134,7 +155,7 @@ class GoatLoader {
                     alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}"
                     loading="lazy"
                     decoding="async"
-                    onerror="this.onerror=null; this.src='/images/splash-home-goat-01.jpeg';"
+                    onerror="this.onerror=null; this.src=(window.location.hostname.includes('github.io') || window.location.pathname.includes('/website/') ? '/website/images/splash-home-goat-01.jpeg' : '/images/splash-home-goat-01.jpeg');"
                 >
             </div>
             <div class="goat-content">
