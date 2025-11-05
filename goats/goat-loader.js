@@ -413,7 +413,6 @@ class GoatLoader {
             }
         }, { passive: true });
     }
-    }
 
     escapeHtml(text) {
         if (!text) return '';
