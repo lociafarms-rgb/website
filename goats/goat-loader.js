@@ -31,6 +31,23 @@ class GoatLoader {
                 ? 'goats.json' 
                 : 'goats/goats.json';
             const response = await fetch(goatsPath);
+            
+            // Helper function to normalize image paths
+            const normalizeImagePath = (path) => {
+                // If path already starts with http or /, return as-is
+                if (path.startsWith('http') || path.startsWith('/')) {
+                    return path;
+                }
+                // If path starts with ../, remove it and use root-relative path
+                if (path.startsWith('../')) {
+                    return path.substring(3); // Remove '../'
+                }
+                // If path starts with ./, remove it
+                if (path.startsWith('./')) {
+                    return path.substring(2);
+                }
+                return path;
+            };
             if (!response.ok) {
                 throw new Error('Failed to load goats.json');
             }
@@ -73,14 +90,21 @@ class GoatLoader {
             .map(trait => `<span class="personality-tag">${this.escapeHtml(trait)}</span>`)
             .join('');
 
+        // Normalize image path for GitHub Pages compatibility
+        const imagePath = goat.image.startsWith('../') 
+            ? goat.image.substring(3) // Remove '../' for root-relative path
+            : goat.image.startsWith('/') 
+                ? goat.image.substring(1) // Remove leading '/' for root-relative
+                : goat.image;
+        
         card.innerHTML = `
             <div class="goat-image">
                 <img 
-                    src="${this.escapeHtml(goat.image)}" 
+                    src="${this.escapeHtml(imagePath)}" 
                     alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}"
                     loading="lazy"
                     decoding="async"
-                    onerror="this.onerror=null; this.src='../images/splash-home-goat-01.jpeg';"
+                    onerror="this.onerror=null; this.src='images/splash-home-goat-01.jpeg';"
                 >
             </div>
             <div class="goat-content">

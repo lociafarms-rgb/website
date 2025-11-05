@@ -71,7 +71,7 @@
       "name": "Caramella",
       "breed": "Mixed",
       "age": "2 years",
-      "image": "../images/goats/caramella_profile.jpeg",
+      "image": "images/goats/caramella_profile.jpeg",
       "bio": "Caramella is a beautiful young goat with a warm caramel-colored coat and an observant, curious nature.",
       "backgroundStory": "Caramella joined our herd with her stunning light brown coat that earned her her sweet name. She's a young goat with a calm and curious personality, always watching and learning from her surroundings. Her gentle disposition and attentive nature make her a favorite among visitors, especially children who are drawn to her warm coloring and friendly eyes. Caramella loves exploring the farmyard and can often be found standing thoughtfully in the sunshine, taking in the world around her.",
       "personality": ["Curious", "Calm", "Observant", "Gentle"],
