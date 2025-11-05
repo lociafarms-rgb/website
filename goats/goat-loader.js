@@ -90,33 +90,10 @@ class GoatLoader {
             .map(trait => `<span class="personality-tag">${this.escapeHtml(trait)}</span>`)
             .join('');
 
-        // Normalize image path for GitHub Pages compatibility
-        // Since we're in a subdirectory (goats/), we need to handle paths correctly
-        let imagePath = goat.image;
-        
-        // If path already starts with http or //, use as-is
-        if (imagePath.startsWith('http') || imagePath.startsWith('//')) {
-            // Absolute URL, use as-is
-        }
-        // If path starts with '/', it's absolute from root - remove leading '/' for root-relative
-        else if (imagePath.startsWith('/')) {
-            imagePath = imagePath.substring(1);
-        }
-        // If path starts with '../', convert to root-relative by removing '../'
-        else if (imagePath.startsWith('../')) {
-            imagePath = imagePath.substring(3);
-        }
-        // If path is already root-relative (starts with 'images/', 'logos/', etc.), use as-is
-        // Otherwise, assume it needs to be root-relative
-        else if (!imagePath.startsWith('images/') && !imagePath.startsWith('logos/')) {
-            // If it's a bare filename or relative path, we might need to prepend
-            // But since our JSON has full paths, this shouldn't happen
-        }
-        
-        // Ensure the path is correct for the current page location
-        // For GitHub Pages with custom domain, root-relative paths work
-        // For subdirectories, we need to ensure the path resolves correctly
-        // The path should work if it's root-relative from the website root
+        // Use image path as-is from JSON
+        // Paths should be relative to the current page location (goats/index.html)
+        // So paths like "../images/goats/..." will work correctly
+        const imagePath = goat.image;
         
         card.innerHTML = `
             <div class="goat-image">
