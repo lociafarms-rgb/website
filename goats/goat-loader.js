@@ -92,10 +92,20 @@ class GoatLoader {
             .map(trait => `<span class="personality-tag">${this.escapeHtml(trait)}</span>`)
             .join('');
 
-        // Use image path directly from JSON
-        // Paths in JSON are already relative (../images/...) which works from goats/index.html
-        // GitHub Pages serves from website/ folder, so relative paths work correctly
-        const imagePath = goat.image;
+        // Use image path from JSON
+        // GitHub Pages serves from website/ subdirectory, so we use absolute paths from root
+        // Paths like /website/images/... work from any subdirectory
+        let imagePath = goat.image;
+        
+        // If path is relative (starts with ../), convert to absolute from root
+        if (imagePath.startsWith('../')) {
+            // Remove ../ and add /website/ prefix for GitHub Pages structure
+            imagePath = '/website/' + imagePath.substring(3);
+        }
+        // If path doesn't start with /, it's relative - add /website/ prefix
+        else if (!imagePath.startsWith('/') && !imagePath.startsWith('http')) {
+            imagePath = '/website/' + imagePath;
+        }
         
         card.innerHTML = `
             <div class="goat-image">
@@ -104,7 +114,7 @@ class GoatLoader {
                     alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}"
                     loading="lazy"
                     decoding="async"
-                    onerror="this.onerror=null; this.src='../images/splash-home-goat-01.jpeg';"
+                    onerror="this.onerror=null; this.src='/website/images/splash-home-goat-01.jpeg';"
                 >
             </div>
             <div class="goat-content">
