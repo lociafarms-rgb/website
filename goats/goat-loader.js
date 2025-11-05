@@ -102,7 +102,7 @@ class GoatLoader {
                     alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}"
                     loading="lazy"
                     decoding="async"
-                    onerror="this.onerror=null; this.src=window.location.pathname.includes('/goats/') ? '../images/splash-home-goat-01.jpeg' : 'images/splash-home-goat-01.jpeg';"
+                    onerror="this.onerror=null; this.src='images/splash-home-goat-01.jpeg';"
                 >
             </div>
             <div class="goat-content">
