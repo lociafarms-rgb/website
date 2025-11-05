@@ -262,7 +262,15 @@ class GoatLoader {
                         <div class="goat-carousel-track">
                             ${normalizedImages.map((imgPath, idx) => `
                                 <div class="goat-carousel-slide ${idx === 0 ? 'active' : ''}">
-                                    <img src="${imgPath}" alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}" loading="lazy" decoding="async">
+                                    <img 
+                                        src="${imgPath}" 
+                                        alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}" 
+                                        loading="${idx === 0 ? 'eager' : 'lazy'}" 
+                                        decoding="async"
+                                        width="800"
+                                        height="600"
+                                        style="max-width: 100%; height: auto;"
+                                    >
                                 </div>
                             `).join('')}
                         </div>
@@ -338,16 +346,36 @@ class GoatLoader {
             this.initGoatCarousel(accordionContent, normalizedImages.length);
         }
         
-        // Set up error handlers for all images
+        // Set up error handlers and optimize loading for all images
         const allImages = accordionContent.querySelectorAll('img');
-        allImages.forEach(img => {
+        allImages.forEach((img, idx) => {
+            // Set up error handler
             img.onerror = function() {
+                console.error('GoatLoader: Image failed to load:', this.src);
                 this.onerror = null;
                 const fallbackPath = window.location.hostname.includes('github.io') 
                     ? '/website/images/splash-home-goat-01.jpeg' 
                     : '/images/splash-home-goat-01.jpeg';
                 this.src = fallbackPath;
             };
+            
+            // Log successful loads
+            img.onload = function() {
+                console.log('GoatLoader: Image loaded successfully:', this.src);
+            };
+            
+            // Ensure image has proper attributes for optimization
+            if (!img.hasAttribute('width')) {
+                img.setAttribute('width', '800');
+            }
+            if (!img.hasAttribute('height')) {
+                img.setAttribute('height', '600');
+            }
+            
+            // Add loading optimization
+            if (idx > 0) {
+                img.loading = 'lazy';
+            }
         });
 
         return accordionItem;

@@ -1686,6 +1686,13 @@ footer p {
     height: 100%;
     object-fit: cover;
     display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Optimize image loading - ensure images don't cause layout shift */
+.goat-carousel-slide {
+    contain: layout style paint;
 }
 
 .goat-carousel-btn {
