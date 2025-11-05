@@ -158,17 +158,28 @@ class GoatLoader {
         // Create image element directly to ensure path is set correctly
         // This prevents browser from resolving relative paths in innerHTML
         const img = document.createElement('img');
-        img.src = finalImagePath; // Set src directly as absolute path
         img.alt = `${goat.name} - ${goat.breed}`;
         img.loading = 'lazy';
         img.decoding = 'async';
+        
+        // Log when image loads or fails
+        img.onload = function() {
+            console.log('GoatLoader: Image loaded successfully:', finalImagePath);
+        };
+        
         img.onerror = function() {
+            console.error('GoatLoader: Image failed to load:', finalImagePath);
+            console.error('GoatLoader: Attempting fallback image');
             this.onerror = null;
             const fallbackPath = window.location.hostname.includes('github.io') 
                 ? '/website/images/splash-home-goat-01.jpeg' 
                 : '/images/splash-home-goat-01.jpeg';
             this.src = fallbackPath;
         };
+        
+        // Set src AFTER setting up error handlers to ensure they're in place
+        img.src = finalImagePath;
+        console.log('GoatLoader: Setting image src to:', finalImagePath);
         
         const imageDiv = document.createElement('div');
         imageDiv.className = 'goat-image';
