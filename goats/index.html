@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the goats of Locia Farms - Each with their own unique personality and story. Learn about our friendly goats and their backgrounds.">
+    <title>Meet Our Goats - Locia Farms</title>
+    <link rel="canonical" href="https://www.lociafarms.com/goats/">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+    <link rel="icon" type="image/png" href="../logos/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Google tag (gtag.js) - Loads Google Analytics and Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17696537147"></script>
+    <script src="../analytics-config.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 0.75rem;">
+                        <img src="../logos/logo.png" alt="Locia Farms Logo" class="logo-img">
+                        <span class="logo-text">Locia Farms</span>
+                    </a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#products">Products & Services</a></li>
+                    <li><a href="../index.html#events">Events</a></li>
+                    <li><a href="../index.html#videos">Video Blog</a></li>
+                    <li><a href="../merchandise/index.html">Shop</a></li>
+                    <li><a href="index.html">Our Goats</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="goats-hero">
+            <div class="container">
+                <h1 class="page-title">Meet Our Goats</h1>
+                <p class="page-subtitle">Each member of our herd has a unique personality and story. Get to know the friendly faces that make Locia Farms a special place.</p>
+            </div>
+        </section>
+
+        <section class="goats-gallery">
+            <div class="container">
+                <div class="goats-grid" id="goats-grid">
+                    <!-- Goats will be loaded dynamically here -->
+                    <div class="loading-state">
+                        <div class="loading-spinner"></div>
+                        <p>Loading our goat family...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Locia Farms</h3>
+                    <p>A peaceful six-acre hideaway in Morriston, Ocala</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#products">Products</a></li>
+                        <li><a href="../index.html#events">Events</a></li>
+                        <li><a href="index.html">Our Goats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Morriston, Ocala, Florida</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Locia Farms. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="goat-loader.js"></script>
+</body>
+</html>
+

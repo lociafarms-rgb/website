@@ -1425,3 +1425,301 @@ footer p {
         font-size: 0.95rem;
     }
 }
+
+/* ============================================================================
+   GOAT PROFILES PAGE
+   ============================================================================ */
+.goats-hero {
+    padding: 6rem 2rem 3rem;
+    background: linear-gradient(135deg, var(--surface), var(--surface-variant));
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.goats-gallery {
+    padding: 4rem 2rem;
+    background-color: var(--background);
+}
+
+.goats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.goat-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.goat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-4);
+}
+
+.goat-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: var(--surface);
+}
+
+.goat-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.goat-card:hover .goat-image img {
+    transform: scale(1.08);
+}
+
+.goat-content {
+    padding: 2rem;
+    background: var(--surface-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-top: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.goat-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--divider-light);
+}
+
+.goat-name {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+}
+
+.goat-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.goat-breed {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.goat-age {
+    color: var(--text-light);
+}
+
+.goat-bio {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.goat-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.goat-story,
+.goat-traits,
+.goat-activity {
+    margin-top: auto;
+}
+
+.goat-story h3,
+.goat-traits h3,
+.goat-activity h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    font-family: 'Roboto Slab', serif;
+}
+
+.goat-story p,
+.goat-activity p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+.personality-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.personality-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-1);
+    transition: all var(--transition-base);
+}
+
+.personality-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-2);
+}
+
+/* Loading State for Goats */
+.goats-grid .loading-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--text-secondary);
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 1.5rem;
+    border: 4px solid var(--divider);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-state p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+/* Empty State for Goats */
+.goats-grid .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 2rem;
+    background: var(--surface-glass);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-2);
+}
+
+.goats-grid .empty-state svg {
+    width: 64px;
+    height: 64px;
+    color: var(--primary-color);
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+}
+
+.goats-grid .empty-state h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.goats-grid .empty-state p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    line-height: 1.7;
+}
+
+/* Responsive Goat Gallery */
+@media (max-width: 1024px) {
+    .goats-grid {
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .goats-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .goat-content {
+        padding: 1.5rem;
+    }
+    
+    .goat-name {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .goats-hero {
+        padding: 5rem 1.5rem 2rem;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .goats-gallery {
+        padding: 3rem 1.5rem;
+    }
+    
+    .goats-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .goat-content {
+        padding: 1.25rem;
+    }
+    
+    .goat-name {
+        font-size: 1.5rem;
+    }
+    
+    .goat-bio {
+        font-size: 1rem;
+    }
+}
