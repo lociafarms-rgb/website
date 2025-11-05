@@ -115,14 +115,26 @@ class GoatLoader {
         // The relative path ../images/... correctly resolves to the website root's images folder
         const imagePath = goat.image;
         
+        // Normalize image path for current location
+        // If path starts with ../, convert to absolute path based on hosting
+        let finalImagePath = imagePath;
+        if (imagePath.startsWith('../')) {
+            // Remove ../ prefix and make absolute
+            finalImagePath = imagePath.substring(3);
+            // Ensure it starts with /
+            if (!finalImagePath.startsWith('/')) {
+                finalImagePath = '/' + finalImagePath;
+            }
+        }
+        
         card.innerHTML = `
             <div class="goat-image">
                 <img 
-                    src="${this.escapeHtml(imagePath)}" 
+                    src="${this.escapeHtml(finalImagePath)}" 
                     alt="${this.escapeHtml(goat.name)} - ${this.escapeHtml(goat.breed)}"
                     loading="lazy"
                     decoding="async"
-                    onerror="this.onerror=null; this.src=(window.location.hostname.includes('github.io') ? '/website/images/splash-home-goat-01.jpeg' : '../images/splash-home-goat-01.jpeg');"
+                    onerror="this.onerror=null; this.src='/images/splash-home-goat-01.jpeg';"
                 >
             </div>
             <div class="goat-content">
