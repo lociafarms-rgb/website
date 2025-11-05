@@ -45,6 +45,11 @@ class GoatLoader {
                 possiblePaths.push('/website/goats/goats.json');
             }
             
+            // For custom domain, try without /website/ prefix
+            if (!pathname.includes('/website/')) {
+                possiblePaths.push('/goats/goats.json');
+            }
+            
             let response = null;
             let lastError = null;
             
