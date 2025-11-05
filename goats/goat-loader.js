@@ -205,8 +205,11 @@ class GoatLoader {
                     </div>
                     ` : ''}
                 </div>
-            </div>
         `;
+        
+        // Append image and content to card
+        card.appendChild(imageDiv);
+        card.appendChild(contentDiv);
 
         return card;
     }
