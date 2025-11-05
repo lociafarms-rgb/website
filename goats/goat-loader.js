@@ -27,9 +27,11 @@ class GoatLoader {
 
         try {
             // Load goats from JSON file
-            const goatsPath = window.location.pathname.includes('/goats/') 
-                ? 'goats.json' 
-                : 'goats/goats.json';
+            // GitHub Pages serves from website/ subdirectory, so path depends on current location
+            const isGoatsPage = window.location.pathname.includes('/goats/') || window.location.pathname.endsWith('/goats');
+            const goatsPath = isGoatsPage 
+                ? 'goats.json'  // From goats/index.html, JSON is in same directory
+                : 'goats/goats.json';  // From root, JSON is in goats/ subdirectory
             const response = await fetch(goatsPath);
             
             // Helper function to normalize image paths
