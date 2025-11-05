@@ -90,17 +90,10 @@ class GoatLoader {
             .map(trait => `<span class="personality-tag">${this.escapeHtml(trait)}</span>`)
             .join('');
 
-        // Normalize image path for GitHub Pages
-        // GitHub Pages serves from website/ subdirectory, so we need to handle paths correctly
-        let imagePath = goat.image;
-        
-        // If path doesn't start with http or /, make it relative to website root
-        if (!imagePath.startsWith('http') && !imagePath.startsWith('//') && !imagePath.startsWith('/')) {
-            // If path doesn't start with ../, add it for subdirectory compatibility
-            if (!imagePath.startsWith('../')) {
-                imagePath = '../' + imagePath;
-            }
-        }
+        // Use image path directly from JSON
+        // Paths in JSON are already relative (../images/...) which works from goats/index.html
+        // GitHub Pages serves from website/ folder, so relative paths work correctly
+        const imagePath = goat.image;
         
         card.innerHTML = `
             <div class="goat-image">
