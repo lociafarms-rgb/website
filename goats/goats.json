@@ -1,82 +1,244 @@
 {
   "goats": [
     {
-      "id": "goat-001",
-      "name": "Bella",
-      "breed": "Nubian",
-      "age": "3 years",
-      "image": "images/splash-home-goat-01.jpeg",
-      "bio": "Bella is the matriarch of our herd, known for her gentle nature and curious personality.",
-      "backgroundStory": "Bella was one of our first goats when we started Locia Farms. She came to us from a local farm that was closing down, and she immediately became the heart of our small herd. Her distinctive long ears and friendly bleating make her easy to spot, and she's always the first to greet visitors. Bella has a special bond with our children and has taught many young visitors about the gentle nature of farm animals.",
-      "personality": ["Curious", "Friendly", "Gentle", "Leader"],
-      "favoriteActivity": "Exploring the farm and greeting visitors"
+      "id": "goat-chip",
+      "name": "Chip",
+      "breed": "Nigerian Dwarf Buck",
+      "age": "Adult (2+ yrs)",
+      "image": "images/goats/profiles/chip.png",
+      "bio": "The fainting phenomenon! Chip is our distinguished Nigerian Dwarf buck with a special quirk—he has Myotonic genetics, meaning he faints when excited.",
+      "backgroundStory": "Chip is the patriarch of the Nigerian Dwarf herd. Standing taller than the others with a heavy bone structure, he commands respect—until he gets too excited and tips over! His 'fainting' is a harmless genetic trait that makes him all the more endearing. He's a gentle giant among dwarfs and loves a good scratch behind the ears.",
+      "personality": [
+        "Distinguished",
+        "Gentle",
+        "Quirky",
+        "Fainting"
+      ],
+      "favoriteActivity": "Overseeing his herd (from a horizontal position occasionally)"
     },
     {
-      "id": "goat-002",
-      "name": "Charlie",
-      "breed": "Alpine",
-      "age": "2 years",
-      "image": "images/splash-home-goat-02.jpeg",
-      "bio": "Charlie is our playful troublemaker, always finding new ways to explore and have fun.",
-      "backgroundStory": "Charlie joined us as a kid and has been entertaining us ever since. He's incredibly agile and loves climbing on anything he can find - logs, rocks, and even the fence posts. His playful antics keep the whole herd active, and he's known for his mischievous grin when he's up to something. Despite his energetic nature, Charlie is very affectionate and loves head scratches.",
-      "personality": ["Playful", "Energetic", "Adventurous", "Affectionate"],
-      "favoriteActivity": "Climbing on logs and exploring new areas"
+      "id": "goat-nugget",
+      "name": "Nugget",
+      "breed": "Nigerian Dwarf Buck",
+      "age": "Kid",
+      "image": "images/goats/profiles/nugget.png",
+      "bio": "One of the 'Sweet Tooth' brothers. Nugget is a tri-colored buck kid with a refined dairy character.",
+      "backgroundStory": "Nugget is Brownie's brother and partner in crime. Smaller and more refined than Chip, he represents the classic dairy style of the Nigerian Dwarf breed. He's full of energy and is constantly challenging his brother to playful sparring matches.",
+      "personality": [
+        "Playful",
+        "Refined",
+        "Energetic",
+        "Sweet"
+      ],
+      "favoriteActivity": "Sparring with Brownie"
     },
     {
-      "id": "goat-003",
-      "name": "Daisy",
-      "breed": "LaMancha",
-      "age": "4 years",
-      "image": "images/splash-home-goat-03.jpeg",
-      "bio": "Daisy is our calm and nurturing goat, often seen watching over the younger members of the herd.",
-      "backgroundStory": "Daisy came to Locia Farms after being rescued from a difficult situation. She's shown remarkable resilience and has become our most nurturing goat. Her calm demeanor makes her perfect with children, and she's often the one the other goats turn to for comfort. Daisy has a special way of sensing when someone needs a friend, whether it's a fellow goat or a human visitor.",
-      "personality": ["Calm", "Nurturing", "Gentle", "Protective"],
-      "favoriteActivity": "Grazing peacefully and watching over the herd"
+      "id": "goat-brownie",
+      "name": "Brownie",
+      "breed": "Nigerian Dwarf Buck",
+      "age": "Kid",
+      "image": "images/goats/profiles/brownie.png",
+      "bio": "Nugget's brother and partner in crime. Brownie sports a similar tri-color coat and loves to explore.",
+      "backgroundStory": "Brownie is the adventurous half of the kid duo. With his rich tri-color markings, he's a handsome young buck who is always the first to investigate a new toy or treat. He and Nugget are inseparable and bring a youthful energy to the buck pen.",
+      "personality": [
+        "Adventurous",
+        "Curious",
+        "Bonded",
+        "Handsome"
+      ],
+      "favoriteActivity": "Investigating new things"
     },
     {
-      "id": "goat-004",
-      "name": "Max",
-      "breed": "Boer",
-      "age": "2.5 years",
-      "image": "images/splash-home-goats-03.jpeg",
-      "bio": "Max is our confident protector, always keeping watch over the herd and ensuring everyone is safe.",
-      "backgroundStory": "Max is the guardian of our herd. He was born here at Locia Farms and has grown into a strong, confident goat with natural leadership qualities. He's always alert and the first to notice anything new in the environment. Max has a strong bond with all our goats and takes his role as protector seriously. Visitors often comment on how calm and well-behaved the herd is, and Max deserves much of the credit.",
-      "personality": ["Confident", "Protective", "Alert", "Loyal"],
-      "favoriteActivity": "Keeping watch and patrolling the perimeter"
+      "id": "goat-snickerella",
+      "name": "Snickerella",
+      "breed": "Nigerian Dwarf Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/snickerela.png",
+      "bio": "A sweet doe with a chocolate-caramel coat. Snickerella is as sweet as her name suggests.",
+      "backgroundStory": "Snickerella is a favorite for her beautiful Chamoisee coat that looks just like a chocolate bar. She has a lovely dairy conformation and a calm, motherly demeanor. She's often found grazing peacefully or waiting patiently for a treat.",
+      "personality": [
+        "Sweet",
+        "Calm",
+        "Motherly",
+        "Foodie"
+      ],
+      "favoriteActivity": "Grazing in the sun"
     },
     {
-      "id": "goat-005",
-      "name": "Luna",
-      "breed": "Pygmy",
-      "age": "1.5 years",
-      "image": "images/splash-home-animals-01.jpeg",
-      "bio": "Luna is our smallest goat with the biggest personality, full of energy and charm.",
-      "backgroundStory": "Luna joined our herd as a tiny kid and quickly became everyone's favorite. Despite her small size, she has an enormous personality and isn't afraid to stand up to goats twice her size. Her playful nature and constant energy make her a joy to watch. Luna loves attention and will follow visitors around the farm, hoping for a treat or a pat. She's proof that great things come in small packages.",
-      "personality": ["Energetic", "Bold", "Playful", "Charming"],
-      "favoriteActivity": "Following visitors and seeking attention"
+      "id": "goat-oreana",
+      "name": "Oreana",
+      "breed": "Nigerian Dwarf Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/oreoana.png",
+      "bio": "Our 'Oreo' goat! Oreana features striking black and white markings and a high-contrast personality to match.",
+      "backgroundStory": "You can't miss Oreana in the pasture—her black and white markings stand out instantly. She's a doe with 'capacity' (room for babies!) and a friendly, outgoing nature. She loves attention and is often the first doe to greet visitors at the fence.",
+      "personality": [
+        "Striking",
+        "Friendly",
+        "Outgoing",
+        "Photogenic"
+      ],
+      "favoriteActivity": "Greeting visitors at the fence"
     },
     {
-      "id": "goat-006",
-      "name": "Oscar",
-      "breed": "Saanen",
-      "age": "3.5 years",
-      "image": "images/splash-home-goat-01.jpeg",
-      "bio": "Oscar is our gentle giant, known for his calm demeanor and love of sunbathing.",
-      "backgroundStory": "Oscar is one of our oldest and most beloved goats. He came to us from a dairy farm that was downsizing, and he's been a steady presence ever since. Oscar loves nothing more than finding a sunny spot to lie down and soak up the Florida sun. His calm, patient nature makes him perfect for educational visits, and he's helped many children overcome their fear of large animals. Oscar represents the peaceful, contemplative side of farm life.",
-      "personality": ["Calm", "Patient", "Gentle", "Content"],
-      "favoriteActivity": "Sunbathing and enjoying quiet moments"
-    },
-    {
-      "id": "goat-007",
+      "id": "goat-caramella",
       "name": "Caramella",
-      "breed": "Mixed",
-      "age": "2 years",
-      "image": "images/goats/caramella_profile.jpeg",
-      "bio": "Caramella is a beautiful young goat with a warm caramel-colored coat and an observant, curious nature.",
-      "backgroundStory": "Caramella joined our herd with her stunning light brown coat that earned her her sweet name. She's a young goat with a calm and curious personality, always watching and learning from her surroundings. Her gentle disposition and attentive nature make her a favorite among visitors, especially children who are drawn to her warm coloring and friendly eyes. Caramella loves exploring the farmyard and can often be found standing thoughtfully in the sunshine, taking in the world around her.",
-      "personality": ["Curious", "Calm", "Observant", "Gentle"],
-      "favoriteActivity": "Standing in the sunshine and observing the farm"
+      "breed": "Nigerian Dwarf Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/caramela.png",
+      "bio": "Golden and glowing, Caramella has a beautiful apricot coat and a gentle, sunny disposition.",
+      "backgroundStory": "Caramella brings a splash of gold to the herd. Her light, soft coat matches her gentle personality. She is a quiet, steady doe who gets along with everyone. Her sweet nature makes her a perfect ambassador for the breed.",
+      "personality": [
+        "Gentle",
+        "Sunny",
+        "Quiet",
+        "Golden"
+      ],
+      "favoriteActivity": "Sunbathing"
+    },
+    {
+      "id": "goat-cookie",
+      "name": "Cookie",
+      "breed": "Nigerian Dwarf Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/cookie.png",
+      "bio": "Spotted and speckled like a cookies-and-cream treat. Cookie is a favorite for her unique roan coat.",
+      "backgroundStory": "Cookie is the artist of the group, sporting a multi-colored, speckled 'roan' coat that makes her truly unique. She's a curious doe who loves to see what's going on. Her distinctive look makes her easy to spot and hard to forget.",
+      "personality": [
+        "Unique",
+        "Curious",
+        "Speckled",
+        "Fun"
+      ],
+      "favoriteActivity": "Showing off her coat"
+    },
+    {
+      "id": "goat-simba",
+      "name": "Simba",
+      "breed": "Boer Buck",
+      "age": "Adult",
+      "image": "images/goats/profiles/simba.png",
+      "bio": "The King of the Boer herd. Simba is a traditional Boer buck with a massive build and a gentle heart.",
+      "backgroundStory": "Simba lives up to his name. With his traditional red head and massive white body, he looks every bit the lion king of the farm. Despite his imposing size and thick muscular neck, he is a gentle giant who takes good care of his does. He is the sire of our future meat herd.",
+      "personality": [
+        "Regal",
+        "Massive",
+        "Gentle",
+        "King"
+      ],
+      "favoriteActivity": "Surveying his kingdom"
+    },
+    {
+      "id": "goat-nala",
+      "name": "Nala",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/nala.png",
+      "bio": "The Queen of the herd. Nala (formerly Sarabi) is a traditional Boer doe with elegance and grace.",
+      "backgroundStory": "Nala is the queen to Simba's king. A traditional Boer doe with a feminine head and excellent width, she represents the ideal mother goat. She is calm, regal, and leads the doe herd with quiet confidence.",
+      "personality": [
+        "Queen",
+        "Elegant",
+        "Confident",
+        "Traditional"
+      ],
+      "favoriteActivity": "Leading the herd"
+    },
+    {
+      "id": "goat-sarabi",
+      "name": "Sarabi",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/sarabi_2.png",
+      "bio": "Nala's close relative and loyal companion. Sarabi shares the traditional Boer markings and a calm nature.",
+      "backgroundStory": "Sarabi is Nala's right-hand doe. Related by blood and bond, they are often found together. She shares the classic Boer markings and the sturdy, productive build of the breed. She is a reliable and protective mother.",
+      "personality": [
+        "Loyal",
+        "Calm",
+        "Protective",
+        "Traditional"
+      ],
+      "favoriteActivity": "Hanging out with Nala"
+    },
+    {
+      "id": "goat-dippa",
+      "name": "Dippa",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/dippa.png",
+      "bio": "Named for her distinct markings. Dippa is a solid Boer doe who loves mealtime.",
+      "backgroundStory": "Dippa gets her name from her unique color pattern that looks like she was 'dipped' in paint. She's a robust Boer doe with a healthy appetite and a solid conformation. She's always the first to the feeder when the grain bucket rattles!",
+      "personality": [
+        "Foodie",
+        "Distinct",
+        "Robust",
+        "Eager"
+      ],
+      "favoriteActivity": "Eating"
+    },
+    {
+      "id": "goat-mary",
+      "name": "Mary",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/mary.png",
+      "bio": "Reliable and steady. Mary is a classic Boer doe with excellent conformation.",
+      "backgroundStory": "Mary is the rock of the Boer herd. She isn't the flashiest, but she is consistent, solid, and dependable. She has excellent structure for a meat goat and is a calm, no-nonsense mother who takes great care of her kids.",
+      "personality": [
+        "Steady",
+        "Reliable",
+        "Classic",
+        "Motherly"
+      ],
+      "favoriteActivity": "Being a good mom"
+    },
+    {
+      "id": "goat-skora",
+      "name": "Skora",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/skora.png",
+      "bio": "Related to Nutella, Skora is a wonderful mother with a strong maternal instinct.",
+      "backgroundStory": "Skora is part of our 'sweet' family line in the Boer herd, related to Nutella. She combines the best of Boer genetics with a strong maternal instinct. She is attentive and caring, ensuring her kids—and sometimes others'—are safe and fed.",
+      "personality": [
+        "Maternal",
+        "Caring",
+        "Attentive",
+        "Sweet"
+      ],
+      "favoriteActivity": "Caring for kids"
+    },
+    {
+      "id": "goat-nutella",
+      "name": "Nutella",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/nutella.png",
+      "bio": "A sweet Boer doe with rich red-brown coloration. Nutella is as delightful as the spread she's named after.",
+      "backgroundStory": "Nutella stands out with her rich, reddish-brown coloration that gave her her name. Related to Skora, she brings a bit of color variety to the Boer herd. She's a sweet-natured doe who loves a treat and a head scratch.",
+      "personality": [
+        "Sweet",
+        "Colorful",
+        "Friendly",
+        "Treat-lover"
+      ],
+      "favoriteActivity": "Seeking out treats"
+    },
+    {
+      "id": "goat-nueggeta",
+      "name": "Nueggeta",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/nueggeta.png",
+      "bio": "Compact and cute. Nueggeta rounds out our Boer herd with her solid build and friendly face.",
+      "backgroundStory": "Don't let the name fool you—Nueggeta is a solid Boer doe! She has a compact, meaty build that is perfect for the breed standard. She's a friendly doe who fits right in with the herd, rounding out our group of seven lovely ladies.",
+      "personality": [
+        "Compact",
+        "Friendly",
+        "Solid",
+        "Cute"
+      ],
+      "favoriteActivity": "Browsing for leaves"
     }
   ]
 }
-
