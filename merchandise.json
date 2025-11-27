@@ -4,7 +4,7 @@
       "id": "example-1",
       "name": "Locia Farms T-Shirt",
       "description": "Comfortable cotton t-shirt featuring the Locia Farms logo. Available in multiple sizes and colors.",
-      "thumbnail": "images/splash-home-02.jpeg",
+      "thumbnail": "../images/splash-home-02.jpeg",
       "variants": [
         {
           "id": "variant-1",
@@ -28,4 +28,3 @@
     }
   ]
 }
-
