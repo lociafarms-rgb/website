@@ -22,7 +22,7 @@ class VideoLoader {
     async loadVideos() {
         // Find video containers
         const homeContainer = document.querySelector('#videos .videos-grid');
-        const videoPageContainer = document.querySelector('.video-grid');
+        const videoPageContainer = document.querySelector('#videos-grid') || document.querySelector('.videos-grid');
         
         this.videosContainer = videoPageContainer || homeContainer;
         

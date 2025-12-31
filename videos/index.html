@@ -36,11 +36,6 @@
             color: var(--primary-dark);
         }
         
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
     </style>
 </head>
 <body>
@@ -58,9 +53,11 @@
                 </button>
                 <ul class="nav-menu">
                     <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../index.html#products">Products</a></li>
-                    <li><a href="../index.html#events">Events</a></li>
-                    <li><a href="../index.html#videos" class="active">Videos</a></li>
+                    <li><a href="../index.html#products">Products & Services</a></li>
+                    <!-- <li><a href="../index.html#events">Events</a></li> -->
+                    <li><a href="index.html" class="active">Video Blog</a></li>
+                    <li><a href="../merchandise/index.html">Shop</a></li>
+                    <li><a href="../goats/index.html">Our Goats</a></li>
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
@@ -80,14 +77,18 @@
             <h1 class="section-title">Video Blog</h1>
             <p class="section-subtitle">Follow our journey through video content - farm tours, animal updates, and farming tips</p>
             
-            <div class="video-grid">
+            <div class="videos-grid" id="videos-grid">
                 <!-- Videos will be dynamically loaded from videos.json -->
-                <div class="empty-state">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polygon points="5 3 19 12 5 21 5 3"/>
-                    </svg>
-                    <h3>Coming Soon</h3>
-                    <p>Our video blog is under development. Check back soon for farm tours, animal updates, and farming tips!</p>
+                <div class="video-card material-card empty-state">
+                    <div class="video-placeholder">
+                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"/>
+                        </svg>
+                    </div>
+                    <div class="video-content">
+                        <h3>Coming Soon</h3>
+                        <p>Our video blog is under development. Check back soon for farm tours, animal updates, and farming tips!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,15 +96,34 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Locia Farms. All rights reserved.</p>
-            <p class="footer-links">
-                <a href="../index.html">Home</a> | 
-                <a href="../index.html#products">Products</a> | 
-                <a href="../index.html#events">Events</a> | 
-                <a href="../index.html#videos">Videos</a> | 
-                <a href="../index.html#about">About</a> | 
-                <a href="../index.html#contact">Contact</a>
-            </p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Locia Farms</h3>
+                    <p>A peaceful six-acre hideaway in Morriston, Ocala</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html#home">Home</a></li>
+                        <li><a href="../index.html#products">Products & Services</a></li>
+                        <!-- <li><a href="../index.html#events">Events</a></li> -->
+                        <li><a href="index.html">Video Blog</a></li>
+                        <li><a href="../merchandise/index.html">Shop</a></li>
+                        <li><a href="../goats/index.html">Our Goats</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Morriston, Ocala, Florida</p>
+                    <p>Visit us by appointment</p>
+                    <p><a href="mailto:lociafarms@gmail.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">lociafarms@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Locia Farms. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
