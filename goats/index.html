@@ -17,6 +17,22 @@
     <!-- Google tag (gtag.js) - Loads Google Analytics and Google Ads -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17696537147"></script>
     <script src="../analytics-config.js"></script>
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            transition: color var(--transition-base);
+        }
+        
+        .back-link:hover {
+            color: var(--primary-dark);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -36,10 +52,10 @@
                 <ul class="nav-menu">
                     <li><a href="../index.html#home">Home</a></li>
                     <li><a href="../index.html#products">Products & Services</a></li>
-                    <li><a href="../index.html#events">Events</a></li>
+                    <!-- <li><a href="../index.html#events">Events</a></li> -->
                     <li><a href="../index.html#videos">Video Blog</a></li>
                     <li><a href="../merchandise/index.html">Shop</a></li>
-                    <li><a href="index.html">Our Goats</a></li>
+                    <li><a href="index.html" class="active">Our Goats</a></li>
                     <li><a href="../index.html#about">About</a></li>
                     <li><a href="../index.html#contact">Contact</a></li>
                 </ul>
@@ -57,11 +73,16 @@
 
         <section class="goats-gallery">
             <div class="container">
-                <div class="goats-grid" id="goats-grid">
+                <a href="../index.html" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back to Home
+                </a>
+                <div class="goats-accordion" id="goats-grid">
                     <!-- Goats will be loaded dynamically here -->
                     <div class="loading-state">
-                        <div class="loading-spinner"></div>
-                        <p>Loading our goat family...</p>
+                        <p>Loading goat profiles...</p>
                     </div>
                 </div>
             </div>
@@ -79,14 +100,20 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="../index.html#home">Home</a></li>
-                        <li><a href="../index.html#products">Products</a></li>
-                        <li><a href="../index.html#events">Events</a></li>
+                        <li><a href="../index.html#products">Products & Services</a></li>
+                        <!-- <li><a href="../index.html#events">Events</a></li> -->
+                        <li><a href="../index.html#videos">Video Blog</a></li>
+                        <li><a href="../merchandise/index.html">Shop</a></li>
                         <li><a href="index.html">Our Goats</a></li>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
                     <p>Morriston, Ocala, Florida</p>
+                    <p>Visit us by appointment</p>
+                    <p><a href="mailto:lociafarms@gmail.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">lociafarms@gmail.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -96,7 +123,14 @@
     </footer>
 
     <script src="../script.js"></script>
-    <script src="goat-loader.js"></script>
+    <script src="../goats/goat-loader.js"></script>
+    <script>
+        // Initialize goat loader on goats page
+        if (document.getElementById('goats-grid')) {
+            const goatLoader = new GoatLoader();
+            goatLoader.init();
+        }
+    </script>
 </body>
 </html>
 
