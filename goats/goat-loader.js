@@ -227,6 +227,7 @@ class GoatLoader {
                     <div class="goat-accordion-meta">
                         <span class="goat-breed">${this.escapeHtml(goat.breed)}</span>
                         <span class="goat-age">${this.escapeHtml(goat.age)}</span>
+                        ${this.renderStatusBadge(goat)}
                     </div>
                     <p class="goat-accordion-bio-preview">${this.escapeHtml(goat.bio)}</p>
                 </div>
@@ -462,6 +463,26 @@ class GoatLoader {
                 }
             }
         }, { passive: true });
+    }
+
+    renderStatusBadge(goat) {
+        const rawStatus = (goat && (goat.status || (goat.sold ? 'sold' : null))) || null;
+        if (!rawStatus) return '';
+
+        const status = String(rawStatus).toLowerCase().trim();
+
+        if (status === 'sold') {
+            return '<span class="goat-status-badge sold">Sold</span>';
+        }
+        if (status === 'available') {
+            return '<span class="goat-status-badge available">Available</span>';
+        }
+        if (status === 'retained' || status === 'keep') {
+            return '<span class="goat-status-badge retained">Retained</span>';
+        }
+
+        // Fallback: render the raw status text
+        return `<span class="goat-status-badge other">${this.escapeHtml(rawStatus)}</span>`;
     }
 
     escapeHtml(text) {

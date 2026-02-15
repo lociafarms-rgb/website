@@ -1606,6 +1606,42 @@ footer p {
     font-size: 0.95rem;
     color: var(--text-secondary);
     margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.goat-status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+}
+
+.goat-status-badge.sold {
+    background: rgba(220, 38, 38, 0.15);
+    border-color: rgba(220, 38, 38, 0.35);
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.goat-status-badge.available {
+    background: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.35);
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.goat-status-badge.retained {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.35);
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.goat-status-badge.other {
+    opacity: 0.9;
 }
 
 .goat-accordion-bio-preview {

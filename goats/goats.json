@@ -14,7 +14,8 @@
         "Quirky",
         "Fainting"
       ],
-      "favoriteActivity": "Overseeing his herd (from a horizontal position occasionally)"
+      "favoriteActivity": "Overseeing his herd (from a horizontal position occasionally)",
+      "status": "retained"
     },
     {
       "id": "goat-nugget",
@@ -30,7 +31,8 @@
         "Energetic",
         "Sweet"
       ],
-      "favoriteActivity": "Sparring with Brownie"
+      "favoriteActivity": "Sparring with Brownie",
+      "status": "retained"
     },
     {
       "id": "goat-brownie",
@@ -46,7 +48,8 @@
         "Bonded",
         "Handsome"
       ],
-      "favoriteActivity": "Investigating new things"
+      "favoriteActivity": "Investigating new things",
+      "status": "retained"
     },
     {
       "id": "goat-snickerella",
@@ -62,7 +65,8 @@
         "Motherly",
         "Foodie"
       ],
-      "favoriteActivity": "Grazing in the sun"
+      "favoriteActivity": "Grazing in the sun",
+      "status": "retained"
     },
     {
       "id": "goat-oreana",
@@ -78,7 +82,8 @@
         "Outgoing",
         "Photogenic"
       ],
-      "favoriteActivity": "Greeting visitors at the fence"
+      "favoriteActivity": "Greeting visitors at the fence",
+      "status": "retained"
     },
     {
       "id": "goat-caramella",
@@ -94,7 +99,8 @@
         "Quiet",
         "Golden"
       ],
-      "favoriteActivity": "Sunbathing"
+      "favoriteActivity": "Sunbathing",
+      "status": "retained"
     },
     {
       "id": "goat-cookie",
@@ -110,7 +116,8 @@
         "Speckled",
         "Fun"
       ],
-      "favoriteActivity": "Showing off her coat"
+      "favoriteActivity": "Showing off her coat",
+      "status": "retained"
     },
     {
       "id": "goat-simba",
@@ -126,7 +133,8 @@
         "Gentle",
         "King"
       ],
-      "favoriteActivity": "Surveying his kingdom"
+      "favoriteActivity": "Surveying his kingdom",
+      "status": "retained"
     },
     {
       "id": "goat-nala",
@@ -142,7 +150,8 @@
         "Confident",
         "Traditional"
       ],
-      "favoriteActivity": "Leading the herd"
+      "favoriteActivity": "Leading the herd",
+      "status": "retained"
     },
     {
       "id": "goat-sarabi",
@@ -158,7 +167,8 @@
         "Protective",
         "Traditional"
       ],
-      "favoriteActivity": "Hanging out with Nala"
+      "favoriteActivity": "Hanging out with Nala",
+      "status": "retained"
     },
     {
       "id": "goat-dippa",
@@ -174,7 +184,8 @@
         "Robust",
         "Eager"
       ],
-      "favoriteActivity": "Eating"
+      "favoriteActivity": "Eating",
+      "status": "retained"
     },
     {
       "id": "goat-mary",
@@ -190,7 +201,8 @@
         "Classic",
         "Motherly"
       ],
-      "favoriteActivity": "Being a good mom"
+      "favoriteActivity": "Being a good mom",
+      "status": "retained"
     },
     {
       "id": "goat-skora",
@@ -206,7 +218,8 @@
         "Attentive",
         "Sweet"
       ],
-      "favoriteActivity": "Caring for kids"
+      "favoriteActivity": "Caring for kids",
+      "status": "retained"
     },
     {
       "id": "goat-nutella",
@@ -222,7 +235,8 @@
         "Friendly",
         "Treat-lover"
       ],
-      "favoriteActivity": "Seeking out treats"
+      "favoriteActivity": "Seeking out treats",
+      "status": "retained"
     },
     {
       "id": "goat-nueggeta",
@@ -238,7 +252,8 @@
         "Solid",
         "Cute"
       ],
-      "favoriteActivity": "Browsing for leaves"
+      "favoriteActivity": "Browsing for leaves",
+      "status": "retained"
     }
   ]
 }
