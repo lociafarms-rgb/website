@@ -374,30 +374,33 @@ class GoatLoader {
             document.head.appendChild(link);
         }
         
-        // Set up error handlers and optimize loading for all images
-        const allImages = accordionContent.querySelectorAll('img');
+        // Set up error handlers + ensure lazy images become visible
+        // NOTE: styles.css sets img[loading="lazy"] { opacity: 0 } until the "loaded" class is added.
+        // Goat profiles are injected dynamically, so we attach the same "loaded" behavior here.
+        const allImages = accordionItem.querySelectorAll('img');
         allImages.forEach((img, idx) => {
             // Set up error handler
             img.onerror = function() {
                 this.onerror = null;
-                const fallbackPath = window.location.hostname.includes('github.io') 
-                    ? '/website/images/splash-home-goat-01.jpeg' 
+                const fallbackPath = window.location.hostname.includes('github.io')
+                    ? '/website/images/splash-home-goat-01.jpeg'
                     : '/images/splash-home-goat-01.jpeg';
                 this.src = fallbackPath;
             };
-            
-            // Ensure image has proper attributes for optimization
+
+            // Ensure image has proper attributes for layout stability
             if (!img.hasAttribute('width')) {
-                img.setAttribute('width', idx === 0 && img.closest('.goat-accordion-image') ? '120' : '800');
+                img.setAttribute('width', img.closest('.goat-accordion-image') ? '120' : '800');
             }
             if (!img.hasAttribute('height')) {
-                img.setAttribute('height', idx === 0 && img.closest('.goat-accordion-image') ? '120' : '600');
+                img.setAttribute('height', img.closest('.goat-accordion-image') ? '120' : '600');
             }
-            
-            // Optimize loading strategy
-            if (idx > 0 || !img.closest('.goat-carousel-slide')) {
-                img.loading = 'lazy';
-                img.fetchPriority = 'low';
+
+            // Visibility: add "loaded" on load (and immediately if cached)
+            const markLoaded = () => img.classList.add('loaded');
+            img.addEventListener('load', markLoaded, { once: true });
+            if (img.complete && img.naturalWidth > 0) {
+                markLoaded();
             }
         });
 
