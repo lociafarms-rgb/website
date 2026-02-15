@@ -215,11 +215,11 @@ class GoatLoader {
                     <img 
                         src="${finalImagePath}" 
                         alt="${this.escapeHtml(goat.name)}" 
-                        loading="lazy" 
+                        loading="eager" 
                         decoding="async"
                         width="120"
                         height="120"
-                        fetchpriority="low"
+                        fetchpriority="high"
                     >
                 </div>
                 <div class="goat-accordion-header-text">
