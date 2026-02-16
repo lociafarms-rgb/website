@@ -33,7 +33,8 @@
         "Sweet"
       ],
       "favoriteActivity": "Sparring with Brownie",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-brownie",
@@ -50,7 +51,8 @@
         "Handsome"
       ],
       "favoriteActivity": "Investigating new things",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-snickerella",
@@ -67,7 +69,8 @@
         "Foodie"
       ],
       "favoriteActivity": "Grazing in the sun",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-oreana",
@@ -84,7 +87,8 @@
         "Photogenic"
       ],
       "favoriteActivity": "Greeting visitors at the fence",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-caramella",
@@ -101,7 +105,8 @@
         "Golden"
       ],
       "favoriteActivity": "Sunbathing",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-cookie",
@@ -118,7 +123,8 @@
         "Fun"
       ],
       "favoriteActivity": "Showing off her coat",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-simba",
@@ -135,7 +141,8 @@
         "King"
       ],
       "favoriteActivity": "Surveying his kingdom",
-      "status": "retained"
+      "status": "retained",
+      "price": 500
     },
     {
       "id": "goat-nala",
@@ -152,7 +159,8 @@
         "Traditional"
       ],
       "favoriteActivity": "Leading the herd",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-sarabi",
@@ -169,7 +177,8 @@
         "Traditional"
       ],
       "favoriteActivity": "Hanging out with Nala",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-dippa",
@@ -186,7 +195,8 @@
         "Eager"
       ],
       "favoriteActivity": "Eating",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-mary",
@@ -203,7 +213,8 @@
         "Motherly"
       ],
       "favoriteActivity": "Being a good mom",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-skora",
@@ -220,7 +231,8 @@
         "Sweet"
       ],
       "favoriteActivity": "Caring for kids",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-nutella",
@@ -237,7 +249,8 @@
         "Treat-lover"
       ],
       "favoriteActivity": "Seeking out treats",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     },
     {
       "id": "goat-nueggeta",
@@ -254,7 +267,8 @@
         "Cute"
       ],
       "favoriteActivity": "Browsing for leaves",
-      "status": "retained"
+      "status": "retained",
+      "price": 150
     }
   ]
 }
