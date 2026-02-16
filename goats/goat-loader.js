@@ -52,11 +52,16 @@ class GoatLoader {
             
             let response = null;
             let lastError = null;
+
+            // Cache-buster to avoid stale goats.json on some CDNs/browsers.
+            // Update this string when goats.json changes significantly.
+            const cacheBuster = 'v=2026-02-16-1';
             
             // Try each path until one works
             for (const path of possiblePaths) {
                 try {
-                    response = await fetch(path);
+                    const url = `${path}${path.includes('?') ? '&' : '?'}${cacheBuster}`;
+                    response = await fetch(url, { cache: 'no-store' });
                     if (response.ok) {
                         break; // Found working path
                     }
