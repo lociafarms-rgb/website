@@ -1653,9 +1653,10 @@ footer p {
     font-weight: 800;
     letter-spacing: 0.02em;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    background: rgba(245, 158, 11, 0.15);
-    border-color: rgba(245, 158, 11, 0.35);
-    color: rgba(255, 255, 255, 0.92);
+    /* Darker for better contrast/readability */
+    background: rgba(245, 158, 11, 0.30);
+    border-color: rgba(245, 158, 11, 0.60);
+    color: rgba(255, 255, 255, 0.96);
 }
 
 .goat-accordion-bio-preview {
