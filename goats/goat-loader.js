@@ -228,6 +228,7 @@ class GoatLoader {
                         <span class="goat-breed">${this.escapeHtml(goat.breed)}</span>
                         <span class="goat-age">${this.escapeHtml(goat.age)}</span>
                         ${this.renderStatusBadge(goat)}
+                        ${this.renderPriceBadge(goat)}
                     </div>
                     <p class="goat-accordion-bio-preview">${this.escapeHtml(goat.bio)}</p>
                 </div>
@@ -486,6 +487,15 @@ class GoatLoader {
 
         // Fallback: render the raw status text
         return `<span class="goat-status-badge other">${this.escapeHtml(rawStatus)}</span>`;
+    }
+
+    renderPriceBadge(goat) {
+        if (!goat || goat.price == null) return '';
+
+        const priceNum = Number(goat.price);
+        const priceText = Number.isFinite(priceNum) ? `$${priceNum.toFixed(0)}` : `$${String(goat.price)}`;
+
+        return `<span class="goat-price-badge">${this.escapeHtml(priceText)}</span>`;
     }
 
     escapeHtml(text) {
