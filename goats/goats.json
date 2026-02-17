@@ -109,6 +109,42 @@
       "price": 150
     },
     {
+      "id": "goat-caramella-twin-doe-kid",
+      "name": "Caramella’s Doe Kid",
+      "breed": "Nigerian Dwarf Doe",
+      "age": "Kid (~3 weeks)",
+      "image": "images/goats/profiles/caramella-twin-doe-kid-2026-02.jpg",
+      "bio": "One of Caramella’s twins — a sweet Nigerian Dwarf doe kid, about 3 weeks old.",
+      "backgroundStory": "Caramella welcomed a set of twins, and this little doe is already curious and confident. Still in the early ‘kid’ stage — lots of hopping, exploring, and staying close to her sibling.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Bouncy",
+        "Twin"
+      ],
+      "favoriteActivity": "Hopping around and exploring",
+      "status": "retained",
+      "price": 150
+    },
+    {
+      "id": "goat-caramella-twin-buck-kid",
+      "name": "Caramella’s Buck Kid",
+      "breed": "Nigerian Dwarf Buck",
+      "age": "Kid (~3 weeks)",
+      "image": "images/goats/profiles/caramella-twin-buck-kid-2026-02.jpg",
+      "bio": "One of Caramella’s twins — a Nigerian Dwarf buck kid, about 3 weeks old.",
+      "backgroundStory": "This little buckling is part of Caramella’s twin pair. He’s sturdy on his feet, always on the move, and already showing that classic Nigerian Dwarf ‘kid’ energy.",
+      "personality": [
+        "Playful",
+        "Energetic",
+        "Bold",
+        "Twin"
+      ],
+      "favoriteActivity": "Playing follow-the-leader",
+      "status": "retained",
+      "price": 150
+    },
+    {
       "id": "goat-cookie",
       "name": "Cookie",
       "breed": "Nigerian Dwarf Doe",
