@@ -87,8 +87,8 @@
         "Triplet"
       ],
       "favoriteActivity": "Exploring with her brothers",
-      "status": "retained",
-      "price": 150
+      "status": "available",
+      "price": 100
     },
     {
       "id": "goat-snickerella-triplet-buck-kid-a",
@@ -105,8 +105,8 @@
         "Triplet"
       ],
       "favoriteActivity": "Tiny sprints and play bows",
-      "status": "retained",
-      "price": 150
+      "status": "available",
+      "price": 100
     },
     {
       "id": "goat-snickerella-triplet-buck-kid-b",
@@ -123,8 +123,8 @@
         "Triplet"
       ],
       "favoriteActivity": "Investigating everything",
-      "status": "retained",
-      "price": 150
+      "status": "available",
+      "price": 100
     },
     {
       "id": "goat-oreana",
@@ -177,8 +177,8 @@
         "Twin"
       ],
       "favoriteActivity": "Hopping around and exploring",
-      "status": "retained",
-      "price": 150
+      "status": "available",
+      "price": 100
     },
     {
       "id": "goat-caramella-twin-buck-kid",
@@ -195,8 +195,8 @@
         "Twin"
       ],
       "favoriteActivity": "Playing follow-the-leader",
-      "status": "retained",
-      "price": 150
+      "status": "available",
+      "price": 100
     },
     {
       "id": "goat-cookie",
