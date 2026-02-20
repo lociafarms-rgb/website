@@ -16,7 +16,7 @@
       ],
       "favoriteActivity": "Overseeing his herd (from a horizontal position occasionally)",
       "status": "available",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-nugget",
@@ -34,7 +34,7 @@
       ],
       "favoriteActivity": "Sparring with Brownie",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-brownie",
@@ -52,7 +52,7 @@
       ],
       "favoriteActivity": "Investigating new things",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-snickerella",
@@ -70,7 +70,7 @@
       ],
       "favoriteActivity": "Grazing in the sun",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-snickerella-triplet-doe-kid",
@@ -88,7 +88,7 @@
       ],
       "favoriteActivity": "Exploring with her brothers",
       "status": "available",
-      "price": 100
+      "price": 150
     },
     {
       "id": "goat-snickerella-triplet-buck-kid-a",
@@ -106,7 +106,7 @@
       ],
       "favoriteActivity": "Tiny sprints and play bows",
       "status": "available",
-      "price": 100
+      "price": 150
     },
     {
       "id": "goat-snickerella-triplet-buck-kid-b",
@@ -124,7 +124,7 @@
       ],
       "favoriteActivity": "Investigating everything",
       "status": "available",
-      "price": 100
+      "price": 150
     },
     {
       "id": "goat-oreana",
@@ -142,7 +142,7 @@
       ],
       "favoriteActivity": "Greeting visitors at the fence",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-caramella",
@@ -160,7 +160,7 @@
       ],
       "favoriteActivity": "Sunbathing",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-caramella-twin-doe-kid",
@@ -178,7 +178,7 @@
       ],
       "favoriteActivity": "Hopping around and exploring",
       "status": "available",
-      "price": 100
+      "price": 150
     },
     {
       "id": "goat-caramella-twin-buck-kid",
@@ -196,7 +196,7 @@
       ],
       "favoriteActivity": "Playing follow-the-leader",
       "status": "available",
-      "price": 100
+      "price": 150
     },
     {
       "id": "goat-cookie",
@@ -214,7 +214,7 @@
       ],
       "favoriteActivity": "Showing off her coat",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-simba",
@@ -232,7 +232,7 @@
       ],
       "favoriteActivity": "Surveying his kingdom",
       "status": "retained",
-      "price": 500
+      "price": 550
     },
     {
       "id": "goat-nala",
@@ -250,7 +250,7 @@
       ],
       "favoriteActivity": "Leading the herd",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-sarabi",
@@ -268,7 +268,7 @@
       ],
       "favoriteActivity": "Hanging out with Nala",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-dippa",
@@ -286,7 +286,7 @@
       ],
       "favoriteActivity": "Eating",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-mary",
@@ -304,7 +304,7 @@
       ],
       "favoriteActivity": "Being a good mom",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-skora",
@@ -322,7 +322,7 @@
       ],
       "favoriteActivity": "Caring for kids",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-nutella",
@@ -340,7 +340,7 @@
       ],
       "favoriteActivity": "Seeking out treats",
       "status": "retained",
-      "price": 150
+      "price": 200
     },
     {
       "id": "goat-nueggeta",
@@ -358,7 +358,7 @@
       ],
       "favoriteActivity": "Browsing for leaves",
       "status": "retained",
-      "price": 150
+      "price": 200
     }
   ]
 }
