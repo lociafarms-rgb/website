@@ -56,7 +56,7 @@ class GoatLoader {
 
             // Cache-buster to avoid stale goats.json on some CDNs/browsers.
             // Update this string when goats.json changes significantly.
-            const cacheBuster = 'v=2026-02-17-1';
+            const cacheBuster = 'v=2026-02-21-1';
             
             // Try each path until one works
             for (const path of possiblePaths) {

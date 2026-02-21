@@ -1,6 +1,166 @@
 {
   "goats": [
     {
+      "id": "goat-kid-copper",
+      "name": "Copper",
+      "breed": "Boer mix / Nigerian Dwarf mix",
+      "age": "Kid (<5 weeks old)",
+      "status": "available",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-copper-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-copper-2026-02.jpg"
+      ],
+      "bio": "Warm red coat and a calm, curious presence — a little explorer in training.",
+      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd."
+    },
+    {
+      "id": "goat-kid-maple",
+      "name": "Maple",
+      "breed": "Boer mix / Nigerian Dwarf mix",
+      "age": "Kid (<5 weeks old)",
+      "status": "available",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-maple-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-maple-2026-02.jpg"
+      ],
+      "bio": "Bright-eyed and friendly, Maple loves to investigate anything new.",
+      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd."
+    },
+    {
+      "id": "goat-kid-rusty",
+      "name": "Rusty",
+      "breed": "Boer mix / Nigerian Dwarf mix",
+      "age": "Kid (<5 weeks old)",
+      "status": "available",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-rusty-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-rusty-2026-02.jpg"
+      ],
+      "bio": "A lively kid with a deep red coat and a bold little stride.",
+      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd."
+    },
+    {
+      "id": "goat-kid-patches",
+      "name": "Patches",
+      "breed": "Boer mix / Nigerian Dwarf mix",
+      "age": "Kid (<5 weeks old)",
+      "status": "available",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-patches-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-patches-2026-02.jpg"
+      ],
+      "bio": "Distinct markings and a gentle vibe — Patches is a sweet, people-curious kid.",
+      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd."
+    },
+    {
+      "id": "goat-kid-bandit",
+      "name": "Bandit",
+      "breed": "Boer mix / Nigerian Dwarf mix",
+      "age": "Kid (<5 weeks old)",
+      "status": "available",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-bandit-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-bandit-2026-02.jpg"
+      ],
+      "bio": "With his mask-like markings, Bandit is playful, alert, and always watching the action.",
+      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd."
+    },
+    {
+      "id": "goat-kid-scout",
+      "name": "Scout",
+      "breed": "Boer mix / Nigerian Dwarf mix",
+      "age": "Kid (<5 weeks old)",
+      "status": "available",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-scout-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-scout-2026-02.jpg"
+      ],
+      "bio": "Small but confident — Scout loves to wander, sniff, and learn the world.",
+      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd."
+    },
+    {
+      "id": "goat-kid-gray-twin-a",
+      "name": "Ash (Gray Twin A)",
+      "breed": "Boer mix / Nigerian Dwarf mix",
+      "age": "Kid (<5 weeks old)",
+      "status": "available",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
+      ],
+      "bio": "One of our gray twin buck kids — calm, sweet, and a great little herd-mate.",
+      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd."
+    },
+    {
+      "id": "goat-kid-gray-twin-b",
+      "name": "Slate (Gray Twin B)",
+      "breed": "Boer mix / Nigerian Dwarf mix",
+      "age": "Kid (<5 weeks old)",
+      "status": "available",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
+      ],
+      "bio": "One of our gray twin buck kids — curious, cuddly, and already full of personality.",
+      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd."
+    },
+    {
       "id": "goat-chip",
       "name": "Chip",
       "breed": "Nigerian Dwarf Buck",
