@@ -10,7 +10,7 @@
 
 window.LOCIA_GOAT_INQUIRY = {
   // Form handler endpoint (Formspree/Getform/etc). Keep empty to disable submission.
-  FORM_ACTION: "",
+  FORM_ACTION: "https://formspree.io/f/xykdnjor",
 
   // Public scheduling link (Google Calendar appointment schedule)
   PICKUP_SCHED_URL: "",
