@@ -1644,6 +1644,146 @@ footer p {
     opacity: 0.9;
 }
 
+/* Goat inquiry modal */
+.goat-inquiry-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.goat-inquiry-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #0b0b0b;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+.goat-inquiry-btn:hover { opacity: 0.92; }
+.goat-inquiry-btn:active { transform: translateY(1px); }
+
+.goat-inquiry-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #fff;
+  color: #0b0b0b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.goat-inquiry-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 9999;
+}
+.goat-inquiry-modal-overlay.open { display: flex; }
+
+.goat-inquiry-modal {
+  width: 100%;
+  max-width: 560px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 12px 45px rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,0,0,0.12);
+}
+
+.goat-inquiry-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 16px 8px;
+}
+
+.goat-inquiry-modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.goat-inquiry-modal-close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.goat-inquiry-modal-body { padding: 8px 16px 16px; }
+
+.goat-inquiry-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.goat-inquiry-form label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: rgba(0,0,0,0.7);
+}
+
+.goat-inquiry-form input,
+.goat-inquiry-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.18);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.goat-inquiry-form textarea { min-height: 110px; resize: vertical; }
+
+.goat-inquiry-form .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 520px) {
+  .goat-inquiry-form .row { grid-template-columns: 1fr; }
+}
+
+.goat-inquiry-form .actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.goat-inquiry-form .submit {
+  border: none;
+  background: #0b0b0b;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.goat-inquiry-form .note {
+  font-size: 12px;
+  color: rgba(0,0,0,0.65);
+  margin-top: 6px;
+}
+
 .goat-price-badge {
     display: inline-flex;
     align-items: center;

@@ -7,6 +7,7 @@ class GoatLoader {
     constructor() {
         this.goatsContainer = null;
         this.goats = [];
+        this.ensureInquiryModal();
         this.init();
     }
 
@@ -305,6 +306,7 @@ class GoatLoader {
                     ` : ''}
                 </div>
                 <div class="goat-accordion-details">
+                    ${this.renderInquiryActions(goat)}
                     <div class="goat-story">
                         <h4>Background Story</h4>
                         <p>${this.escapeHtml(goat.backgroundStory)}</p>
@@ -501,6 +503,188 @@ class GoatLoader {
         const priceText = Number.isFinite(priceNum) ? `$${priceNum.toFixed(0)}` : `$${String(goat.price)}`;
 
         return `<span class="goat-price-badge">${this.escapeHtml(priceText)}</span>`;
+    }
+
+    renderInquiryActions(goat) {
+        // Only show inquiry actions for goats that are clearly available
+        const status = String((goat && (goat.status || (goat.sold ? 'sold' : ''))) || '').toLowerCase().trim();
+        if (status && status !== 'available') return '';
+
+        const cfg = (window && window.LOCIA_GOAT_INQUIRY) ? window.LOCIA_GOAT_INQUIRY : {};
+        const schedUrl = cfg.PICKUP_SCHED_URL || '';
+
+        const schedLink = schedUrl
+            ? `<a class="goat-inquiry-link" href="${this.escapeHtml(schedUrl)}" target="_blank" rel="noopener">Schedule pickup</a>`
+            : '';
+
+        return `
+            <div class="goat-inquiry-actions">
+              <button class="goat-inquiry-btn" type="button" data-inquiry="1" data-goat-id="${this.escapeHtml(goat.id || '')}" data-goat-name="${this.escapeHtml(goat.name || '')}">Request / Ask about ${this.escapeHtml(goat.name || 'this goat')}</button>
+              ${schedLink}
+            </div>
+        `;
+    }
+
+    ensureInquiryModal() {
+        // Create once per page
+        if (document.getElementById('goat-inquiry-modal-overlay')) return;
+
+        const overlay = document.createElement('div');
+        overlay.id = 'goat-inquiry-modal-overlay';
+        overlay.className = 'goat-inquiry-modal-overlay';
+        overlay.innerHTML = `
+          <div class="goat-inquiry-modal" role="dialog" aria-modal="true" aria-labelledby="goat-inquiry-title">
+            <div class="goat-inquiry-modal-header">
+              <h3 class="goat-inquiry-modal-title" id="goat-inquiry-title">Goat inquiry</h3>
+              <button class="goat-inquiry-modal-close" type="button" aria-label="Close">×</button>
+            </div>
+            <div class="goat-inquiry-modal-body">
+              <form class="goat-inquiry-form" id="goat-inquiry-form" method="POST">
+                <input type="hidden" name="goat_id" id="goat_inquiry_goat_id" value="">
+                <input type="hidden" name="goat_name" id="goat_inquiry_goat_name" value="">
+                <input type="text" name="goat" id="goat_inquiry_goat" value="" readonly style="background:#fafafa;">
+
+                <div class="row">
+                  <div>
+                    <label for="goat_inquiry_name">Your name</label>
+                    <input id="goat_inquiry_name" name="name" type="text" required>
+                  </div>
+                  <div>
+                    <label for="goat_inquiry_email">Email</label>
+                    <input id="goat_inquiry_email" name="email" type="email" required>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="goat_inquiry_phone">Phone (optional)</label>
+                  <input id="goat_inquiry_phone" name="phone" type="tel">
+                </div>
+
+                <div>
+                  <label for="goat_inquiry_message">Message</label>
+                  <textarea id="goat_inquiry_message" name="message" placeholder="Tell us what you’d like to know, or when you’re hoping to pick up."></textarea>
+                </div>
+
+                <!-- Honeypot spam trap -->
+                <input type="text" name="company" tabindex="-1" autocomplete="off" style="display:none;">
+
+                <div class="actions">
+                  <button class="submit" type="submit">Send inquiry</button>
+                  <a class="goat-inquiry-link" id="goat_inquiry_schedule_link" href="#" target="_blank" rel="noopener" style="display:none;">Schedule pickup</a>
+                </div>
+
+                <div class="note" id="goat_inquiry_note"></div>
+              </form>
+            </div>
+          </div>
+        `;
+
+        const addHandlers = () => {
+            // Close logic
+            const close = () => overlay.classList.remove('open');
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) close();
+            });
+            const closeBtn = overlay.querySelector('.goat-inquiry-modal-close');
+            if (closeBtn) closeBtn.addEventListener('click', close);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') close();
+            });
+
+            // Open handler (delegated)
+            document.addEventListener('click', (e) => {
+                const btn = e.target && e.target.closest ? e.target.closest('button[data-inquiry="1"]') : null;
+                if (!btn) return;
+                e.preventDefault();
+                const goatId = btn.getAttribute('data-goat-id') || '';
+                const goatName = btn.getAttribute('data-goat-name') || '';
+                this.openInquiryModal(goatId, goatName);
+            });
+
+            // Submit handler
+            const form = overlay.querySelector('#goat-inquiry-form');
+            if (form) {
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const cfg = (window && window.LOCIA_GOAT_INQUIRY) ? window.LOCIA_GOAT_INQUIRY : {};
+                    const action = cfg.FORM_ACTION || '';
+                    const note = overlay.querySelector('#goat_inquiry_note');
+
+                    if (!action) {
+                        if (note) note.textContent = 'Form is not yet configured. Please email lociafarms@gmail.com for now.';
+                        return;
+                    }
+
+                    try {
+                        const fd = new FormData(form);
+                        const resp = await fetch(action, {
+                            method: 'POST',
+                            body: fd,
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (resp.ok) {
+                            if (note) note.textContent = 'Sent. We’ll get back to you soon.';
+                            form.reset();
+                            // Keep goat fields visible
+                            const goatDisplay = overlay.querySelector('#goat_inquiry_goat');
+                            const goatIdEl = overlay.querySelector('#goat_inquiry_goat_id');
+                            const goatNameEl = overlay.querySelector('#goat_inquiry_goat_name');
+                            // no-op; openInquiryModal sets again on next open
+                            setTimeout(() => overlay.classList.remove('open'), 900);
+                        } else {
+                            if (note) note.textContent = 'Could not send. Please try again or email lociafarms@gmail.com.';
+                        }
+                    } catch (err) {
+                        if (note) note.textContent = 'Could not send. Please try again or email lociafarms@gmail.com.';
+                    }
+                });
+            }
+        };
+
+        // Ensure added after DOM ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.appendChild(overlay);
+                addHandlers();
+            });
+        } else {
+            document.body.appendChild(overlay);
+            addHandlers();
+        }
+    }
+
+    openInquiryModal(goatId, goatName) {
+        const overlay = document.getElementById('goat-inquiry-modal-overlay');
+        if (!overlay) return;
+
+        const cfg = (window && window.LOCIA_GOAT_INQUIRY) ? window.LOCIA_GOAT_INQUIRY : {};
+        const schedUrl = cfg.PICKUP_SCHED_URL || '';
+
+        const goatDisplay = overlay.querySelector('#goat_inquiry_goat');
+        const goatIdEl = overlay.querySelector('#goat_inquiry_goat_id');
+        const goatNameEl = overlay.querySelector('#goat_inquiry_goat_name');
+        const note = overlay.querySelector('#goat_inquiry_note');
+        const schedLink = overlay.querySelector('#goat_inquiry_schedule_link');
+
+        const label = goatName ? `${goatName} (${goatId || 'id'})` : (goatId || '');
+
+        if (goatDisplay) goatDisplay.value = label;
+        if (goatIdEl) goatIdEl.value = goatId || '';
+        if (goatNameEl) goatNameEl.value = goatName || '';
+        if (note) note.textContent = '';
+
+        if (schedLink) {
+            if (schedUrl) {
+                schedLink.href = schedUrl;
+                schedLink.style.display = 'inline-flex';
+            } else {
+                schedLink.style.display = 'none';
+            }
+        }
+
+        overlay.classList.add('open');
+        const nameField = overlay.querySelector('#goat_inquiry_name');
+        if (nameField) nameField.focus();
     }
 
     escapeHtml(text) {
