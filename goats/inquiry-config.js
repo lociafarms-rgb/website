@@ -13,7 +13,7 @@ window.LOCIA_GOAT_INQUIRY = {
   FORM_ACTION: "https://formspree.io/f/xykdnjor",
 
   // Public scheduling link (Google Calendar appointment schedule)
-  PICKUP_SCHED_URL: "",
+  PICKUP_SCHED_URL: "https://calendar.app.google/FEHXXWXLwPQiqHzp7",
 
   // Where the inquiry should route (informational only; real routing is controlled by the form provider)
   TO_EMAIL: "lociafarms@gmail.com",
