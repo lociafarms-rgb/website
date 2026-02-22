@@ -99,13 +99,13 @@ class GoatLoader {
 
         // Clear loading state
         this.goatsContainer.innerHTML = '';
-        this.goatsContainer.className = 'goats-accordion'; // Change to accordion class
+        this.goatsContainer.className = 'goats-accordion';
 
-        // Render each goat
-        this.goats.forEach(goat => {
-            const goatCard = this.createGoatCard(goat);
-            this.goatsContainer.appendChild(goatCard);
-        });
+        // Ensure filters are wired (idempotent)
+        this.initFilters();
+
+        // Render based on current filter state
+        this.applyFiltersAndRender();
     }
 
     createGoatCard(goat) {
@@ -685,6 +685,102 @@ class GoatLoader {
         overlay.classList.add('open');
         const nameField = overlay.querySelector('#goat_inquiry_name');
         if (nameField) nameField.focus();
+    }
+
+    initFilters() {
+        if (this._filtersInitialized) return;
+
+        const searchEl = document.getElementById('goat-filter-search');
+        const statusEl = document.getElementById('goat-filter-status');
+        const ageEl = document.getElementById('goat-filter-age');
+        const clearEl = document.getElementById('goat-filter-clear');
+
+        if (!searchEl || !statusEl || !ageEl || !clearEl) {
+            // Filters not present on this page
+            this._filtersInitialized = true;
+            return;
+        }
+
+        const apply = () => this.applyFiltersAndRender();
+
+        // Restore from query param (optional)
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get('status');
+        if (status && ['available','all','sold','retained'].includes(status)) statusEl.value = status;
+
+        searchEl.addEventListener('input', apply);
+        statusEl.addEventListener('change', apply);
+        ageEl.addEventListener('change', apply);
+
+        clearEl.addEventListener('click', () => {
+            searchEl.value = '';
+            statusEl.value = 'available';
+            ageEl.value = 'all';
+            this.applyFiltersAndRender();
+        });
+
+        this._filtersInitialized = true;
+    }
+
+    applyFiltersAndRender() {
+        if (!this.goatsContainer) return;
+
+        const searchEl = document.getElementById('goat-filter-search');
+        const statusEl = document.getElementById('goat-filter-status');
+        const ageEl = document.getElementById('goat-filter-age');
+        const countEl = document.getElementById('goat-filter-count');
+
+        const q = (searchEl && searchEl.value ? searchEl.value : '').trim().toLowerCase();
+        const status = statusEl ? statusEl.value : 'all';
+        const age = ageEl ? ageEl.value : 'all';
+
+        const isKid = (g) => String(g && g.age || '').toLowerCase().includes('kid');
+        const isAdult = (g) => !isKid(g);
+
+        const matches = (g) => {
+            // Status
+            const s = String((g && (g.status || (g.sold ? 'sold' : ''))) || '').toLowerCase().trim();
+            if (status !== 'all' && s !== status) return false;
+
+            // Age
+            if (age === 'kid' && !isKid(g)) return false;
+            if (age === 'adult' && !isAdult(g)) return false;
+
+            // Search
+            if (q) {
+                const hay = [g.id, g.name, g.breed, g.age, g.bio, g.backgroundStory].filter(Boolean).join(' ').toLowerCase();
+                if (!hay.includes(q)) return false;
+            }
+
+            return true;
+        };
+
+        const filtered = (this.goats || []).filter(matches);
+
+        // Render
+        this.goatsContainer.innerHTML = '';
+        filtered.forEach(g => this.goatsContainer.appendChild(this.createGoatCard(g)));
+
+        // Count
+        if (countEl) countEl.textContent = `Showing ${filtered.length} of ${(this.goats || []).length}`;
+
+        // Keep status in URL (nice for sharing)
+        try {
+            const u = new URL(window.location.href);
+            u.searchParams.set('status', status);
+            window.history.replaceState({}, '', u);
+        } catch (e) {
+            // ignore
+        }
+
+        // Empty state
+        if (filtered.length === 0) {
+            this.goatsContainer.innerHTML = `
+              <div class="empty-state">
+                <p>No goats match your filters.</p>
+              </div>
+            `;
+        }
     }
 
     escapeHtml(text) {

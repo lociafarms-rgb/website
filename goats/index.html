@@ -79,6 +79,27 @@
                     </svg>
                     Back to Home
                 </a>
+                <div class="goats-filters" id="goats-filters">
+                    <div class="goats-filters-row">
+                        <input id="goat-filter-search" type="search" placeholder="Search goats (name, breed, notes...)" aria-label="Search goats">
+                        <select id="goat-filter-status" aria-label="Filter by status">
+                            <option value="available" selected>Available (buyers)</option>
+                            <option value="all">All (herd directory)</option>
+                            <option value="sold">Sold</option>
+                            <option value="retained">Retained</option>
+                        </select>
+                        <select id="goat-filter-age" aria-label="Filter by age">
+                            <option value="all" selected>All ages</option>
+                            <option value="kid">Kids</option>
+                            <option value="adult">Adults</option>
+                        </select>
+                        <button id="goat-filter-clear" type="button">Clear</button>
+                    </div>
+                    <div class="goats-filters-meta">
+                        <span id="goat-filter-count">Loading…</span>
+                    </div>
+                </div>
+
                 <div class="goats-accordion" id="goats-grid">
                     <!-- Goats will be loaded dynamically here -->
                     <div class="loading-state">

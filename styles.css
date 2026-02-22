@@ -1525,12 +1525,65 @@ footer p {
     background-color: var(--background);
 }
 
+/* Goats filter bar */
+.goats-filters {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 14px;
+  margin: 16px auto 18px;
+  max-width: 900px;
+}
+
+.goats-filters-row {
+  display: grid;
+  grid-template-columns: 1fr 210px 160px 90px;
+  gap: 10px;
+  align-items: center;
+}
+
+.goats-filters-row input,
+.goats-filters-row select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(0,0,0,0.22);
+  color: #fff;
+  font-family: inherit;
+}
+
+.goats-filters-row input::placeholder { color: rgba(255,255,255,0.65); }
+
+.goats-filters-row button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.10);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.goats-filters-row button:hover { background: rgba(255,255,255,0.14); }
+
+.goats-filters-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.75);
+}
+
+@media (max-width: 860px) {
+  .goats-filters-row {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Goats Accordion Styles */
 .goats-accordion {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: 3rem;
+    margin-top: 1.25rem;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
