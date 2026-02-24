@@ -134,7 +134,7 @@
     },
     {
       "id": "goat-kid-gray-twin-a",
-      "name": "Ash (Gray Twin A)",
+      "name": "Ash",
       "breed": "Boer",
       "age": "Kid",
       "status": "available",
@@ -143,20 +143,21 @@
       "images": [
         "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
       ],
-      "bio": "One of our gray twin buck kids — calm, sweet, and a great little herd-mate. Born approx. 2026-01-26.",
-      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "bio": "Boer kid (doe). Born approx. 2026-01-20.",
+      "backgroundStory": "A pair of Boer kids raised at Locia Farms — calm, sweet, and already comfortable around people.",
       "personality": [
-        "Curious",
         "Sweet",
-        "Confident"
+        "Calm",
+        "Curious"
       ],
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-01-26",
-      "birthDateApprox": true
+      "birthDate": "2026-01-20",
+      "birthDateApprox": true,
+      "sex": "doe"
     },
     {
       "id": "goat-kid-gray-twin-b",
-      "name": "Slate (Gray Twin B)",
+      "name": "Slate",
       "breed": "Boer",
       "age": "Kid",
       "status": "available",
@@ -165,16 +166,17 @@
       "images": [
         "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
       ],
-      "bio": "One of our gray twin buck kids — curious, cuddly, and already full of personality. Born approx. 2026-01-29.",
-      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "bio": "Boer kid (buck). Born approx. 2026-01-20.",
+      "backgroundStory": "A pair of Boer kids raised at Locia Farms — calm, sweet, and already comfortable around people.",
       "personality": [
-        "Curious",
         "Sweet",
-        "Confident"
+        "Calm",
+        "Curious"
       ],
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-01-29",
-      "birthDateApprox": true
+      "birthDate": "2026-01-20",
+      "birthDateApprox": true,
+      "sex": "buck"
     },
     {
       "id": "goat-chip",
