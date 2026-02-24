@@ -232,7 +232,7 @@ class GoatLoader {
                     <h3 class="goat-accordion-name">${this.escapeHtml(goat.name)}</h3>
                     <div class="goat-accordion-meta">
                         <span class="goat-breed">${this.escapeHtml(goat.breed)}</span>
-                        <span class="goat-age">${this.escapeHtml(goat.age)}</span>
+                        <span class="goat-age">${this.escapeHtml(this.renderBirthOrAge(goat))}</span>
                         ${this.renderStatusBadge(goat)}
                         ${this.renderPriceBadge(goat)}
                     </div>
@@ -503,6 +503,30 @@ class GoatLoader {
         const priceText = Number.isFinite(priceNum) ? `$${priceNum.toFixed(0)}` : `$${String(goat.price)}`;
 
         return `<span class="goat-price-badge">${this.escapeHtml(priceText)}</span>`;
+    }
+
+    renderBirthOrAge(goat) {
+        // Prefer explicit birthDate when present.
+        // Display as: Born (approx.) Feb 02, 2026
+        const bd = goat && (goat.birthDate || goat.birthdate || goat.dob);
+        if (bd) {
+            try {
+                const d = new Date(bd);
+                if (!isNaN(d.getTime())) {
+                    const month = d.toLocaleString('en-US', { month: 'short' });
+                    const day = String(d.getDate()).padStart(2, '0');
+                    const year = d.getFullYear();
+                    const approx = (goat.birthDateApprox === false) ? '' : ' (approx.)';
+                    return `Born${approx} ${month} ${day}, ${year}`;
+                }
+            } catch (e) {
+                // fallthrough
+            }
+            // If not parseable, show raw
+            return `Born (approx.) ${String(bd)}`;
+        }
+
+        return goat && goat.age ? goat.age : '';
     }
 
     renderInquiryActions(goat) {

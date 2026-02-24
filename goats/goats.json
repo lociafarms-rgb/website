@@ -4,161 +4,177 @@
       "id": "goat-kid-copper",
       "name": "Copper",
       "breed": "Boer mix / Nigerian Dwarf mix",
-      "age": "Kid (<5 weeks old)",
+      "age": "Kid",
       "status": "available",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-copper-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-boy-copper-2026-02.jpg"
       ],
-      "bio": "Warm red coat and a calm, curious presence — a little explorer in training.",
+      "bio": "Warm red coat and a calm, curious presence — a little explorer in training. Born approx. 2026-01-27.",
       "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
         "Confident"
       ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd."
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-01-27",
+      "birthDateApprox": true
     },
     {
       "id": "goat-kid-maple",
       "name": "Maple",
       "breed": "Boer mix / Nigerian Dwarf mix",
-      "age": "Kid (<5 weeks old)",
+      "age": "Kid",
       "status": "available",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-maple-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-boy-maple-2026-02.jpg"
       ],
-      "bio": "Bright-eyed and friendly, Maple loves to investigate anything new.",
+      "bio": "Bright-eyed and friendly, Maple loves to investigate anything new. Born approx. 2026-01-28.",
       "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
         "Confident"
       ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd."
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-01-28",
+      "birthDateApprox": true
     },
     {
       "id": "goat-kid-rusty",
       "name": "Rusty",
       "breed": "Boer mix / Nigerian Dwarf mix",
-      "age": "Kid (<5 weeks old)",
+      "age": "Kid",
       "status": "available",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-rusty-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-boy-rusty-2026-02.jpg"
       ],
-      "bio": "A lively kid with a deep red coat and a bold little stride.",
+      "bio": "A lively kid with a deep red coat and a bold little stride. Born approx. 2026-02-02.",
       "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
         "Confident"
       ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd."
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-02-02",
+      "birthDateApprox": true
     },
     {
       "id": "goat-kid-patches",
       "name": "Patches",
       "breed": "Boer mix / Nigerian Dwarf mix",
-      "age": "Kid (<5 weeks old)",
+      "age": "Kid",
       "status": "available",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-patches-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-boy-patches-2026-02.jpg"
       ],
-      "bio": "Distinct markings and a gentle vibe — Patches is a sweet, people-curious kid.",
+      "bio": "Distinct markings and a gentle vibe — Patches is a sweet, people-curious kid. Born approx. 2026-02-03.",
       "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
         "Confident"
       ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd."
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-02-03",
+      "birthDateApprox": true
     },
     {
       "id": "goat-kid-bandit",
       "name": "Bandit",
       "breed": "Boer mix / Nigerian Dwarf mix",
-      "age": "Kid (<5 weeks old)",
+      "age": "Kid",
       "status": "available",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-bandit-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-boy-bandit-2026-02.jpg"
       ],
-      "bio": "With his mask-like markings, Bandit is playful, alert, and always watching the action.",
+      "bio": "With his mask-like markings, Bandit is playful, alert, and always watching the action. Born approx. 2026-02-01.",
       "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
         "Confident"
       ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd."
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-02-01",
+      "birthDateApprox": true
     },
     {
       "id": "goat-kid-scout",
       "name": "Scout",
       "breed": "Boer mix / Nigerian Dwarf mix",
-      "age": "Kid (<5 weeks old)",
+      "age": "Kid",
       "status": "available",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-scout-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-boy-scout-2026-02.jpg"
       ],
-      "bio": "Small but confident — Scout loves to wander, sniff, and learn the world.",
+      "bio": "Small but confident — Scout loves to wander, sniff, and learn the world. Born approx. 2026-02-04.",
       "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
         "Confident"
       ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd."
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-02-04",
+      "birthDateApprox": true
     },
     {
       "id": "goat-kid-gray-twin-a",
       "name": "Ash (Gray Twin A)",
       "breed": "Boer mix / Nigerian Dwarf mix",
-      "age": "Kid (<5 weeks old)",
+      "age": "Kid",
       "status": "available",
       "price": 250,
       "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
       ],
-      "bio": "One of our gray twin buck kids — calm, sweet, and a great little herd-mate.",
+      "bio": "One of our gray twin buck kids — calm, sweet, and a great little herd-mate. Born approx. 2026-01-26.",
       "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
         "Confident"
       ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd."
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-01-26",
+      "birthDateApprox": true
     },
     {
       "id": "goat-kid-gray-twin-b",
       "name": "Slate (Gray Twin B)",
       "breed": "Boer mix / Nigerian Dwarf mix",
-      "age": "Kid (<5 weeks old)",
+      "age": "Kid",
       "status": "available",
       "price": 250,
       "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
       ],
-      "bio": "One of our gray twin buck kids — curious, cuddly, and already full of personality.",
+      "bio": "One of our gray twin buck kids — curious, cuddly, and already full of personality. Born approx. 2026-01-29.",
       "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
         "Confident"
       ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd."
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-01-29",
+      "birthDateApprox": true
     },
     {
       "id": "goat-chip",
@@ -184,8 +200,8 @@
       "breed": "Nigerian Dwarf Buck",
       "age": "Kid",
       "image": "images/goats/profiles/nugget.png",
-      "bio": "One of the 'Sweet Tooth' brothers. Nugget is a tri-colored buck kid with a refined dairy character.",
-      "backgroundStory": "Nugget is Brownie's brother and partner in crime. Smaller and more refined than Chip, he represents the classic dairy style of the Nigerian Dwarf breed. He's full of energy and is constantly challenging his brother to playful sparring matches.",
+      "bio": "One of the 'Sweet Tooth' brothers. Nugget is a tri-colored buck kid with a refined dairy character. Born approx. 2026-01-20.",
+      "backgroundStory": "Nugget is Brownie's brother and partner in crime. Smaller and more refined than Chip, he represents the classic dairy style of the Nigerian Dwarf breed. He's full of energy and is constantly challenging his brother to playful sparring matches Born approx. 2026-01-20.",
       "personality": [
         "Playful",
         "Refined",
@@ -194,7 +210,9 @@
       ],
       "favoriteActivity": "Sparring with Brownie",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "birthDate": "2026-01-20",
+      "birthDateApprox": true
     },
     {
       "id": "goat-brownie",
@@ -202,8 +220,8 @@
       "breed": "Nigerian Dwarf Buck",
       "age": "Kid",
       "image": "images/goats/profiles/brownie.png",
-      "bio": "Nugget's brother and partner in crime. Brownie sports a similar tri-color coat and loves to explore.",
-      "backgroundStory": "Brownie is the adventurous half of the kid duo. With his rich tri-color markings, he's a handsome young buck who is always the first to investigate a new toy or treat. He and Nugget are inseparable and bring a youthful energy to the buck pen.",
+      "bio": "Nugget's brother and partner in crime. Brownie sports a similar tri-color coat and loves to explore. Born approx. 2026-01-22.",
+      "backgroundStory": "Brownie is the adventurous half of the kid duo. With his rich tri-color markings, he's a handsome young buck who is always the first to investigate a new toy or treat. He and Nugget are inseparable and bring a youthful energy to the buck pen Born approx. 2026-01-22.",
       "personality": [
         "Adventurous",
         "Curious",
@@ -212,7 +230,9 @@
       ],
       "favoriteActivity": "Investigating new things",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "birthDate": "2026-01-22",
+      "birthDateApprox": true
     },
     {
       "id": "goat-snickerella",
@@ -236,10 +256,10 @@
       "id": "goat-snickerella-triplet-doe-kid",
       "name": "Snickerella’s Doe Kid",
       "breed": "Nigerian Dwarf Doe",
-      "age": "Kid (born week of Jan 25, 2026)",
+      "age": "Kid",
       "image": "images/goats/profiles/snickerella-triplet-doe-kid-2026-02.jpg",
-      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf doe kid, about 3 weeks old.",
-      "backgroundStory": "Snickerella had triplets (2 buck kids and 1 doe kid). This little doe is bright-eyed, quick on her feet, and already practicing those tiny hops that make Nigerian Dwarf kids so fun to watch.",
+      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf doe kid, about 3 weeks old. Born approx. 2026-01-27.",
+      "backgroundStory": "Snickerella had triplets (2 buck kids and 1 doe kid). This little doe is bright-eyed, quick on her feet, and already practicing those tiny hops that make Nigerian Dwarf kids so fun to watch Born approx. 2026-01-27.",
       "personality": [
         "Sweet",
         "Curious",
@@ -248,16 +268,18 @@
       ],
       "favoriteActivity": "Exploring with her brothers",
       "status": "available",
-      "price": 150
+      "price": 150,
+      "birthDate": "2026-01-27",
+      "birthDateApprox": true
     },
     {
       "id": "goat-snickerella-triplet-buck-kid-a",
       "name": "Snickerella’s Buck Kid (A)",
       "breed": "Nigerian Dwarf Buck",
-      "age": "Kid (born week of Jan 25, 2026)",
+      "age": "Kid",
       "image": "images/goats/profiles/snickerella-triplet-kid-a-2026-02.jpg",
-      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf buck kid, about 3 weeks old.",
-      "backgroundStory": "One of the two bucklings from Snickerella’s triplet set. He’s playful, sturdy, and always testing his legs—little bursts of speed, quick turns, and a lot of curiosity.",
+      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf buck kid, about 3 weeks old. Born approx. 2026-01-27.",
+      "backgroundStory": "One of the two bucklings from Snickerella’s triplet set. He’s playful, sturdy, and always testing his legs—little bursts of speed, quick turns, and a lot of curiosity Born approx. 2026-01-27.",
       "personality": [
         "Playful",
         "Energetic",
@@ -266,16 +288,18 @@
       ],
       "favoriteActivity": "Tiny sprints and play bows",
       "status": "available",
-      "price": 150
+      "price": 150,
+      "birthDate": "2026-01-27",
+      "birthDateApprox": true
     },
     {
       "id": "goat-snickerella-triplet-buck-kid-b",
       "name": "Snickerella’s Buck Kid (B)",
       "breed": "Nigerian Dwarf Buck",
-      "age": "Kid (born week of Jan 25, 2026)",
+      "age": "Kid",
       "image": "images/goats/profiles/snickerella-triplet-kid-b-2026-02.jpg",
-      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf buck kid, about 3 weeks old.",
-      "backgroundStory": "The second buckling from Snickerella’s triplet set. He’s got that classic kid curiosity—always investigating whatever’s new, and sticking close to the crew when it’s time to settle.",
+      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf buck kid, about 3 weeks old. Born approx. 2026-01-27.",
+      "backgroundStory": "The second buckling from Snickerella’s triplet set. He’s got that classic kid curiosity—always investigating whatever’s new, and sticking close to the crew when it’s time to settle Born approx. 2026-01-27.",
       "personality": [
         "Curious",
         "Adventurous",
@@ -284,7 +308,9 @@
       ],
       "favoriteActivity": "Investigating everything",
       "status": "available",
-      "price": 150
+      "price": 150,
+      "birthDate": "2026-01-27",
+      "birthDateApprox": true
     },
     {
       "id": "goat-oreana",
@@ -326,10 +352,10 @@
       "id": "goat-caramella-twin-doe-kid",
       "name": "Caramella’s Doe Kid",
       "breed": "Nigerian Dwarf Doe",
-      "age": "Kid (born week of Jan 25, 2026)",
+      "age": "Kid",
       "image": "images/goats/profiles/caramella-twin-doe-kid-2026-02.jpg",
-      "bio": "One of Caramella’s twins — a sweet Nigerian Dwarf doe kid, about 3 weeks old.",
-      "backgroundStory": "Caramella welcomed a set of twins, and this little doe is already curious and confident. Still in the early ‘kid’ stage — lots of hopping, exploring, and staying close to her sibling.",
+      "bio": "One of Caramella’s twins — a sweet Nigerian Dwarf doe kid, about 3 weeks old. Born approx. 2026-01-28.",
+      "backgroundStory": "Caramella welcomed a set of twins, and this little doe is already curious and confident. Still in the early ‘kid’ stage — lots of hopping, exploring, and staying close to her sibling Born approx. 2026-01-28.",
       "personality": [
         "Curious",
         "Sweet",
@@ -338,16 +364,18 @@
       ],
       "favoriteActivity": "Hopping around and exploring",
       "status": "available",
-      "price": 150
+      "price": 150,
+      "birthDate": "2026-01-28",
+      "birthDateApprox": true
     },
     {
       "id": "goat-caramella-twin-buck-kid",
       "name": "Caramella’s Buck Kid",
       "breed": "Nigerian Dwarf Buck",
-      "age": "Kid (born week of Jan 25, 2026)",
+      "age": "Kid",
       "image": "images/goats/profiles/caramella-twin-buck-kid-2026-02.jpg",
-      "bio": "One of Caramella’s twins — a Nigerian Dwarf buck kid, about 3 weeks old.",
-      "backgroundStory": "This little buckling is part of Caramella’s twin pair. He’s sturdy on his feet, always on the move, and already showing that classic Nigerian Dwarf ‘kid’ energy.",
+      "bio": "One of Caramella’s twins — a Nigerian Dwarf buck kid, about 3 weeks old. Born approx. 2026-01-28.",
+      "backgroundStory": "This little buckling is part of Caramella’s twin pair. He’s sturdy on his feet, always on the move, and already showing that classic Nigerian Dwarf ‘kid’ energy Born approx. 2026-01-28.",
       "personality": [
         "Playful",
         "Energetic",
@@ -356,7 +384,9 @@
       ],
       "favoriteActivity": "Playing follow-the-leader",
       "status": "available",
-      "price": 150
+      "price": 150,
+      "birthDate": "2026-01-28",
+      "birthDateApprox": true
     },
     {
       "id": "goat-cookie",
