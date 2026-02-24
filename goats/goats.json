@@ -21,7 +21,8 @@
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
       "birthDate": "2026-01-27",
       "birthDateApprox": true,
-      "sex": "buck"
+      "sex": "buck",
+      "color": "brown"
     },
     {
       "id": "goat-kid-maple",
@@ -44,7 +45,8 @@
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
       "birthDate": "2026-01-28",
       "birthDateApprox": true,
-      "sex": "buck"
+      "sex": "buck",
+      "color": "brown"
     },
     {
       "id": "goat-kid-rusty",
@@ -67,7 +69,8 @@
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
       "birthDate": "2026-02-02",
       "birthDateApprox": true,
-      "sex": "buck"
+      "sex": "buck",
+      "color": "brown"
     },
     {
       "id": "goat-kid-patches",
@@ -90,7 +93,8 @@
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
       "birthDate": "2026-02-03",
       "birthDateApprox": true,
-      "sex": "buck"
+      "sex": "buck",
+      "color": "tricolor"
     },
     {
       "id": "goat-kid-bandit",
@@ -113,7 +117,8 @@
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
       "birthDate": "2026-02-01",
       "birthDateApprox": true,
-      "sex": "buck"
+      "sex": "buck",
+      "color": "blackwhite"
     },
     {
       "id": "goat-kid-scout",
@@ -136,7 +141,8 @@
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
       "birthDate": "2026-02-04",
       "birthDateApprox": true,
-      "sex": "buck"
+      "sex": "buck",
+      "color": "blackwhite"
     },
     {
       "id": "goat-kid-gray-twin-a",
@@ -159,7 +165,8 @@
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
       "birthDate": "2026-01-20",
       "birthDateApprox": true,
-      "sex": "doe"
+      "sex": "doe",
+      "color": "gray"
     },
     {
       "id": "goat-kid-gray-twin-b",
@@ -182,7 +189,8 @@
       "favoriteActivity": "Exploring, hopping around, and following the herd.",
       "birthDate": "2026-01-20",
       "birthDateApprox": true,
-      "sex": "buck"
+      "sex": "buck",
+      "color": "gray"
     },
     {
       "id": "goat-chip",
@@ -200,7 +208,8 @@
       ],
       "favoriteActivity": "Overseeing his herd (from a horizontal position occasionally)",
       "status": "sold",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-nugget",
@@ -220,7 +229,8 @@
       "status": "retained",
       "price": 200,
       "birthDate": "2025-02-01",
-      "birthDateApprox": true
+      "birthDateApprox": true,
+      "color": "unknown"
     },
     {
       "id": "goat-brownie",
@@ -240,7 +250,8 @@
       "status": "retained",
       "price": 200,
       "birthDate": "2025-02-08",
-      "birthDateApprox": true
+      "birthDateApprox": true,
+      "color": "unknown"
     },
     {
       "id": "goat-snickerella",
@@ -258,7 +269,8 @@
       ],
       "favoriteActivity": "Grazing in the sun",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-oreana",
@@ -276,7 +288,8 @@
       ],
       "favoriteActivity": "Greeting visitors at the fence",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-caramella",
@@ -294,7 +307,8 @@
       ],
       "favoriteActivity": "Sunbathing",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-cookie",
@@ -312,7 +326,8 @@
       ],
       "favoriteActivity": "Showing off her coat",
       "status": "sold",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-simba",
@@ -330,7 +345,8 @@
       ],
       "favoriteActivity": "Surveying his kingdom",
       "status": "retained",
-      "price": 550
+      "price": 550,
+      "color": "unknown"
     },
     {
       "id": "goat-nala",
@@ -348,7 +364,8 @@
       ],
       "favoriteActivity": "Leading the herd",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-sarabi",
@@ -366,7 +383,8 @@
       ],
       "favoriteActivity": "Hanging out with Nala",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-dippa",
@@ -384,7 +402,8 @@
       ],
       "favoriteActivity": "Eating",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-mary",
@@ -402,7 +421,8 @@
       ],
       "favoriteActivity": "Being a good mom",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-skora",
@@ -420,7 +440,8 @@
       ],
       "favoriteActivity": "Caring for kids",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-nutella",
@@ -438,7 +459,8 @@
       ],
       "favoriteActivity": "Seeking out treats",
       "status": "sold",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     },
     {
       "id": "goat-nueggeta",
@@ -456,7 +478,8 @@
       ],
       "favoriteActivity": "Browsing for leaves",
       "status": "retained",
-      "price": 200
+      "price": 200,
+      "color": "unknown"
     }
   ]
 }

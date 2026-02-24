@@ -717,9 +717,10 @@ class GoatLoader {
         const searchEl = document.getElementById('goat-filter-search');
         const statusEl = document.getElementById('goat-filter-status');
         const ageEl = document.getElementById('goat-filter-age');
+        const colorEl = document.getElementById('goat-filter-color');
         const clearEl = document.getElementById('goat-filter-clear');
 
-        if (!searchEl || !statusEl || !ageEl || !clearEl) {
+        if (!searchEl || !statusEl || !ageEl || !colorEl || !clearEl) {
             // Filters not present on this page
             this._filtersInitialized = true;
             return;
@@ -732,14 +733,19 @@ class GoatLoader {
         const status = params.get('status');
         if (status && ['available','all','sold','retained'].includes(status)) statusEl.value = status;
 
+        const color = params.get('color');
+        if (color && ['all','brown','blackwhite','tricolor','gray','other','unknown'].includes(color)) colorEl.value = color;
+
         searchEl.addEventListener('input', apply);
         statusEl.addEventListener('change', apply);
         ageEl.addEventListener('change', apply);
+        colorEl.addEventListener('change', apply);
 
         clearEl.addEventListener('click', () => {
             searchEl.value = '';
             statusEl.value = 'available';
             ageEl.value = 'all';
+            colorEl.value = 'all';
             this.applyFiltersAndRender();
         });
 
@@ -752,11 +758,13 @@ class GoatLoader {
         const searchEl = document.getElementById('goat-filter-search');
         const statusEl = document.getElementById('goat-filter-status');
         const ageEl = document.getElementById('goat-filter-age');
+        const colorEl = document.getElementById('goat-filter-color');
         const countEl = document.getElementById('goat-filter-count');
 
         const q = (searchEl && searchEl.value ? searchEl.value : '').trim().toLowerCase();
         const status = statusEl ? statusEl.value : 'all';
         const age = ageEl ? ageEl.value : 'all';
+        const color = colorEl ? colorEl.value : 'all';
 
         const isKid = (g) => String(g && g.age || '').toLowerCase().includes('kid');
         const isAdult = (g) => !isKid(g);
@@ -770,9 +778,13 @@ class GoatLoader {
             if (age === 'kid' && !isKid(g)) return false;
             if (age === 'adult' && !isAdult(g)) return false;
 
+            // Color
+            const c = String((g && (g.color || g.coatColor || 'unknown')) || 'unknown').toLowerCase().trim();
+            if (color !== 'all' && c !== color) return false;
+
             // Search
             if (q) {
-                const hay = [g.id, g.name, g.breed, g.age, g.bio, g.backgroundStory].filter(Boolean).join(' ').toLowerCase();
+                const hay = [g.id, g.name, g.breed, g.age, g.bio, g.backgroundStory, g.color].filter(Boolean).join(' ').toLowerCase();
                 if (!hay.includes(q)) return false;
             }
 
@@ -792,6 +804,7 @@ class GoatLoader {
         try {
             const u = new URL(window.location.href);
             u.searchParams.set('status', status);
+            u.searchParams.set('color', color);
             window.history.replaceState({}, '', u);
         } catch (e) {
             // ignore
