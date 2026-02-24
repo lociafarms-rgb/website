@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": "first-weeks-kids",
+      "date": "2026-02-01",
+      "title": "First Weeks: The Kids When They Were Tiny",
+      "summary": "Some of our first photos from the early days — when the kids were still small and everything felt brand new.",
+      "tags": ["goats", "kids", "herd"],
+      "media": [
+        {"type": "image", "src": "/images/journal/2026-02/goat-kids-early-01.jpg", "caption": "Early kid season — the first little crew."},
+        {"type": "image", "src": "/images/journal/2026-02/goat-kids-early-02.jpg", "caption": "Small bodies, big personalities."},
+        {"type": "image", "src": "/images/journal/2026-02/goat-kids-early-03.jpg", "caption": "A snapshot from those first weeks."},
+        {"type": "image", "src": "/images/journal/2026-02/goat-kids-early-04.jpg", "caption": "The herd learning the routine."}
+      ],
+      "body": [
+        "These are a few of our first photos from when the kids were still tiny.",
+        "Those early days are equal parts joy and logistics: making sure everyone is warm, fed, and settling into the herd rhythm.",
+        "Lesson learned: take pictures early and often — it’s amazing how quickly they change, and it helps us keep our records straight as the herd grows."
+      ]
+    },
+    {
+      "id": "maduro-donkey",
+      "date": "2026-02-05",
+      "title": "Meet Maduro",
+      "summary": "A photo from when we first got Maduro. The day he was captured in Venezuela made the name feel oddly appropriate.",
+      "tags": ["donkey", "farm-life"],
+      "media": [
+        {"type": "image", "src": "/images/journal/2026-02/maduro-donkey-01.jpg", "caption": "Maduro — our first days together."}
+      ],
+      "body": [
+        "This is Maduro — a photo from when we first got him.",
+        "The day he was captured in Venezuela, the name ‘Maduro’ seemed strangely fitting, so it stuck.",
+        "He’s been part of the rhythm here ever since — a steady presence and a good reminder that the farm has its own tempo."
+      ]
+    },
+    {
+      "id": "first-firepit-night",
+      "date": "2026-02-10",
+      "title": "First Fire Pit Night",
+      "summary": "One of the first nights we completed our fire pit area — and burned some trash while we were at it.",
+      "tags": ["projects", "homestead"],
+      "media": [
+        {"type": "image", "src": "/images/journal/2026-02/firepit-night-01.jpg", "caption": "First fire pit night."},
+        {"type": "video", "src": "/videos/journal/2026-02/farm-clip-01.mp4", "caption": "A short clip from around the farm."}
+      ],
+      "body": [
+        "We finally completed our first fire pit area — one of those small milestones that makes the place feel more like home.",
+        "We also burned some trash that night (the practical side of farm work never really stops).",
+        "Lesson learned: progress is usually a stack of small nights like this, not one big weekend."
+      ]
+    },
+    {
+      "id": "driveway-700ft",
+      "date": "2026-02-15",
+      "title": "Driveway Progress (700 ft)",
+      "summary": "Our ongoing driveway work — about 700 feet we’ve slowly cleared, and recently finished the apron work.",
+      "tags": ["projects", "driveway"],
+      "media": [
+        {"type": "image", "src": "/images/journal/2026-02/driveway-progress-01.jpg", "caption": "A view down the driveway."},
+        {"type": "image", "src": "/images/journal/2026-02/driveway-apron-01.jpg", "caption": "Apron work progress."},
+        {"type": "image", "src": "/images/journal/2026-02/driveway-apron-02.jpg", "caption": "More apron work progress."}
+      ],
+      "body": [
+        "This is our ongoing driveway work — about 700 feet we’ve been slowly clearing and shaping over time.",
+        "We recently finished the apron work, which was a big step forward.",
+        "Lesson learned: long projects get done by showing up consistently. A little progress, then another little progress, and suddenly it’s real."
+      ]
+    }
+  ]
+}
