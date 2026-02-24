@@ -3,7 +3,7 @@
     {
       "id": "goat-kid-copper",
       "name": "Copper",
-      "breed": "Boer mix / Nigerian Dwarf mix",
+      "breed": "Boer",
       "age": "Kid",
       "status": "available",
       "price": 250,
@@ -25,7 +25,7 @@
     {
       "id": "goat-kid-maple",
       "name": "Maple",
-      "breed": "Boer mix / Nigerian Dwarf mix",
+      "breed": "Boer / Nigerian Dwarf mix",
       "age": "Kid",
       "status": "available",
       "price": 250,
@@ -47,7 +47,7 @@
     {
       "id": "goat-kid-rusty",
       "name": "Rusty",
-      "breed": "Boer mix / Nigerian Dwarf mix",
+      "breed": "Nigerian Dwarf",
       "age": "Kid",
       "status": "available",
       "price": 250,
@@ -69,7 +69,7 @@
     {
       "id": "goat-kid-patches",
       "name": "Patches",
-      "breed": "Boer mix / Nigerian Dwarf mix",
+      "breed": "Nigerian Dwarf",
       "age": "Kid",
       "status": "available",
       "price": 250,
@@ -91,7 +91,7 @@
     {
       "id": "goat-kid-bandit",
       "name": "Bandit",
-      "breed": "Boer mix / Nigerian Dwarf mix",
+      "breed": "Nigerian Dwarf",
       "age": "Kid",
       "status": "available",
       "price": 250,
@@ -113,7 +113,7 @@
     {
       "id": "goat-kid-scout",
       "name": "Scout",
-      "breed": "Boer mix / Nigerian Dwarf mix",
+      "breed": "Nigerian Dwarf",
       "age": "Kid",
       "status": "available",
       "price": 250,
@@ -135,7 +135,7 @@
     {
       "id": "goat-kid-gray-twin-a",
       "name": "Ash (Gray Twin A)",
-      "breed": "Boer mix / Nigerian Dwarf mix",
+      "breed": "Boer",
       "age": "Kid",
       "status": "available",
       "price": 250,
@@ -157,7 +157,7 @@
     {
       "id": "goat-kid-gray-twin-b",
       "name": "Slate (Gray Twin B)",
-      "breed": "Boer mix / Nigerian Dwarf mix",
+      "breed": "Boer",
       "age": "Kid",
       "status": "available",
       "price": 250,
@@ -198,10 +198,10 @@
       "id": "goat-nugget",
       "name": "Nugget",
       "breed": "Nigerian Dwarf Buck",
-      "age": "Kid",
+      "age": "Yearling (~1 year)",
       "image": "images/goats/profiles/nugget.png",
-      "bio": "One of the 'Sweet Tooth' brothers. Nugget is a tri-colored buck kid with a refined dairy character. Born approx. 2026-01-20.",
-      "backgroundStory": "Nugget is Brownie's brother and partner in crime. Smaller and more refined than Chip, he represents the classic dairy style of the Nigerian Dwarf breed. He's full of energy and is constantly challenging his brother to playful sparring matches Born approx. 2026-01-20.",
+      "bio": "One of the 'Sweet Tooth' brothers. Nugget is a tri-colored buck kid with a refined dairy character. Born approx. 2025-02-01.",
+      "backgroundStory": "Nugget is Brownie's brother and partner in crime. Smaller and more refined than Chip, he represents the classic dairy style of the Nigerian Dwarf breed. He's full of energy and is constantly challenging his brother to playful sparring matches. Born approx. 2025-02-01.",
       "personality": [
         "Playful",
         "Refined",
@@ -211,17 +211,17 @@
       "favoriteActivity": "Sparring with Brownie",
       "status": "retained",
       "price": 200,
-      "birthDate": "2026-01-20",
+      "birthDate": "2025-02-01",
       "birthDateApprox": true
     },
     {
       "id": "goat-brownie",
       "name": "Brownie",
       "breed": "Nigerian Dwarf Buck",
-      "age": "Kid",
+      "age": "Yearling (~1 year)",
       "image": "images/goats/profiles/brownie.png",
-      "bio": "Nugget's brother and partner in crime. Brownie sports a similar tri-color coat and loves to explore. Born approx. 2026-01-22.",
-      "backgroundStory": "Brownie is the adventurous half of the kid duo. With his rich tri-color markings, he's a handsome young buck who is always the first to investigate a new toy or treat. He and Nugget are inseparable and bring a youthful energy to the buck pen Born approx. 2026-01-22.",
+      "bio": "Nugget's brother and partner in crime. Brownie sports a similar tri-color coat and loves to explore. Born approx. 2025-02-08.",
+      "backgroundStory": "Brownie is the adventurous half of the kid duo. With his rich tri-color markings, he's a handsome young buck who is always the first to investigate a new toy or treat. He and Nugget are inseparable and bring a youthful energy to the buck pen. Born approx. 2025-02-08.",
       "personality": [
         "Adventurous",
         "Curious",
@@ -231,7 +231,7 @@
       "favoriteActivity": "Investigating new things",
       "status": "retained",
       "price": 200,
-      "birthDate": "2026-01-22",
+      "birthDate": "2025-02-08",
       "birthDateApprox": true
     },
     {
