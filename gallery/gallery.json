@@ -3,65 +3,119 @@
     {
       "id": "goat-kids-early-01",
       "date": "2026-02-01",
-      "tags": ["goats", "kids"],
+      "tags": [
+        "goats",
+        "kids"
+      ],
       "src": "/images/gallery/2026-02/goat-kids-early-01.jpg",
       "caption": "Early kid season — the first little crew."
     },
     {
       "id": "goat-kids-early-02",
       "date": "2026-02-01",
-      "tags": ["goats", "kids"],
+      "tags": [
+        "goats",
+        "kids"
+      ],
       "src": "/images/gallery/2026-02/goat-kids-early-02.jpg",
       "caption": "Small bodies, big personalities."
     },
     {
       "id": "goat-kids-early-03",
       "date": "2026-02-01",
-      "tags": ["goats", "kids"],
+      "tags": [
+        "goats",
+        "kids"
+      ],
       "src": "/images/gallery/2026-02/goat-kids-early-03.jpg",
       "caption": "A snapshot from those first weeks."
     },
     {
       "id": "goat-kids-early-04",
       "date": "2026-02-01",
-      "tags": ["goats", "kids"],
+      "tags": [
+        "goats",
+        "kids"
+      ],
       "src": "/images/gallery/2026-02/goat-kids-early-04.jpg",
       "caption": "The herd learning the routine."
     },
     {
       "id": "maduro-donkey-01",
       "date": "2026-02-05",
-      "tags": ["donkey"],
+      "tags": [
+        "donkey"
+      ],
       "src": "/images/gallery/2026-02/maduro-donkey-01.jpg",
       "caption": "Maduro — our first days together."
     },
     {
       "id": "firepit-night-01",
       "date": "2026-02-10",
-      "tags": ["projects"],
+      "tags": [
+        "projects"
+      ],
       "src": "/images/gallery/2026-02/firepit-night-01.jpg",
       "caption": "First fire pit night."
     },
     {
       "id": "driveway-progress-01",
       "date": "2026-02-15",
-      "tags": ["driveway", "projects"],
+      "tags": [
+        "driveway",
+        "projects"
+      ],
       "src": "/images/gallery/2026-02/driveway-progress-01.jpg",
       "caption": "A view down the driveway."
     },
     {
       "id": "driveway-apron-01",
       "date": "2026-02-15",
-      "tags": ["driveway", "projects"],
+      "tags": [
+        "driveway",
+        "projects"
+      ],
       "src": "/images/gallery/2026-02/driveway-apron-01.jpg",
       "caption": "Apron work progress."
     },
     {
       "id": "driveway-apron-02",
       "date": "2026-02-15",
-      "tags": ["driveway", "projects"],
+      "tags": [
+        "driveway",
+        "projects"
+      ],
       "src": "/images/gallery/2026-02/driveway-apron-02.jpg",
       "caption": "More apron work progress."
+    },
+    {
+      "id": "milking-station-01",
+      "date": "2026-02-20",
+      "tags": [
+        "milking",
+        "projects"
+      ],
+      "src": "/images/gallery/2026-02/milking-station-01.jpg",
+      "caption": "First milking station setup."
+    },
+    {
+      "id": "milking-station-04",
+      "date": "2026-02-20",
+      "tags": [
+        "milking"
+      ],
+      "src": "/images/gallery/2026-02/milking-station-04.jpg",
+      "caption": "Learning the process."
+    },
+    {
+      "id": "milking-station-09",
+      "date": "2026-02-20",
+      "tags": [
+        "milking",
+        "projects"
+      ],
+      "src": "/images/gallery/2026-02/milking-station-09.jpg",
+      "caption": "We’ll keep improving the station."
     }
   ]
 }
