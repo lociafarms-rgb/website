@@ -12,7 +12,7 @@
         "/images/goats/profiles/kid-boy-copper-2026-02.jpg"
       ],
       "bio": "Warm red coat and a calm, curious presence — a little explorer in training. Born approx. 2026-01-27.",
-      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
@@ -34,7 +34,7 @@
         "/images/goats/profiles/kid-boy-maple-2026-02.jpg"
       ],
       "bio": "Bright-eyed and friendly, Maple loves to investigate anything new. Born approx. 2026-01-28.",
-      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
@@ -56,7 +56,7 @@
         "/images/goats/profiles/kid-boy-rusty-2026-02.jpg"
       ],
       "bio": "A lively kid with a deep red coat and a bold little stride. Born approx. 2026-02-02.",
-      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
@@ -78,7 +78,7 @@
         "/images/goats/profiles/kid-boy-patches-2026-02.jpg"
       ],
       "bio": "Distinct markings and a gentle vibe — Patches is a sweet, people-curious kid. Born approx. 2026-02-03.",
-      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
@@ -100,7 +100,7 @@
         "/images/goats/profiles/kid-boy-bandit-2026-02.jpg"
       ],
       "bio": "With his mask-like markings, Bandit is playful, alert, and always watching the action. Born approx. 2026-02-01.",
-      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
@@ -122,7 +122,7 @@
         "/images/goats/profiles/kid-boy-scout-2026-02.jpg"
       ],
       "bio": "Small but confident — Scout loves to wander, sniff, and learn the world. Born approx. 2026-02-04.",
-      "backgroundStory": "Born at Locia Farms less than 5 weeks ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
         "Curious",
         "Sweet",
@@ -253,26 +253,6 @@
       "favoriteActivity": "Grazing in the sun",
       "status": "retained",
       "price": 200
-    },
-    {
-      "id": "goat-snickerella-triplet-doe-kid",
-      "name": "Snickerella’s Doe Kid",
-      "breed": "Nigerian Dwarf Doe",
-      "age": "Kid",
-      "image": "images/goats/profiles/snickerella-triplet-doe-kid-2026-02.jpg",
-      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf doe kid, about 3 weeks old. Born approx. 2026-01-27.",
-      "backgroundStory": "Snickerella had triplets (2 buck kids and 1 doe kid). This little doe is bright-eyed, quick on her feet, and already practicing those tiny hops that make Nigerian Dwarf kids so fun to watch Born approx. 2026-01-27.",
-      "personality": [
-        "Sweet",
-        "Curious",
-        "Bouncy",
-        "Triplet"
-      ],
-      "favoriteActivity": "Exploring with her brothers",
-      "status": "available",
-      "price": 150,
-      "birthDate": "2026-01-27",
-      "birthDateApprox": true
     },
     {
       "id": "goat-oreana",
