@@ -273,46 +273,6 @@
       "birthDateApprox": true
     },
     {
-      "id": "goat-snickerella-triplet-buck-kid-a",
-      "name": "Snickerella’s Buck Kid (A)",
-      "breed": "Nigerian Dwarf Buck",
-      "age": "Kid",
-      "image": "images/goats/profiles/snickerella-triplet-kid-a-2026-02.jpg",
-      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf buck kid, about 3 weeks old. Born approx. 2026-01-27.",
-      "backgroundStory": "One of the two bucklings from Snickerella’s triplet set. He’s playful, sturdy, and always testing his legs—little bursts of speed, quick turns, and a lot of curiosity Born approx. 2026-01-27.",
-      "personality": [
-        "Playful",
-        "Energetic",
-        "Bold",
-        "Triplet"
-      ],
-      "favoriteActivity": "Tiny sprints and play bows",
-      "status": "available",
-      "price": 150,
-      "birthDate": "2026-01-27",
-      "birthDateApprox": true
-    },
-    {
-      "id": "goat-snickerella-triplet-buck-kid-b",
-      "name": "Snickerella’s Buck Kid (B)",
-      "breed": "Nigerian Dwarf Buck",
-      "age": "Kid",
-      "image": "images/goats/profiles/snickerella-triplet-kid-b-2026-02.jpg",
-      "bio": "One of Snickerella’s triplets — a Nigerian Dwarf buck kid, about 3 weeks old. Born approx. 2026-01-27.",
-      "backgroundStory": "The second buckling from Snickerella’s triplet set. He’s got that classic kid curiosity—always investigating whatever’s new, and sticking close to the crew when it’s time to settle Born approx. 2026-01-27.",
-      "personality": [
-        "Curious",
-        "Adventurous",
-        "Friendly",
-        "Triplet"
-      ],
-      "favoriteActivity": "Investigating everything",
-      "status": "available",
-      "price": 150,
-      "birthDate": "2026-01-27",
-      "birthDateApprox": true
-    },
-    {
       "id": "goat-oreana",
       "name": "Oreana",
       "breed": "Nigerian Dwarf Doe",
@@ -347,46 +307,6 @@
       "favoriteActivity": "Sunbathing",
       "status": "retained",
       "price": 200
-    },
-    {
-      "id": "goat-caramella-twin-doe-kid",
-      "name": "Caramella’s Doe Kid",
-      "breed": "Nigerian Dwarf Doe",
-      "age": "Kid",
-      "image": "images/goats/profiles/caramella-twin-doe-kid-2026-02.jpg",
-      "bio": "One of Caramella’s twins — a sweet Nigerian Dwarf doe kid, about 3 weeks old. Born approx. 2026-01-28.",
-      "backgroundStory": "Caramella welcomed a set of twins, and this little doe is already curious and confident. Still in the early ‘kid’ stage — lots of hopping, exploring, and staying close to her sibling Born approx. 2026-01-28.",
-      "personality": [
-        "Curious",
-        "Sweet",
-        "Bouncy",
-        "Twin"
-      ],
-      "favoriteActivity": "Hopping around and exploring",
-      "status": "available",
-      "price": 150,
-      "birthDate": "2026-01-28",
-      "birthDateApprox": true
-    },
-    {
-      "id": "goat-caramella-twin-buck-kid",
-      "name": "Caramella’s Buck Kid",
-      "breed": "Nigerian Dwarf Buck",
-      "age": "Kid",
-      "image": "images/goats/profiles/caramella-twin-buck-kid-2026-02.jpg",
-      "bio": "One of Caramella’s twins — a Nigerian Dwarf buck kid, about 3 weeks old. Born approx. 2026-01-28.",
-      "backgroundStory": "This little buckling is part of Caramella’s twin pair. He’s sturdy on his feet, always on the move, and already showing that classic Nigerian Dwarf ‘kid’ energy Born approx. 2026-01-28.",
-      "personality": [
-        "Playful",
-        "Energetic",
-        "Bold",
-        "Twin"
-      ],
-      "favoriteActivity": "Playing follow-the-leader",
-      "status": "available",
-      "price": 150,
-      "birthDate": "2026-01-28",
-      "birthDateApprox": true
     },
     {
       "id": "goat-cookie",
