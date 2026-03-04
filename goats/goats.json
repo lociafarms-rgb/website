@@ -49,30 +49,6 @@
       "color": "brown"
     },
     {
-      "id": "goat-kid-rusty",
-      "name": "Rusty",
-      "breed": "Nigerian Dwarf",
-      "age": "Kid",
-      "status": "available",
-      "price": 250,
-      "image": "/images/goats/profiles/kid-boy-rusty-2026-02.jpg",
-      "images": [
-        "/images/goats/profiles/kid-boy-rusty-2026-02.jpg"
-      ],
-      "bio": "Nigerian Dwarf kid (buck). Born approx. 2026-02-02.",
-      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
-      "personality": [
-        "Curious",
-        "Sweet",
-        "Confident"
-      ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-02-02",
-      "birthDateApprox": true,
-      "sex": "buck",
-      "color": "brown"
-    },
-    {
       "id": "goat-kid-patches",
       "name": "Patches",
       "breed": "Nigerian Dwarf",
@@ -101,8 +77,7 @@
       "name": "Bandit",
       "breed": "Nigerian Dwarf",
       "age": "Kid",
-      "status": "available",
-      "price": 250,
+      "status": "sold",
       "image": "/images/goats/profiles/kid-boy-bandit-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-boy-bandit-2026-02.jpg"
