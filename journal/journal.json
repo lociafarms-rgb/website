@@ -1,6 +1,34 @@
 {
   "posts": [
     {
+      "id": "playground-built",
+      "date": "2026-03-22",
+      "title": "A New Playground at Locia Farms",
+      "summary": "We just finished building a playground on the farm — a small milestone that makes the space more welcoming for families.",
+      "tags": [
+        "projects",
+        "family",
+        "homestead"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "src": "/images/journal/2026-03/playground-01.jpg",
+          "caption": "The new play set — ready for little adventurers."
+        },
+        {
+          "type": "image",
+          "src": "/images/journal/2026-03/playground-02.jpg",
+          "caption": "Wide view: tucked into the trees, built on a fresh pad."
+        }
+      ],
+      "body": [
+        "We just finished building a playground on the farm — one of those projects that changes how the whole place feels.",
+        "It’s simple, sturdy, and set back in the trees so the kids can play while the adults take a breath and enjoy the property.",
+        "Lesson learned: farm progress isn’t only fences and feeders — it’s also the little pieces that make the land feel like home."
+      ]
+    },
+    {
       "id": "first-weeks-kids",
       "date": "2026-02-01",
       "title": "First Weeks: The Kids When They Were Tiny",
