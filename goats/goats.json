@@ -53,8 +53,8 @@
       "name": "Patches",
       "breed": "Nigerian Dwarf",
       "age": "Kid",
-      "status": "available",
-      "price": 250,
+      "status": "sold",
+      "price": 200,
       "image": "/images/goats/profiles/kid-boy-patches-2026-02.jpg",
       "images": [
         "/images/goats/profiles/kid-boy-patches-2026-02.jpg"
@@ -70,7 +70,8 @@
       "birthDate": "2026-02-03",
       "birthDateApprox": true,
       "sex": "buck",
-      "color": "tricolor"
+      "color": "tricolor",
+      "soldNote": "Sold for $200 cash (2026-03-22)."
     },
     {
       "id": "goat-kid-bandit",
