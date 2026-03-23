@@ -8,8 +8,8 @@ class JournalLoader {
     if (!this.el) return;
 
     try {
-      const cacheBuster = 'v=2026-02-24-1';
-      const resp = await fetch(`journal.json?${cacheBuster}`, { cache: 'no-store' });
+      const cacheBuster = 'v=2026-03-23-1';
+      const resp = await fetch(`journal.json?${cacheBuster}`, { cache: 'force-cache' });
       if (!resp.ok) throw new Error('Failed to load journal.json');
       const data = await resp.json();
       const posts = (data.posts || []).slice().sort((a,b) => (b.date || '').localeCompare(a.date || ''));
@@ -42,9 +42,14 @@ class JournalLoader {
             </div>
           `;
         }
+        const fallbackSrc = m.src;
+        const webpSrc = this.webpFromSrc(m.src);
         return `
           <div class="journal-media">
-            <img src="${m.src}" alt="${this.escape(m.caption || p.title || 'Photo')}" loading="lazy" decoding="async" />
+            <picture>
+              <source srcset="${webpSrc}" type="image/webp" />
+              <img src="${fallbackSrc}" alt="${this.escape(m.caption || p.title || 'Photo')}" loading="lazy" decoding="async" />
+            </picture>
             ${m.caption ? `<div class="journal-caption">${this.escape(m.caption)}</div>` : ''}
           </div>
         `;
@@ -64,6 +69,11 @@ class JournalLoader {
 
       this.el.appendChild(card);
     });
+  }
+
+  webpFromSrc(src) {
+    if (!src) return '';
+    return String(src).replace(/\.(jpe?g|png)$/i, '.webp');
   }
 
   escape(s) {
