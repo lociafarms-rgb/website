@@ -55,7 +55,7 @@ class JournalLoader {
         `;
       }).join('');
 
-      const bodyHtml = (p.body || []).map(par => `<p>${this.escape(par)}</p>`).join('');
+      const bodyHtml = (p.body || []).map(par => `<p>${this.linkify(this.escape(par))}</p>`).join('');
 
       card.innerHTML = `
         <div class="journal-header">
@@ -81,6 +81,17 @@ class JournalLoader {
     const div = document.createElement('div');
     div.textContent = String(s);
     return div.innerHTML;
+  }
+
+  linkify(text) {
+    // Minimal, safe linkification: only turns http(s) URLs into anchors.
+    // Input should already be escaped.
+    if (!text) return '';
+    const urlRe = /(https?:\/\/[^\s<]+)/g;
+    return String(text).replace(urlRe, (url) => {
+      const safeUrl = url.replace(/"/g, '&quot;');
+      return `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+    });
   }
 }
 
