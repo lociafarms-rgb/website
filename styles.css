@@ -2450,3 +2450,64 @@ footer p {
   margin: 10px 0;
 }
 
+/* ============================================================================
+   HOMEPAGE AVAILABILITY STRIP
+   ============================================================================ */
+.availability-strip {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr;
+  gap: 18px;
+  padding: 18px;
+  margin: 18px 0 28px;
+  align-items: center;
+}
+
+.availability-strip h3 {
+  margin-bottom: 8px;
+}
+
+.availability-strip ol {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.availability-strip__note {
+  margin-top: 10px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.availability-strip__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Nav CTA */
+.nav-cta {
+  margin-left: 6px;
+}
+
+.nav-cta-button {
+  padding: 10px 14px;
+}
+
+@media (max-width: 900px) {
+  .availability-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .nav-cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
