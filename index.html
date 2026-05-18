@@ -61,7 +61,10 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="images/splash-home-01.jpg" alt="Locia Farms Landscape" fetchpriority="high" loading="eager" decoding="async" width="800" height="600">
+                <picture>
+                    <source type="image/webp" srcset="images/splash-home-01.800w.webp 800w, images/splash-home-01.1200w.webp 1200w" sizes="(max-width: 900px) 92vw, 800px">
+                    <img src="images/splash-home-01.800w.jpeg" srcset="images/splash-home-01.800w.jpeg 800w, images/splash-home-01.1200w.jpeg 1200w" sizes="(max-width: 900px) 92vw, 800px" alt="Locia Farms Landscape" fetchpriority="high" loading="eager" decoding="async" width="800" height="600">
+                </picture>
             </div>
         </section>
 
@@ -142,7 +145,10 @@
                     <div class="product-card material-card">
                         <div class="card-image">
                             <a href="goats/index.html" style="display: block; text-decoration: none;">
-                                <img src="images/splash-home-goat-01.jpeg" alt="Goats" loading="lazy" decoding="async" width="400" height="300">
+                                <picture>
+                                    <source type="image/webp" srcset="images/splash-home-goat-01.800w.webp 800w, images/splash-home-goat-01.1200w.webp 1200w" sizes="(max-width: 900px) 92vw, 400px">
+                                    <img src="images/splash-home-goat-01.jpeg" alt="Goats" loading="lazy" decoding="async" width="400" height="300">
+                                </picture>
                             </a>
                         </div>
                         <div class="card-content">
@@ -157,7 +163,10 @@
                     
                     <div class="product-card material-card">
                         <div class="card-image">
-                            <img src="images/splash-home-chickens-01.jpeg" alt="Chickens" loading="lazy" decoding="async" width="400" height="300">
+                            <picture>
+                                <source type="image/webp" srcset="images/splash-home-chickens-01.800w.webp 800w" sizes="(max-width: 900px) 92vw, 400px">
+                                <img src="images/splash-home-chickens-01.jpeg" alt="Chickens" loading="lazy" decoding="async" width="400" height="300">
+                            </picture>
                         </div>
                         <div class="card-content">
                             <h3>Chickens</h3>
@@ -170,7 +179,10 @@
                     
                     <div class="product-card material-card">
                         <div class="card-image">
-                            <img src="images/splash-home-02.jpeg" alt="Fresh Produce" loading="lazy" decoding="async" width="400" height="300">
+                            <picture>
+                                <source type="image/webp" srcset="images/splash-home-02.800w.webp 800w" sizes="(max-width: 900px) 92vw, 400px">
+                                <img src="images/splash-home-02.jpeg" alt="Fresh Produce" loading="lazy" decoding="async" width="400" height="300">
+                            </picture>
                         </div>
                         <div class="card-content">
                             <h3>Fresh Produce</h3>
@@ -219,7 +231,17 @@
         <section id="contact" class="contact">
             <div class="container">
                 <h2 class="section-title">Contact Us</h2>
-                <p class="section-subtitle">Get in touch to learn more about our products, schedule a visit, or inquire about events</p>
+                <p class="section-subtitle">Get in touch to check availability, schedule a visit, or ask a quick question.</p>
+
+                <div class="contact-faq material-card">
+                    <h3>Quick answers</h3>
+                    <ul>
+                        <li><strong>Purchases:</strong> In-person at the farm or by appointment.</li>
+                        <li><strong>Availability:</strong> Seasonal — email us and we’ll confirm what’s available right now.</li>
+                        <li><strong>Response time:</strong> Usually within 24–48 hours.</li>
+                        <li><strong>Payments:</strong> Cash, check, Venmo, Apple Cash, Zelle.</li>
+                    </ul>
+                </div>
                 
                 <div class="contact-cards">
                     <div class="contact-card material-card">
