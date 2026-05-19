@@ -2530,3 +2530,114 @@ footer p {
   margin: 6px 0;
 }
 
+/* ============================================================================
+   FARM LIFE FEED
+   ============================================================================ */
+.farmlife-controls {
+  padding: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.farmlife-controls__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.farmlife-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.farmlife-post {
+  padding: 18px;
+}
+
+.farmlife-date {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.farmlife-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.farmlife-summary {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.farmlife-post__layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.farmlife-details__toggle {
+  display: none; /* desktop: details visible */
+  width: 100%;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.farmlife-details__body p {
+  color: var(--text-primary);
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+.farmlife-media video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.farmlife-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.farmlife-caption {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+@media (max-width: 900px) {
+  .farmlife-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .farmlife-controls__actions {
+    justify-content: flex-start;
+  }
+
+  .farmlife-post__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .farmlife-details__toggle {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  .farmlife-details[data-open="false"] .farmlife-details__body {
+    display: none;
+  }
+}
+

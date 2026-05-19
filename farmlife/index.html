@@ -42,53 +42,22 @@
       </div>
     </section>
 
-    <section class="products">
+    <section class="goats-gallery">
       <div class="container" style="max-width: 1100px;">
-        <div class="product-grid">
-          <div class="product-card material-card">
-            <div class="card-image">
-              <a href="../journal/index.html" style="display:block; text-decoration:none;">
-                <img src="../images/splash-home-goat-01.jpeg" alt="Journal" loading="lazy" decoding="async" width="400" height="300" />
-              </a>
-            </div>
-            <div class="card-content">
-              <h3>Journal</h3>
-              <p>Progress notes, lessons learned, and the everyday story of Locia Farms.</p>
-              <div class="card-actions">
-                <a href="../journal/index.html" class="btn-text">Read the Journal</a>
-              </div>
-            </div>
+        <div class="farmlife-controls material-card">
+          <div>
+            <h2 style="margin-bottom: 6px;">Latest posts</h2>
+            <p style="color: var(--text-secondary);">A feed of journal entries with photos and videos.</p>
           </div>
+          <div class="farmlife-controls__actions">
+            <a href="../journal/index.html" class="btn-text">Open Journal</a>
+            <a href="../videos/index.html" class="btn-text">Open Video Blog</a>
+            <a href="../gallery/index.html" class="btn-text">Open Gallery</a>
+          </div>
+        </div>
 
-          <div class="product-card material-card">
-            <div class="card-image">
-              <a href="../videos/index.html" style="display:block; text-decoration:none;">
-                <img src="../images/splash-home-animals-01.jpeg" alt="Video Blog" loading="lazy" decoding="async" width="400" height="300" />
-              </a>
-            </div>
-            <div class="card-content">
-              <h3>Video Blog</h3>
-              <p>Short clips and longer updates from the farm as we build and grow.</p>
-              <div class="card-actions">
-                <a href="../videos/index.html" class="btn-text">Watch Videos</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card material-card">
-            <div class="card-image">
-              <a href="../gallery/index.html" style="display:block; text-decoration:none;">
-                <img src="../images/splash-home-02.jpeg" alt="Gallery" loading="lazy" decoding="async" width="400" height="300" />
-              </a>
-            </div>
-            <div class="card-content">
-              <h3>Gallery</h3>
-              <p>A growing photo gallery from around Locia Farms.</p>
-              <div class="card-actions">
-                <a href="../gallery/index.html" class="btn-text">View Gallery</a>
-              </div>
-            </div>
-          </div>
+        <div id="farmlife-feed" class="farmlife-feed">
+          <div class="loading-state"><p>Loading Farm Life…</p></div>
         </div>
       </div>
     </section>
@@ -123,5 +92,6 @@
   </footer>
 
   <script src="../script.js"></script>
+  <script src="farmlife-loader.js"></script>
 </body>
 </html>
