@@ -43,13 +43,12 @@ class FarmLifeFeed {
           `;
         }
         const fallbackSrc = m.src;
-        const webpSrc = this.webpFromSrc(m.src);
+        // NOTE: We intentionally avoid <picture>/<source type="image/webp"> here.
+        // Some hosts/browsers will prefer the WebP source and show a broken image
+        // if the .webp file doesn't exist. Using <img> guarantees JPG/PNG renders.
         return `
           <div class="farmlife-media">
-            <picture>
-              <source srcset="${webpSrc}" type="image/webp" />
-              <img src="${fallbackSrc}" alt="${this.escape(m.caption || p.title || 'Photo')}" loading="lazy" decoding="async" />
-            </picture>
+            <img src="${fallbackSrc}" alt="${this.escape(m.caption || p.title || 'Photo')}" loading="lazy" decoding="async" />
             ${m.caption ? `<div class="farmlife-caption">${this.escape(m.caption)}</div>` : ''}
           </div>
         `;
