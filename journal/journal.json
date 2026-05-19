@@ -194,7 +194,13 @@
         "herd",
         "health"
       ],
-      "media": [],
+      "media": [
+        {
+          "type": "image",
+          "src": "/images/journal/2026-05/bingo-bottlejaw-01.jpg",
+          "caption": "Bingo (green collar) \u2014 bottle jaw visible."
+        }
+      ],
       "body": [
         "This week we lost our goat Bingo (green collar) to anemia.",
         "For weeks we tried to support her recovery with Red Cell and vitamin B, especially after using Cydectin. We kept working to get her eating and stronger, but unfortunately her body couldn\u2019t recover.",
