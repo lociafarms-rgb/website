@@ -56,7 +56,7 @@ class GoatLoader {
 
             // Cache-buster to avoid stale goats.json on some CDNs/browsers.
             // Update this string when goats.json changes significantly.
-            const cacheBuster = 'v=2026-07-11-goat-sale';
+            const cacheBuster = 'v=2026-07-11-herd-confirmed';
             
             // Try each path until one works
             for (const path of possiblePaths) {
@@ -743,7 +743,7 @@ class GoatLoader {
 
         clearEl.addEventListener('click', () => {
             searchEl.value = '';
-            statusEl.value = 'sold';
+            statusEl.value = 'retained';
             ageEl.value = 'all';
             colorEl.value = 'all';
             this.applyFiltersAndRender();
@@ -762,7 +762,7 @@ class GoatLoader {
         const countEl = document.getElementById('goat-filter-count');
 
         const q = (searchEl && searchEl.value ? searchEl.value : '').trim().toLowerCase();
-        const status = statusEl ? statusEl.value : 'sold';
+        const status = statusEl ? statusEl.value : 'retained';
         const age = ageEl ? ageEl.value : 'all';
         const color = colorEl ? colorEl.value : 'all';
 

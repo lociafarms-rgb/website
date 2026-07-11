@@ -8,7 +8,7 @@ class JournalLoader {
     if (!this.el) return;
 
     try {
-      const cacheBuster = 'v=2026-07-11-goat-sale';
+      const cacheBuster = 'v=2026-07-11-herd-confirmed';
       const resp = await fetch(`journal.json?${cacheBuster}`, { cache: 'force-cache' });
       if (!resp.ok) throw new Error('Failed to load journal.json');
       const data = await resp.json();

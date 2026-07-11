@@ -1,243 +1,22 @@
 {
   "goats": [
     {
-      "id": "goat-kid-copper",
-      "name": "Copper",
-      "breed": "Boer",
-      "age": "Kid",
-      "status": "sold",
-      "price": 250,
-      "image": "/images/goats/profiles/kid-boy-copper-2026-02.jpg",
-      "images": [
-        "/images/goats/profiles/kid-boy-copper-2026-02.jpg"
-      ],
-      "bio": "Boer kid (buck). Born approx. 2026-01-27.",
-      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "id": "goat-caramella",
+      "name": "Caramella",
+      "breed": "Nigerian Dwarf Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/caramela.png",
+      "bio": "Golden and glowing, Caramella has a beautiful apricot coat and a gentle, sunny disposition.",
+      "backgroundStory": "Caramella brings a splash of gold to the herd. Her light, soft coat matches her gentle personality. She is a quiet, steady doe who gets along with everyone. Her sweet nature makes her a perfect ambassador for the breed.",
       "personality": [
-        "Curious",
-        "Sweet",
-        "Confident"
-      ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-01-27",
-      "birthDateApprox": true,
-      "sex": "buck",
-      "color": "brown",
-      "saleDate": "2026-07-11",
-      "saleChannel": "Craigslist"
-    },
-    {
-      "id": "goat-kid-maple",
-      "name": "Maple",
-      "breed": "Boer / Nigerian Dwarf mix",
-      "age": "Kid",
-      "status": "sold",
-      "price": 250,
-      "image": "/images/goats/profiles/kid-boy-maple-2026-02.jpg",
-      "images": [
-        "/images/goats/profiles/kid-boy-maple-2026-02.jpg"
-      ],
-      "bio": "Boer / Nigerian Dwarf mix kid (buck). Born approx. 2026-01-28.",
-      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
-      "personality": [
-        "Curious",
-        "Sweet",
-        "Confident"
-      ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-01-28",
-      "birthDateApprox": true,
-      "sex": "buck",
-      "color": "brown",
-      "saleDate": "2026-07-11",
-      "saleChannel": "Craigslist"
-    },
-    {
-      "id": "goat-kid-patches",
-      "name": "Patches",
-      "breed": "Nigerian Dwarf",
-      "age": "Kid",
-      "status": "sold",
-      "price": 250,
-      "image": "/images/goats/profiles/kid-boy-patches-2026-02.jpg",
-      "images": [
-        "/images/goats/profiles/kid-boy-patches-2026-02.jpg"
-      ],
-      "bio": "Nigerian Dwarf kid (buck). Born approx. 2026-02-03.",
-      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
-      "personality": [
-        "Curious",
-        "Sweet",
-        "Confident"
-      ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-02-03",
-      "birthDateApprox": true,
-      "sex": "buck",
-      "color": "tricolor",
-      "saleDate": "2026-07-11",
-      "saleChannel": "Craigslist"
-    },
-    {
-      "id": "goat-kid-bandit",
-      "name": "Bandit",
-      "breed": "Nigerian Dwarf",
-      "age": "Kid",
-      "status": "sold",
-      "image": "/images/goats/profiles/kid-boy-bandit-2026-02.jpg",
-      "images": [
-        "/images/goats/profiles/kid-boy-bandit-2026-02.jpg"
-      ],
-      "bio": "Nigerian Dwarf kid (buck). Born approx. 2026-02-01.",
-      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
-      "personality": [
-        "Curious",
-        "Sweet",
-        "Confident"
-      ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-02-01",
-      "birthDateApprox": true,
-      "sex": "buck",
-      "color": "blackwhite"
-    },
-    {
-      "id": "goat-kid-scout",
-      "name": "Scout",
-      "breed": "Nigerian Dwarf",
-      "age": "Kid",
-      "status": "sold",
-      "price": 250,
-      "image": "/images/goats/profiles/kid-boy-scout-2026-02.jpg",
-      "images": [
-        "/images/goats/profiles/kid-boy-scout-2026-02.jpg"
-      ],
-      "bio": "Nigerian Dwarf kid (buck). Born approx. 2026-02-04.",
-      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
-      "personality": [
-        "Curious",
-        "Sweet",
-        "Confident"
-      ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-02-04",
-      "birthDateApprox": true,
-      "sex": "buck",
-      "color": "blackwhite",
-      "saleDate": "2026-07-11",
-      "saleChannel": "Craigslist"
-    },
-    {
-      "id": "goat-kid-gray-twin-a",
-      "name": "Ash",
-      "breed": "Boer",
-      "age": "Kid",
-      "status": "sold",
-      "price": 250,
-      "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
-      "images": [
-        "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
-      ],
-      "bio": "Boer kid (doe). Born approx. 2026-01-20.",
-      "backgroundStory": "A pair of Boer kids raised at Locia Farms — calm, sweet, and already comfortable around people.",
-      "personality": [
-        "Sweet",
-        "Calm",
-        "Curious"
-      ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-01-20",
-      "birthDateApprox": true,
-      "sex": "doe",
-      "color": "gray",
-      "saleDate": "2026-07-11",
-      "saleChannel": "Craigslist"
-    },
-    {
-      "id": "goat-kid-gray-twin-b",
-      "name": "Slate",
-      "breed": "Boer",
-      "age": "Kid",
-      "status": "sold",
-      "price": 250,
-      "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
-      "images": [
-        "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
-      ],
-      "bio": "Boer kid (buck). Born approx. 2026-01-20.",
-      "backgroundStory": "A pair of Boer kids raised at Locia Farms — calm, sweet, and already comfortable around people.",
-      "personality": [
-        "Sweet",
-        "Calm",
-        "Curious"
-      ],
-      "favoriteActivity": "Exploring, hopping around, and following the herd.",
-      "birthDate": "2026-01-20",
-      "birthDateApprox": true,
-      "sex": "buck",
-      "color": "gray",
-      "saleDate": "2026-07-11",
-      "saleChannel": "Craigslist"
-    },
-    {
-      "id": "goat-chip",
-      "name": "Chip",
-      "breed": "Nigerian Dwarf Buck",
-      "age": "Adult (2+ yrs)",
-      "image": "images/goats/profiles/chip.png",
-      "bio": "The fainting phenomenon! Chip is our distinguished Nigerian Dwarf buck with a special quirk—he has Myotonic genetics, meaning he faints when excited.",
-      "backgroundStory": "Chip is the patriarch of the Nigerian Dwarf herd. Standing taller than the others with a heavy bone structure, he commands respect—until he gets too excited and tips over! His 'fainting' is a harmless genetic trait that makes him all the more endearing. He's a gentle giant among dwarfs and loves a good scratch behind the ears.",
-      "personality": [
-        "Distinguished",
         "Gentle",
-        "Quirky",
-        "Fainting"
+        "Sunny",
+        "Quiet",
+        "Golden"
       ],
-      "favoriteActivity": "Overseeing his herd (from a horizontal position occasionally)",
-      "status": "sold",
-      "price": 200,
-      "color": "unknown"
-    },
-    {
-      "id": "goat-nugget",
-      "name": "Nugget",
-      "breed": "Nigerian Dwarf Buck",
-      "age": "Yearling (~1 year)",
-      "image": "images/goats/profiles/nugget.png",
-      "bio": "One of the 'Sweet Tooth' brothers. Nugget is a tri-colored buck kid with a refined dairy character. Born approx. 2025-02-01.",
-      "backgroundStory": "Nugget is Brownie's brother and partner in crime. Smaller and more refined than Chip, he represents the classic dairy style of the Nigerian Dwarf breed. He's full of energy and is constantly challenging his brother to playful sparring matches. Born approx. 2025-02-01.",
-      "personality": [
-        "Playful",
-        "Refined",
-        "Energetic",
-        "Sweet"
-      ],
-      "favoriteActivity": "Sparring with Brownie",
+      "favoriteActivity": "Sunbathing",
       "status": "retained",
       "price": 200,
-      "birthDate": "2025-02-01",
-      "birthDateApprox": true,
-      "color": "unknown"
-    },
-    {
-      "id": "goat-brownie",
-      "name": "Brownie",
-      "breed": "Nigerian Dwarf Buck",
-      "age": "Yearling (~1 year)",
-      "image": "images/goats/profiles/brownie.png",
-      "bio": "Nugget's brother and partner in crime. Brownie sports a similar tri-color coat and loves to explore. Born approx. 2025-02-08.",
-      "backgroundStory": "Brownie is the adventurous half of the kid duo. With his rich tri-color markings, he's a handsome young buck who is always the first to investigate a new toy or treat. He and Nugget are inseparable and bring a youthful energy to the buck pen. Born approx. 2025-02-08.",
-      "personality": [
-        "Adventurous",
-        "Curious",
-        "Bonded",
-        "Handsome"
-      ],
-      "favoriteActivity": "Investigating new things",
-      "status": "retained",
-      "price": 200,
-      "birthDate": "2025-02-08",
-      "birthDateApprox": true,
       "color": "unknown"
     },
     {
@@ -279,21 +58,179 @@
       "color": "unknown"
     },
     {
-      "id": "goat-caramella",
-      "name": "Caramella",
-      "breed": "Nigerian Dwarf Doe",
-      "age": "Adult",
-      "image": "images/goats/profiles/caramela.png",
-      "bio": "Golden and glowing, Caramella has a beautiful apricot coat and a gentle, sunny disposition.",
-      "backgroundStory": "Caramella brings a splash of gold to the herd. Her light, soft coat matches her gentle personality. She is a quiet, steady doe who gets along with everyone. Her sweet nature makes her a perfect ambassador for the breed.",
-      "personality": [
-        "Gentle",
-        "Sunny",
-        "Quiet",
-        "Golden"
-      ],
-      "favoriteActivity": "Sunbathing",
+      "id": "goat-kid-gray-twin-b",
+      "name": "Slate",
+      "breed": "Boer",
+      "age": "Kid",
       "status": "retained",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
+      ],
+      "bio": "Boer buck retained at Locia Farms as part of the current smaller herd. Born approx. 2026-01-20.",
+      "backgroundStory": "Slate remained at Locia Farms after the Craigslist goat sale and is part of the current six-goat herd.",
+      "personality": [
+        "Sweet",
+        "Calm",
+        "Curious"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-01-20",
+      "birthDateApprox": true,
+      "sex": "buck",
+      "color": "gray"
+    },
+    {
+      "id": "goat-caramella-daughter",
+      "name": "Caramella's Daughter",
+      "breed": "Nigerian Dwarf Doe",
+      "age": "Kid",
+      "status": "retained",
+      "image": "/images/splash-home-goat-01.jpeg",
+      "images": [
+        "/images/splash-home-goat-01.jpeg"
+      ],
+      "bio": "A young Nigerian Dwarf doe and daughter of Caramella.",
+      "backgroundStory": "This new Nigerian Dwarf doe is Caramella's daughter and part of the smaller retained herd at Locia Farms.",
+      "personality": [
+        "Young",
+        "Sweet",
+        "Growing"
+      ],
+      "favoriteActivity": "Staying close to Caramella and learning the herd rhythm.",
+      "birthDateApprox": true,
+      "sex": "doe",
+      "color": "unknown"
+    },
+    {
+      "id": "goat-hugo-snowball",
+      "name": "Hugo (Snowball)",
+      "breed": "Boer Buck",
+      "age": "Buck",
+      "status": "retained",
+      "image": "/images/splash-home-goat-01.jpeg",
+      "images": [
+        "/images/splash-home-goat-01.jpeg"
+      ],
+      "bio": "A Boer buck in the current Locia Farms herd, called Hugo — also known as Snowball.",
+      "backgroundStory": "Hugo, also known as Snowball, is the Boer buck in the smaller retained herd at Locia Farms.",
+      "personality": [
+        "Steady",
+        "Strong",
+        "Watchful"
+      ],
+      "favoriteActivity": "Keeping an eye on the pasture.",
+      "sex": "buck",
+      "color": "white"
+    },
+    {
+      "id": "goat-kid-gray-twin-a",
+      "name": "Ash",
+      "breed": "Boer",
+      "age": "Kid",
+      "status": "sold",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-gray-twins-2026-02.jpg"
+      ],
+      "bio": "Boer kid (doe). Born approx. 2026-01-20.",
+      "backgroundStory": "A pair of Boer kids raised at Locia Farms — calm, sweet, and already comfortable around people.",
+      "personality": [
+        "Sweet",
+        "Calm",
+        "Curious"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-01-20",
+      "birthDateApprox": true,
+      "sex": "doe",
+      "color": "gray",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
+    },
+    {
+      "id": "goat-kid-bandit",
+      "name": "Bandit",
+      "breed": "Nigerian Dwarf",
+      "age": "Kid",
+      "status": "sold",
+      "image": "/images/goats/profiles/kid-boy-bandit-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-bandit-2026-02.jpg"
+      ],
+      "bio": "Nigerian Dwarf kid (buck). Born approx. 2026-02-01.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-02-01",
+      "birthDateApprox": true,
+      "sex": "buck",
+      "color": "blackwhite"
+    },
+    {
+      "id": "goat-skora",
+      "name": "Bingo",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/skora.png",
+      "bio": "Related to Nutella, Skora is a wonderful mother with a strong maternal instinct.",
+      "backgroundStory": "Skora is part of our 'sweet' family line in the Boer herd, related to Nutella. She combines the best of Boer genetics with a strong maternal instinct. She is attentive and caring, ensuring her kids—and sometimes others'—are safe and fed.",
+      "personality": [
+        "Maternal",
+        "Caring",
+        "Attentive",
+        "Sweet"
+      ],
+      "favoriteActivity": "Caring for kids",
+      "status": "deceased",
+      "price": 200,
+      "color": "unknown"
+    },
+    {
+      "id": "goat-brownie",
+      "name": "Brownie",
+      "breed": "Nigerian Dwarf Buck",
+      "age": "Yearling (~1 year)",
+      "image": "images/goats/profiles/brownie.png",
+      "bio": "Nugget's brother and partner in crime. Brownie sports a similar tri-color coat and loves to explore. Born approx. 2025-02-08.",
+      "backgroundStory": "Brownie is the adventurous half of the kid duo. With his rich tri-color markings, he's a handsome young buck who is always the first to investigate a new toy or treat. He and Nugget are inseparable and bring a youthful energy to the buck pen. Born approx. 2025-02-08.",
+      "personality": [
+        "Adventurous",
+        "Curious",
+        "Bonded",
+        "Handsome"
+      ],
+      "favoriteActivity": "Investigating new things",
+      "status": "sold",
+      "price": 200,
+      "birthDate": "2025-02-08",
+      "birthDateApprox": true,
+      "color": "unknown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
+    },
+    {
+      "id": "goat-chip",
+      "name": "Chip",
+      "breed": "Nigerian Dwarf Buck",
+      "age": "Adult (2+ yrs)",
+      "image": "images/goats/profiles/chip.png",
+      "bio": "The fainting phenomenon! Chip is our distinguished Nigerian Dwarf buck with a special quirk—he has Myotonic genetics, meaning he faints when excited.",
+      "backgroundStory": "Chip is the patriarch of the Nigerian Dwarf herd. Standing taller than the others with a heavy bone structure, he commands respect—until he gets too excited and tips over! His 'fainting' is a harmless genetic trait that makes him all the more endearing. He's a gentle giant among dwarfs and loves a good scratch behind the ears.",
+      "personality": [
+        "Distinguished",
+        "Gentle",
+        "Quirky",
+        "Fainting"
+      ],
+      "favoriteActivity": "Overseeing his herd (from a horizontal position occasionally)",
+      "status": "sold",
       "price": 200,
       "color": "unknown"
     },
@@ -317,61 +254,30 @@
       "color": "unknown"
     },
     {
-      "id": "goat-simba",
-      "name": "Simba",
-      "breed": "Boer Buck",
-      "age": "Adult",
-      "image": "images/goats/profiles/simba.png",
-      "bio": "The King of the Boer herd. Simba is a traditional Boer buck with a massive build and a gentle heart.",
-      "backgroundStory": "Simba lives up to his name. With his traditional red head and massive white body, he looks every bit the lion king of the farm. Despite his imposing size and thick muscular neck, he is a gentle giant who takes good care of his does. He is the sire of our future meat herd.",
-      "personality": [
-        "Regal",
-        "Massive",
-        "Gentle",
-        "King"
+      "id": "goat-kid-copper",
+      "name": "Copper",
+      "breed": "Boer",
+      "age": "Kid",
+      "status": "sold",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-copper-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-copper-2026-02.jpg"
       ],
-      "favoriteActivity": "Surveying his kingdom",
-      "status": "retained",
-      "price": 550,
-      "color": "unknown"
-    },
-    {
-      "id": "goat-nala",
-      "name": "Nala",
-      "breed": "Boer Doe",
-      "age": "Adult",
-      "image": "images/goats/profiles/nala.png",
-      "bio": "The Queen of the herd. Nala (formerly Sarabi) is a traditional Boer doe with elegance and grace.",
-      "backgroundStory": "Nala is the queen to Simba's king. A traditional Boer doe with a feminine head and excellent width, she represents the ideal mother goat. She is calm, regal, and leads the doe herd with quiet confidence.",
+      "bio": "Boer kid (buck). Born approx. 2026-01-27.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
       "personality": [
-        "Queen",
-        "Elegant",
-        "Confident",
-        "Traditional"
+        "Curious",
+        "Sweet",
+        "Confident"
       ],
-      "favoriteActivity": "Leading the herd",
-      "status": "retained",
-      "price": 200,
-      "color": "unknown"
-    },
-    {
-      "id": "goat-sarabi",
-      "name": "Sarabi",
-      "breed": "Boer Doe",
-      "age": "Adult",
-      "image": "images/goats/profiles/sarabi_2.png",
-      "bio": "Nala's close relative and loyal companion. Sarabi shares the traditional Boer markings and a calm nature.",
-      "backgroundStory": "Sarabi is Nala's right-hand doe. Related by blood and bond, they are often found together. She shares the classic Boer markings and the sturdy, productive build of the breed. She is a reliable and protective mother.",
-      "personality": [
-        "Loyal",
-        "Calm",
-        "Protective",
-        "Traditional"
-      ],
-      "favoriteActivity": "Hanging out with Nala",
-      "status": "retained",
-      "price": 200,
-      "color": "unknown"
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-01-27",
+      "birthDateApprox": true,
+      "sex": "buck",
+      "color": "brown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-dippa",
@@ -388,9 +294,37 @@
         "Eager"
       ],
       "favoriteActivity": "Eating",
-      "status": "retained",
+      "status": "sold",
       "price": 200,
-      "color": "unknown"
+      "color": "unknown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
+    },
+    {
+      "id": "goat-kid-maple",
+      "name": "Maple",
+      "breed": "Boer / Nigerian Dwarf mix",
+      "age": "Kid",
+      "status": "sold",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-maple-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-maple-2026-02.jpg"
+      ],
+      "bio": "Boer / Nigerian Dwarf mix kid (buck). Born approx. 2026-01-28.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-01-28",
+      "birthDateApprox": true,
+      "sex": "buck",
+      "color": "brown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-mary",
@@ -407,28 +341,76 @@
         "Motherly"
       ],
       "favoriteActivity": "Being a good mom",
-      "status": "retained",
+      "status": "sold",
       "price": 200,
-      "color": "unknown"
+      "color": "unknown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
-      "id": "goat-skora",
-      "name": "Bingo",
+      "id": "goat-nala",
+      "name": "Nala",
       "breed": "Boer Doe",
       "age": "Adult",
-      "image": "images/goats/profiles/skora.png",
-      "bio": "Related to Nutella, Skora is a wonderful mother with a strong maternal instinct.",
-      "backgroundStory": "Skora is part of our 'sweet' family line in the Boer herd, related to Nutella. She combines the best of Boer genetics with a strong maternal instinct. She is attentive and caring, ensuring her kids—and sometimes others'—are safe and fed.",
+      "image": "images/goats/profiles/nala.png",
+      "bio": "The Queen of the herd. Nala (formerly Sarabi) is a traditional Boer doe with elegance and grace.",
+      "backgroundStory": "Nala is the queen to Simba's king. A traditional Boer doe with a feminine head and excellent width, she represents the ideal mother goat. She is calm, regal, and leads the doe herd with quiet confidence.",
       "personality": [
-        "Maternal",
-        "Caring",
-        "Attentive",
+        "Queen",
+        "Elegant",
+        "Confident",
+        "Traditional"
+      ],
+      "favoriteActivity": "Leading the herd",
+      "status": "sold",
+      "price": 200,
+      "color": "unknown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
+    },
+    {
+      "id": "goat-nueggeta",
+      "name": "Nueggeta",
+      "breed": "Boer Doe",
+      "age": "Adult",
+      "image": "images/goats/profiles/nueggeta.png",
+      "bio": "Compact and cute. Nueggeta rounds out our Boer herd with her solid build and friendly face.",
+      "backgroundStory": "Don't let the name fool you—Nueggeta is a solid Boer doe! She has a compact, meaty build that is perfect for the breed standard. She's a friendly doe who fits right in with the herd, rounding out our group of seven lovely ladies.",
+      "personality": [
+        "Compact",
+        "Friendly",
+        "Solid",
+        "Cute"
+      ],
+      "favoriteActivity": "Browsing for leaves",
+      "status": "sold",
+      "price": 200,
+      "color": "unknown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
+    },
+    {
+      "id": "goat-nugget",
+      "name": "Nugget",
+      "breed": "Nigerian Dwarf Buck",
+      "age": "Yearling (~1 year)",
+      "image": "images/goats/profiles/nugget.png",
+      "bio": "One of the 'Sweet Tooth' brothers. Nugget is a tri-colored buck kid with a refined dairy character. Born approx. 2025-02-01.",
+      "backgroundStory": "Nugget is Brownie's brother and partner in crime. Smaller and more refined than Chip, he represents the classic dairy style of the Nigerian Dwarf breed. He's full of energy and is constantly challenging his brother to playful sparring matches. Born approx. 2025-02-01.",
+      "personality": [
+        "Playful",
+        "Refined",
+        "Energetic",
         "Sweet"
       ],
-      "favoriteActivity": "Caring for kids",
-      "status": "retained",
+      "favoriteActivity": "Sparring with Brownie",
+      "status": "sold",
       "price": 200,
-      "color": "unknown"
+      "birthDate": "2025-02-01",
+      "birthDateApprox": true,
+      "color": "unknown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-nutella",
@@ -450,23 +432,98 @@
       "color": "unknown"
     },
     {
-      "id": "goat-nueggeta",
-      "name": "Nueggeta",
+      "id": "goat-kid-patches",
+      "name": "Patches",
+      "breed": "Nigerian Dwarf",
+      "age": "Kid",
+      "status": "sold",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-patches-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-patches-2026-02.jpg"
+      ],
+      "bio": "Nigerian Dwarf kid (buck). Born approx. 2026-02-03.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-02-03",
+      "birthDateApprox": true,
+      "sex": "buck",
+      "color": "tricolor",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
+    },
+    {
+      "id": "goat-sarabi",
+      "name": "Sarabi",
       "breed": "Boer Doe",
       "age": "Adult",
-      "image": "images/goats/profiles/nueggeta.png",
-      "bio": "Compact and cute. Nueggeta rounds out our Boer herd with her solid build and friendly face.",
-      "backgroundStory": "Don't let the name fool you—Nueggeta is a solid Boer doe! She has a compact, meaty build that is perfect for the breed standard. She's a friendly doe who fits right in with the herd, rounding out our group of seven lovely ladies.",
+      "image": "images/goats/profiles/sarabi_2.png",
+      "bio": "Nala's close relative and loyal companion. Sarabi shares the traditional Boer markings and a calm nature.",
+      "backgroundStory": "Sarabi is Nala's right-hand doe. Related by blood and bond, they are often found together. She shares the classic Boer markings and the sturdy, productive build of the breed. She is a reliable and protective mother.",
       "personality": [
-        "Compact",
-        "Friendly",
-        "Solid",
-        "Cute"
+        "Loyal",
+        "Calm",
+        "Protective",
+        "Traditional"
       ],
-      "favoriteActivity": "Browsing for leaves",
-      "status": "retained",
+      "favoriteActivity": "Hanging out with Nala",
+      "status": "sold",
       "price": 200,
-      "color": "unknown"
+      "color": "unknown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
+    },
+    {
+      "id": "goat-kid-scout",
+      "name": "Scout",
+      "breed": "Nigerian Dwarf",
+      "age": "Kid",
+      "status": "sold",
+      "price": 250,
+      "image": "/images/goats/profiles/kid-boy-scout-2026-02.jpg",
+      "images": [
+        "/images/goats/profiles/kid-boy-scout-2026-02.jpg"
+      ],
+      "bio": "Nigerian Dwarf kid (buck). Born approx. 2026-02-04.",
+      "backgroundStory": "Born at Locia Farms less than 5 ago. This little guy is growing fast, learning the herd rhythm, and already showing a sweet, confident personality.",
+      "personality": [
+        "Curious",
+        "Sweet",
+        "Confident"
+      ],
+      "favoriteActivity": "Exploring, hopping around, and following the herd.",
+      "birthDate": "2026-02-04",
+      "birthDateApprox": true,
+      "sex": "buck",
+      "color": "blackwhite",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
+    },
+    {
+      "id": "goat-simba",
+      "name": "Simba",
+      "breed": "Boer Buck",
+      "age": "Adult",
+      "image": "images/goats/profiles/simba.png",
+      "bio": "The King of the Boer herd. Simba is a traditional Boer buck with a massive build and a gentle heart.",
+      "backgroundStory": "Simba lives up to his name. With his traditional red head and massive white body, he looks every bit the lion king of the farm. Despite his imposing size and thick muscular neck, he is a gentle giant who takes good care of his does. He is the sire of our future meat herd.",
+      "personality": [
+        "Regal",
+        "Massive",
+        "Gentle",
+        "King"
+      ],
+      "favoriteActivity": "Surveying his kingdom",
+      "status": "sold",
+      "price": 550,
+      "color": "unknown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     }
   ]
 }
