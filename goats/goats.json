@@ -5,7 +5,7 @@
       "name": "Copper",
       "breed": "Boer",
       "age": "Kid",
-      "status": "available",
+      "status": "sold",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-copper-2026-02.jpg",
       "images": [
@@ -22,14 +22,16 @@
       "birthDate": "2026-01-27",
       "birthDateApprox": true,
       "sex": "buck",
-      "color": "brown"
+      "color": "brown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-kid-maple",
       "name": "Maple",
       "breed": "Boer / Nigerian Dwarf mix",
       "age": "Kid",
-      "status": "available",
+      "status": "sold",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-maple-2026-02.jpg",
       "images": [
@@ -46,14 +48,16 @@
       "birthDate": "2026-01-28",
       "birthDateApprox": true,
       "sex": "buck",
-      "color": "brown"
+      "color": "brown",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-kid-patches",
       "name": "Patches",
       "breed": "Nigerian Dwarf",
       "age": "Kid",
-      "status": "available",
+      "status": "sold",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-patches-2026-02.jpg",
       "images": [
@@ -70,7 +74,9 @@
       "birthDate": "2026-02-03",
       "birthDateApprox": true,
       "sex": "buck",
-      "color": "tricolor"
+      "color": "tricolor",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-kid-bandit",
@@ -100,7 +106,7 @@
       "name": "Scout",
       "breed": "Nigerian Dwarf",
       "age": "Kid",
-      "status": "available",
+      "status": "sold",
       "price": 250,
       "image": "/images/goats/profiles/kid-boy-scout-2026-02.jpg",
       "images": [
@@ -117,14 +123,16 @@
       "birthDate": "2026-02-04",
       "birthDateApprox": true,
       "sex": "buck",
-      "color": "blackwhite"
+      "color": "blackwhite",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-kid-gray-twin-a",
       "name": "Ash",
       "breed": "Boer",
       "age": "Kid",
-      "status": "available",
+      "status": "sold",
       "price": 250,
       "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
       "images": [
@@ -141,14 +149,16 @@
       "birthDate": "2026-01-20",
       "birthDateApprox": true,
       "sex": "doe",
-      "color": "gray"
+      "color": "gray",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-kid-gray-twin-b",
       "name": "Slate",
       "breed": "Boer",
       "age": "Kid",
-      "status": "available",
+      "status": "sold",
       "price": 250,
       "image": "/images/goats/profiles/kid-gray-twins-2026-02.jpg",
       "images": [
@@ -165,7 +175,9 @@
       "birthDate": "2026-01-20",
       "birthDateApprox": true,
       "sex": "buck",
-      "color": "gray"
+      "color": "gray",
+      "saleDate": "2026-07-11",
+      "saleChannel": "Craigslist"
     },
     {
       "id": "goat-chip",
