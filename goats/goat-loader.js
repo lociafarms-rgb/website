@@ -499,6 +499,9 @@ class GoatLoader {
     renderPriceBadge(goat) {
         if (!goat || goat.price == null) return '';
 
+        const status = String((goat.status || (goat.sold ? 'sold' : '')) || '').toLowerCase().trim();
+        if (status !== 'available') return '';
+
         const priceNum = Number(goat.price);
         const priceText = Number.isFinite(priceNum) ? `$${priceNum.toFixed(0)}` : `$${String(goat.price)}`;
 

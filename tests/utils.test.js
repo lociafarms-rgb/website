@@ -8,8 +8,12 @@ const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>');
 const window = dom.window;
 const document = window.document;
 
-// Execute script in context
-eval(scriptContent.replace('const app = new App();', '')); // Remove auto-init
+// Execute script in an explicit function scope and return the utilities under test.
+const utils = new Function(
+  'window',
+  'document',
+  `${scriptContent.replace('const app = new App();', '')}; return utils;`
+)(window, document);
 
 global.window = window;
 global.document = document;

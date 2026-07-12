@@ -69,6 +69,9 @@ describe('VideoLoader utility methods', () => {
       
       try {
         const date = new Date(dateString);
+        if (Number.isNaN(date.getTime())) {
+          return dateString;
+        }
         return date.toLocaleDateString('en-US', { 
           year: 'numeric', 
           month: 'long', 
