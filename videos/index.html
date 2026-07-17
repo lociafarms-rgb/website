@@ -1,143 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Farm tours, animal updates, and video stories from Locia Farms LLC.">
-    <title>Video Blog - Locia Farms LLC</title>
-    <link rel="canonical" href="https://www.lociafarms.com/videos/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Locia Farms LLC">
-    <meta property="og:title" content="Video Blog - Locia Farms LLC">
-    <meta property="og:description" content="Farm tours, animal updates, and video stories from Locia Farms LLC.">
-    <meta property="og:url" content="https://www.lociafarms.com/videos/">
-    <meta property="og:image" content="https://www.lociafarms.com/images/splash-home-goat-01.jpeg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Video Blog - Locia Farms LLC">
-    <meta name="twitter:description" content="Farm tours, animal updates, and video stories from Locia Farms LLC.">
-    <meta name="twitter:image" content="https://www.lociafarms.com/images/splash-home-goat-01.jpeg">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-    <link rel="icon" type="image/png" href="../logos/favicon.png">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Google tag (gtag.js) - Loads Google Analytics and Google Ads -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17696537147"></script>
-    <script src="../analytics-config.js"></script>
-    <style>
-        .video-page {
-            padding: 2rem 1rem;
-        }
-        
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--primary-color);
-            text-decoration: none;
-            margin-bottom: 2rem;
-            font-weight: 500;
-            transition: color var(--transition-base);
-        }
-        
-        .back-link:hover {
-            color: var(--primary-dark);
-        }
-        
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farm Life Posts - Locia Farms LLC</title>
+  <meta name="description" content="Locia Farms video blog updates now live inside the Farm Life posts feed.">
+  <link rel="canonical" href="https://www.lociafarms.com/farmlife/">
+  <meta http-equiv="refresh" content="0; url=../farmlife/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Locia Farms LLC">
+  <meta property="og:title" content="Farm Life Posts - Locia Farms LLC">
+  <meta property="og:description" content="Locia Farms video blog updates now live inside the Farm Life posts feed.">
+  <meta property="og:url" content="https://www.lociafarms.com/farmlife/">
+  <meta property="og:image" content="https://www.lociafarms.com/images/splash-home-animals-01.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Farm Life Posts - Locia Farms LLC">
+  <meta name="twitter:description" content="Locia Farms video blog updates now live inside the Farm Life posts feed.">
+  <meta name="twitter:image" content="https://www.lociafarms.com/images/splash-home-animals-01.jpeg">
+  <link rel="icon" type="image/png" href="../logos/favicon.png" />
+  <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <a href="../index.html" class="logo">
-                    <img src="../logos/logo.png" alt="Locia Farms Logo" class="logo-img">
-                    <span class="logo-text">Locia Farms</span>
-                </a>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu">
-                    <li><a href="../index.html#home">Home</a></li>
-                    <li><a href="../index.html#products">Buy</a></li>
-                    <li><a href="../farmlife/index.html" class="active">Farm Life</a></li>
-                    <li><a href="../merchandise/index.html">Shop</a></li>
-                    <li><a href="../goats/index.html">Our Goats</a></li>
-                    <li><a href="../index.html#contact">Contact</a></li>
-                    <li class="nav-cta"><a href="../index.html#contact" class="cta-button primary nav-cta-button">Check Availability</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main class="video-page">
-        <div class="container">
-            <a href="../index.html" class="back-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19 12H5M12 19l-7-7 7-7"/>
-                </svg>
-                Back to Home
-            </a>
-            
-            <h1 class="section-title">Video Blog</h1>
-            <p class="section-subtitle">Follow our journey through video content - farm tours, animal updates, and farming tips</p>
-            
-            <div class="videos-grid" id="videos-grid">
-                <!-- Videos will be dynamically loaded from videos.json -->
-                <div class="video-card material-card empty-state">
-                    <div class="video-placeholder">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="5 3 19 12 5 21 5 3"/>
-                        </svg>
-                    </div>
-                    <div class="video-content">
-                        <h3>Coming Soon</h3>
-                        <p>Our video blog is under development. Check back soon for farm tours, animal updates, and farming tips!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Locia Farms</h3>
-                    <p>A peaceful six-acre hideaway in Morriston, Ocala</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html#home">Home</a></li>
-                        <li><a href="../index.html#products">Buy</a></li>
-                        <li><a href="../farmlife/index.html">Farm Life</a></li>
-                        <li><a href="../merchandise/index.html">Shop</a></li>
-                        <li><a href="../goats/index.html">Our Goats</a></li>
-                        <li><a href="../index.html#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Morriston, Ocala, Florida</p>
-                    <p>Visit us by appointment</p>
-                    <p><a href="mailto:lociafarms@gmail.com" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">lociafarms@gmail.com</a></p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Locia Farms LLC. All rights reserved.</p>
-                <p>Locia Farms LLC — Morriston / Ocala, Florida. Visits by appointment only.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
-    <script src="../youtube-api-config.js"></script>
-    <script src="../video-loader.js"></script>
+  <main class="goats-hero">
+    <div class="container">
+      <h1 class="page-title">Video Blog moved to Farm Life</h1>
+      <p class="page-subtitle">Video, blog, and journal updates now live together on Farm Life posts.</p>
+      <p><a class="cta-button primary" href="../farmlife/">Open Farm Life Posts</a></p>
+    </div>
+  </main>
+  <script>window.location.replace('../farmlife/');</script>
 </body>
 </html>
-

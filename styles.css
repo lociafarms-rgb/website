@@ -287,9 +287,12 @@ img {
     image-rendering: crisp-edges;
 }
 
-/* Lazy loading states */
+/* Lazy loading states
+   Keep images visible by default. Some pages inject post images after the global
+   LazyImageLoader initializes; hiding every lazy image until JS adds `.loaded`
+   made dynamically inserted Farm Life images appear blank on mobile. */
 img[loading="lazy"] {
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.5s ease-in-out;
     background-color: var(--surface);
 }

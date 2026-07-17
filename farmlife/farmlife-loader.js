@@ -8,14 +8,14 @@ class FarmLifeFeed {
     if (!this.el) return;
 
     try {
-      const cacheBuster = 'v=2026-05-19-1';
+      const cacheBuster = 'v=2026-07-16-farmlife-consolidated';
       const resp = await fetch(`../journal/journal.json?${cacheBuster}`, { cache: 'force-cache' });
-      if (!resp.ok) throw new Error('Failed to load journal feed');
+      if (!resp.ok) throw new Error('Failed to load Farm Life posts');
       const data = await resp.json();
       const posts = (data.posts || []).slice().sort((a,b) => (b.date || '').localeCompare(a.date || ''));
       this.render(posts);
     } catch (e) {
-      this.el.innerHTML = `<div class="empty-state"><p>Could not load Farm Life right now.</p></div>`;
+      this.el.innerHTML = `<div class="empty-state"><p>Could not load Farm Life posts right now.</p></div>`;
     }
   }
 
@@ -48,7 +48,7 @@ class FarmLifeFeed {
         // if the .webp file doesn't exist. Using <img> guarantees JPG/PNG renders.
         return `
           <div class="farmlife-media">
-            <img src="${fallbackSrc}" alt="${this.escape(m.caption || p.title || 'Photo')}" loading="lazy" decoding="async" />
+            <img src="${fallbackSrc}" alt="${this.escape(m.caption || p.title || 'Photo')}" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.classList.add('loaded')" />
             ${m.caption ? `<div class="farmlife-caption">${this.escape(m.caption)}</div>` : ''}
           </div>
         `;

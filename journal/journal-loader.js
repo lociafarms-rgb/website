@@ -43,13 +43,9 @@ class JournalLoader {
           `;
         }
         const fallbackSrc = m.src;
-        const webpSrc = this.webpFromSrc(m.src);
         return `
           <div class="journal-media">
-            <picture>
-              <source srcset="${webpSrc}" type="image/webp" />
-              <img src="${fallbackSrc}" alt="${this.escape(m.caption || p.title || 'Photo')}" loading="lazy" decoding="async" />
-            </picture>
+            <img src="${fallbackSrc}" alt="${this.escape(m.caption || p.title || 'Photo')}" loading="lazy" decoding="async" onload="this.classList.add('loaded')" onerror="this.classList.add('loaded')" />
             ${m.caption ? `<div class="journal-caption">${this.escape(m.caption)}</div>` : ''}
           </div>
         `;
